@@ -1,0 +1,190 @@
+NDS Database:  version O.40d
+
+NDS_INFO | xa9500xl | A9536XL44VQ | XA9536XL-15-VQ44
+
+DEVICE | A9536XL | A9536XL44VQ | 
+
+NETWORK | FPGADevice | 0 | 0 | 16859143
+
+MACROCELL_INSTANCE | LowPow+FbkInv+Merge+OptxMapped | io_display_0_OBUF | FPGADevice_COPY_0_COPY_0 | 2155907073 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io_display_0_OBUF$Q | 105 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF.Q | io_display_0_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io_display_0_OBUF.SI | io_display_0_OBUF | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io_display_0_OBUF.D1 | 120 | ? | 0 | 4096 | io_display_0_OBUF | NULL | NULL | io_display_0_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io_display_0_OBUF.D2 | 121 | ? | 0 | 4096 | io_display_0_OBUF | NULL | NULL | io_display_0_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io_display_0_OBUF.REG | io_display_0_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io_display_0_OBUF.D | 119 | ? | 0 | 0 | io_display_0_OBUF | NULL | NULL | io_display_0_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io_display_0_OBUF.Q | 122 | ? | 0 | 0 | io_display_0_OBUF | NULL | NULL | io_display_0_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | io_display_0_OBUF$BUF0 | FPGADevice_COPY_0_COPY_0 | 2155872257 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io_display_0_OBUF$BUF0 | 106 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF0.Q | io_display_0_OBUF$BUF0 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io_display_0_OBUF$BUF0.SI | io_display_0_OBUF$BUF0 | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io_display_0_OBUF$BUF0.D1 | 124 | ? | 0 | 4096 | io_display_0_OBUF$BUF0 | NULL | NULL | io_display_0_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io_display_0_OBUF$BUF0.D2 | 125 | ? | 0 | 6144 | io_display_0_OBUF$BUF0 | NULL | NULL | io_display_0_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io_display_0_OBUF$BUF0.REG | io_display_0_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io_display_0_OBUF$BUF0.D | 123 | ? | 0 | 0 | io_display_0_OBUF$BUF0 | NULL | NULL | io_display_0_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io_display_0_OBUF$BUF0.Q | 126 | ? | 0 | 0 | io_display_0_OBUF$BUF0 | NULL | NULL | io_display_0_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | io_display_0_OBUF$BUF1 | FPGADevice_COPY_0_COPY_0 | 2155872257 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io_display_0_OBUF$BUF1 | 107 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF1.Q | io_display_0_OBUF$BUF1 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io_display_0_OBUF$BUF1.SI | io_display_0_OBUF$BUF1 | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io_display_0_OBUF$BUF1.D1 | 128 | ? | 0 | 4096 | io_display_0_OBUF$BUF1 | NULL | NULL | io_display_0_OBUF$BUF1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io_display_0_OBUF$BUF1.D2 | 129 | ? | 0 | 6144 | io_display_0_OBUF$BUF1 | NULL | NULL | io_display_0_OBUF$BUF1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io_display_0_OBUF$BUF1.REG | io_display_0_OBUF$BUF1 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io_display_0_OBUF$BUF1.D | 127 | ? | 0 | 0 | io_display_0_OBUF$BUF1 | NULL | NULL | io_display_0_OBUF$BUF1.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io_display_0_OBUF$BUF1.Q | 130 | ? | 0 | 0 | io_display_0_OBUF$BUF1 | NULL | NULL | io_display_0_OBUF$BUF1.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | io_display_0_OBUF$BUF2 | FPGADevice_COPY_0_COPY_0 | 2155872257 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io_display_0_OBUF$BUF2 | 108 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF2.Q | io_display_0_OBUF$BUF2 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io_display_0_OBUF$BUF2.SI | io_display_0_OBUF$BUF2 | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io_display_0_OBUF$BUF2.D1 | 132 | ? | 0 | 4096 | io_display_0_OBUF$BUF2 | NULL | NULL | io_display_0_OBUF$BUF2.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io_display_0_OBUF$BUF2.D2 | 133 | ? | 0 | 6144 | io_display_0_OBUF$BUF2 | NULL | NULL | io_display_0_OBUF$BUF2.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io_display_0_OBUF$BUF2.REG | io_display_0_OBUF$BUF2 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io_display_0_OBUF$BUF2.D | 131 | ? | 0 | 0 | io_display_0_OBUF$BUF2 | NULL | NULL | io_display_0_OBUF$BUF2.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io_display_0_OBUF$BUF2.Q | 134 | ? | 0 | 0 | io_display_0_OBUF$BUF2 | NULL | NULL | io_display_0_OBUF$BUF2.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | io_display_0_OBUF$BUF3 | FPGADevice_COPY_0_COPY_0 | 2155872257 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io_display_0_OBUF$BUF3 | 109 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF3.Q | io_display_0_OBUF$BUF3 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io_display_0_OBUF$BUF3.SI | io_display_0_OBUF$BUF3 | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io_display_0_OBUF$BUF3.D1 | 136 | ? | 0 | 4096 | io_display_0_OBUF$BUF3 | NULL | NULL | io_display_0_OBUF$BUF3.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io_display_0_OBUF$BUF3.D2 | 137 | ? | 0 | 6144 | io_display_0_OBUF$BUF3 | NULL | NULL | io_display_0_OBUF$BUF3.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io_display_0_OBUF$BUF3.REG | io_display_0_OBUF$BUF3 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io_display_0_OBUF$BUF3.D | 135 | ? | 0 | 0 | io_display_0_OBUF$BUF3 | NULL | NULL | io_display_0_OBUF$BUF3.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io_display_0_OBUF$BUF3.Q | 138 | ? | 0 | 0 | io_display_0_OBUF$BUF3 | NULL | NULL | io_display_0_OBUF$BUF3.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | io_display_0_OBUF$BUF4 | FPGADevice_COPY_0_COPY_0 | 2155872257 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io_display_0_OBUF$BUF4 | 110 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF4.Q | io_display_0_OBUF$BUF4 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io_display_0_OBUF$BUF4.SI | io_display_0_OBUF$BUF4 | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io_display_0_OBUF$BUF4.D1 | 140 | ? | 0 | 4096 | io_display_0_OBUF$BUF4 | NULL | NULL | io_display_0_OBUF$BUF4.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io_display_0_OBUF$BUF4.D2 | 141 | ? | 0 | 6144 | io_display_0_OBUF$BUF4 | NULL | NULL | io_display_0_OBUF$BUF4.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io_display_0_OBUF$BUF4.REG | io_display_0_OBUF$BUF4 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io_display_0_OBUF$BUF4.D | 139 | ? | 0 | 0 | io_display_0_OBUF$BUF4 | NULL | NULL | io_display_0_OBUF$BUF4.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io_display_0_OBUF$BUF4.Q | 142 | ? | 0 | 0 | io_display_0_OBUF$BUF4 | NULL | NULL | io_display_0_OBUF$BUF4.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | LowPow+OptxMapped | io_display_0_OBUF$BUF5 | FPGADevice_COPY_0_COPY_0 | 2155872257 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io_display_0_OBUF$BUF5 | 111 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF5.Q | io_display_0_OBUF$BUF5 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io_display_0_OBUF$BUF5.SI | io_display_0_OBUF$BUF5 | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io_display_0_OBUF$BUF5.D1 | 144 | ? | 0 | 4096 | io_display_0_OBUF$BUF5 | NULL | NULL | io_display_0_OBUF$BUF5.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io_display_0_OBUF$BUF5.D2 | 145 | ? | 0 | 6144 | io_display_0_OBUF$BUF5 | NULL | NULL | io_display_0_OBUF$BUF5.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io_display_0_OBUF$BUF5.REG | io_display_0_OBUF$BUF5 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io_display_0_OBUF$BUF5.D | 143 | ? | 0 | 0 | io_display_0_OBUF$BUF5 | NULL | NULL | io_display_0_OBUF$BUF5.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io_display_0_OBUF$BUF5.Q | 146 | ? | 0 | 0 | io_display_0_OBUF$BUF5 | NULL | NULL | io_display_0_OBUF$BUF5.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | io_display<6> | FPGADevice_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io_display_0_OBUF$Q | 105 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF.Q | io_display_0_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io_display<6> | 112 | PO | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | NULL | io_display<6> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | io_display<5> | FPGADevice_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io_display_0_OBUF$BUF0 | 106 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF0.Q | io_display_0_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io_display<5> | 113 | PO | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | NULL | io_display<5> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | io_display<4> | FPGADevice_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io_display_0_OBUF$BUF1 | 107 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF1.Q | io_display_0_OBUF$BUF1 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io_display<4> | 114 | PO | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | NULL | io_display<4> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | io_display<3> | FPGADevice_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io_display_0_OBUF$BUF2 | 108 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF2.Q | io_display_0_OBUF$BUF2 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io_display<3> | 115 | PO | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | NULL | io_display<3> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | io_display<2> | FPGADevice_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io_display_0_OBUF$BUF3 | 109 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF3.Q | io_display_0_OBUF$BUF3 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io_display<2> | 116 | PO | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | NULL | io_display<2> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | io_display<1> | FPGADevice_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io_display_0_OBUF$BUF4 | 110 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF4.Q | io_display_0_OBUF$BUF4 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io_display<1> | 117 | PO | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | NULL | io_display<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | io_display<0> | FPGADevice_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io_display_0_OBUF$BUF5 | 111 | ? | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | io_display_0_OBUF$BUF5.Q | io_display_0_OBUF$BUF5 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io_display<0> | 118 | PO | 0 | 0 | FPGADevice_COPY_0_COPY_0 | NULL | NULL | io_display<0> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | FPGADevice_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | io_display_0_OBUF$BUF0 | 1 | NULL | 0 | io_display<5> | 1 | 41 | 49152
+FBPIN | 9 | io_display_0_OBUF$BUF2 | 1 | NULL | 0 | io_display<3> | 1 | 5 | 49152
+FBPIN | 14 | io_display_0_OBUF$BUF4 | 1 | NULL | 0 | io_display<1> | 1 | 13 | 49152
+
+FB_INSTANCE | FOOBAR2_ | FPGADevice_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | io_display_0_OBUF | 1 | NULL | 0 | io_display<6> | 1 | 38 | 49152
+FBPIN | 8 | io_display_0_OBUF$BUF1 | 1 | NULL | 0 | io_display<4> | 1 | 31 | 49152
+FBPIN | 12 | io_display_0_OBUF$BUF3 | 1 | NULL | 0 | io_display<2> | 1 | 27 | 49152
+FBPIN | 16 | io_display_0_OBUF$BUF5 | 1 | NULL | 0 | io_display<0> | 1 | 20 | 49152
+
+FB_INSTANCE | INPUTPINS_FOOBAR3_ | FPGADevice_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | IO_DISPLAY<6:0> | 7 | 0 | 1 | io_display<0> | 6 | io_display<1> | 5 | io_display<2> | 4 | io_display<3> | 3 | io_display<4> | 2 | io_display<5> | 1 | io_display<6> | 0

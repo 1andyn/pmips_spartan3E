@@ -1,0 +1,63 @@
+Release 14.6 par P.68d (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+ANDROMEDA::  Fri Feb 21 17:48:43 2014
+
+par -w -intstyle ise -ol high -t 1 FPGADevice_map.ncd FPGADevice.ncd
+FPGADevice.pcf 
+
+
+Constraints file: FPGADevice.pcf.
+Loading device for application Rf_Device from file '3s100e.nph' in environment D:\Xilinx\14.6\ISE_DS\ISE\.
+   "FPGADevice" is an NCD, version 3.2, device xc3s100e, package cp132, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.27 2013-06-08".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          11 out of 83     13%
+
+   Number of External Input IOBs                  4
+
+      Number of External Input IBUFs              4
+        Number of LOCed External Input IBUFs      4 out of 4     100%
+
+
+   Number of External Output IOBs                 7
+
+      Number of External Output IOBs              7
+        Number of LOCed External Output IOBs      7 out of 7     100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of RAMB16s                         1 out of 4      25%
+   Number of Slices                        196 out of 960    20%
+      Number of SLICEMs                     33 out of 480     6%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 3 secs 
+Total CPU  time at the beginning of Placer: 0 secs 

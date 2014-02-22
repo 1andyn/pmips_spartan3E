@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# PlanAhead v13.1 (64-bit)
+# Build 117799 by hdbuild on Thu Feb 17 11:42:17 PST 2011
+# Start of session at: Tue Dec 03 15:01:21 2013
+# Process ID: 4288
+# Log file: C:/Users/andy.ng/Desktop/sub1/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/andy.ng/Desktop/sub1/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui -source C:/Users/andy.ng/Desktop/sub1/pa.fromNetlist.tcl
+set_property loc "" [get_ports {io_display[0]}]
+set_property loc "" [get_ports {io_display[1]}]
+set_property loc "" [get_ports {io_display[2]}]
+set_property loc "" [get_ports {io_display[3]}]
+set_property loc "" [get_ports {io_display[4]}]
+set_property loc "" [get_ports {io_display[5]}]
+set_property loc "" [get_ports {io_display[6]}]
+startgroup
+set_property loc PAD52 [get_ports {io_display[0]}]
+endgroup
+startgroup
+set_property loc PAD49 [get_ports {io_display[1]}]
+endgroup
+startgroup
+set_property loc PAD56 [get_ports {io_display[2]}]
+endgroup
+startgroup
+set_property loc PAD59 [get_ports {io_display[3]}]
+endgroup
+startgroup
+set_property loc PAD53 [get_ports {io_display[4]}]
+endgroup
+startgroup
+set_property loc PAD39 [get_ports {io_display[5]}]
+endgroup
+startgroup
+set_property loc PAD48 [get_ports {io_display[6]}]
+endgroup
+save_design
+exit

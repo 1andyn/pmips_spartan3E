@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Compat Version="1" Minor="4">
+	<CompatParts>
+	</CompatParts>
+	<ConfigModes>
+	</ConfigModes>
+	<PortProps>
+		<Port Name="io_display[6]"/>
+		<Port Name="io_display[5]"/>
+		<Port Name="io_display[4]"/>
+		<Port Name="io_display[3]"/>
+		<Port Name="io_display[2]"/>
+		<Port Name="io_display[1]"/>
+		<Port Name="io_display[0]"/>
+		<Port Name="reset"/>
+		<Port Name="clock"/>
+		<Port Name="io_sw0"/>
+		<Port Name="io_sw1"/>
+	</PortProps>
+</Compat>
+

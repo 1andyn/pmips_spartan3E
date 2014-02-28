@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-02-21T19:34:14</DateModified>
+  <DateModified>2014-02-27T14:15:36</DateModified>
   <ModuleName>FPGADevice</ModuleName>
   <SummaryTimeStamp>2013-12-03T14:26:40</SummaryTimeStamp>
-  <SavedFilePath>D:/Dropbox/EE496/sub1/iseconfig/FPGADevice.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Dropbox/EE496/sub1\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Dropbox/Codespace/PMIPS/sub1/iseconfig/FPGADevice.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Dropbox/Codespace/PMIPS/sub1\</ImplementationReportsDirectory>
   <DateInitialized>2013-12-03T13:50:39</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

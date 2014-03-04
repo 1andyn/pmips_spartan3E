@@ -257,21 +257,42 @@ Control cntrol1(
 
 always @(posedge clock)
 	begin
-	IDEXPCPlus2 <= IFIDPCPlus2;
-	IDEXRegRead1 <= rdata1;
-	IDEXRegRead2 <= rdata2;
-	IDEXInstr <= IFIDInstr; // I probably don't need the instruction but just in case
-	IDEXRegfield2 <= IFIDRegfield2;
-	IDEXRegfield3 <= IFIDRegfield3;
-	IDEXSignExtend <= IFIDSignExt;
-	IDEXALUSrc <= ALUSrc;
-	IDEXALUOp <= ALUOp;
-	IDEXRegDst <= RegDst;
-	IDEXRegWrite <= RegWrite;
-	IDEXMemRead <= MemRead;
-	IDEXMemWrite <= MemWrite;
-	IDEXMemtoReg <= MemtoReg;
-	IDEXBranch <= Branch;
+		if(Stall == 1)
+			begin
+				IDEXPCPlus2 <= 0'b0000000000000000; //Insert a blank instruction for "bubble"
+				IDEXRegRead1 <= 0'b0000000000000000;
+				IDEXRegRead2 <= 0'b0000000000000000;
+				IDEXInstr <= 0'b0000000000000000; // I probably don't need the instruction but just in case
+				IDEXRegfield2 <= 0'b000;
+				IDEXRegfield3 <= 0'b000;
+				IDEXSignExtend <= 0'b0000000000000000;
+				IDEXALUSrc <= 0'b0;
+				IDEXALUOp <= 0'b00;
+				IDEXRegDst <= 0'b0;
+				IDEXRegWrite <= 0'b0;
+				IDEXMemRead <= 0'b0;
+				IDEXMemWrite <= 0'b0;
+				IDEXMemtoReg <= 0'b0;
+				IDEXBranch <= 0'b0;
+			end
+		else
+			begin
+			IDEXPCPlus2 <= IFIDPCPlus2;
+			IDEXRegRead1 <= rdata1;
+			IDEXRegRead2 <= rdata2;
+			IDEXInstr <= IFIDInstr; // I probably don't need the instruction but just in case
+			IDEXRegfield2 <= IFIDRegfield2;
+			IDEXRegfield3 <= IFIDRegfield3;
+			IDEXSignExtend <= IFIDSignExt;
+			IDEXALUSrc <= ALUSrc;
+			IDEXALUOp <= ALUOp;
+			IDEXRegDst <= RegDst;
+			IDEXRegWrite <= RegWrite;
+			IDEXMemRead <= MemRead;
+			IDEXMemWrite <= MemWrite;
+			IDEXMemtoReg <= MemtoReg;
+			IDEXBranch <= Branch;
+			end
 	end
 
 //----------------------------- EXMEM Stage --------------------------------

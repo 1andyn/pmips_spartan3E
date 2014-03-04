@@ -74,7 +74,9 @@ module Control(
 	clock,			// Clock input signal
 	OpCode,			// Opcode from the IF/ID pipeline register
 	reset,			// Used to clear controller
-	Instruction
+	IFID,
+	IDEX,
+	EXMEM
 	);
 
 output PCStall;		
@@ -86,11 +88,15 @@ output Branch;
 output MemWrite;
 output MemRead;
 output MemtoReg;
-//output controlcodedebug; //debug
+
 input  clock;
 input  [2:0] OpCode;		
 input  reset;
-input [15:0] Instruction;		
+
+//Instruction Registers
+input [15:0] IFID;
+input [15:0] IDEX;
+input [15:0] EXMEM;	
 
 //assign controlcodedebug = ControlCode;
 

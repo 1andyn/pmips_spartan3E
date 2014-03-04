@@ -247,7 +247,9 @@ Control cntrol1(
 	clock,			
 	IFIDOpcode,	// from the IFID pipeline register	
 	reset,
-	IFIDInstr //entire instruction goes to control for hazard detection
+	IFIDInstr, //entire instruction goes to control for hazard detection
+	IDEXInstr,
+	EXMEMInstr
 	);
 
 
@@ -309,6 +311,7 @@ assign EXBranchAddr = (IDEXSignExtend << 1) + IDEXPCPlus2; //Branch Address
 
 always @(posedge clock)
  	begin
+	EXMEMInstr <= IDEXInstru;
 	EXMEMALUOut <= aluout1;
 	EXMEMALUZero <= aluzero;
 	EXMEMMemtoReg <= IDEXMemtoReg;

@@ -22,7 +22,7 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], Debug:[%b]";
-static const char *ng1 = "D:/Dropbox/EE496/Temp/testbenchSubproject3.V";
+static const char *ng1 = "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V";
 static int ng2[] = {0, 0};
 static const char *ng3 = "\nIO[display,switch0,switch1]\n";
 static const char *ng4 = "IMEM[PC,Instr]\n";

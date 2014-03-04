@@ -21,13 +21,13 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Dropbox/EE496/Temp/MIPS-Parts.V";
+static const char *ng0 = "D:/Dropbox/Codespace/PMIPS/Temp/MIPS-Parts.V";
 static int ng1[] = {1, 0};
 static int ng2[] = {0, 0};
 
 
 
-static void Always_181_0(char *t0)
+static void Always_157_0(char *t0)
 {
     char t6[8];
     char t30[8];
@@ -86,7 +86,7 @@ LAB0:    t1 = (t0 + 3808U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(181, ng0);
+LAB2:    xsi_set_current_line(157, ng0);
     t2 = (t0 + 5120);
     *((int *)t2) = 1;
     t3 = (t0 + 3840);
@@ -94,7 +94,7 @@ LAB2:    xsi_set_current_line(181, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(182, ng0);
+LAB4:    xsi_set_current_line(158, ng0);
     t4 = (t0 + 1848U);
     t5 = *((char **)t4);
     t4 = ((char*)((ng1)));
@@ -138,7 +138,7 @@ LAB7:    t21 = (t6 + 4);
     *((unsigned int *)t21) = 1;
     goto LAB8;
 
-LAB9:    xsi_set_current_line(182, ng0);
+LAB9:    xsi_set_current_line(158, ng0);
     t28 = (t0 + 1208U);
     t29 = *((char **)t28);
     t28 = (t0 + 2568);
@@ -172,7 +172,7 @@ LAB12:    t46 = *((unsigned int *)t30);
 
 }
 
-static void Always_185_1(char *t0)
+static void Always_161_1(char *t0)
 {
     char t6[8];
     char *t1;
@@ -212,7 +212,7 @@ LAB0:    t1 = (t0 + 4056U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(185, ng0);
+LAB2:    xsi_set_current_line(161, ng0);
     t2 = (t0 + 5136);
     *((int *)t2) = 1;
     t3 = (t0 + 4088);
@@ -220,7 +220,7 @@ LAB2:    xsi_set_current_line(185, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(186, ng0);
+LAB4:    xsi_set_current_line(162, ng0);
     t4 = (t0 + 1368U);
     t5 = *((char **)t4);
     t4 = ((char*)((ng2)));
@@ -256,7 +256,7 @@ LAB8:    t22 = (t6 + 4);
     if (t27 > 0)
         goto LAB9;
 
-LAB10:    xsi_set_current_line(187, ng0);
+LAB10:    xsi_set_current_line(163, ng0);
     t2 = (t0 + 2568);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
@@ -279,7 +279,7 @@ LAB7:    t21 = (t6 + 4);
     *((unsigned int *)t21) = 1;
     goto LAB8;
 
-LAB9:    xsi_set_current_line(186, ng0);
+LAB9:    xsi_set_current_line(162, ng0);
     t28 = ((char*)((ng2)));
     t29 = (t0 + 2248);
     xsi_vlogvar_assign_value(t29, t28, 0, 0, 16);
@@ -287,7 +287,7 @@ LAB9:    xsi_set_current_line(186, ng0);
 
 }
 
-static void Always_190_2(char *t0)
+static void Always_166_2(char *t0)
 {
     char t6[8];
     char *t1;
@@ -327,7 +327,7 @@ LAB0:    t1 = (t0 + 4304U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(190, ng0);
+LAB2:    xsi_set_current_line(166, ng0);
     t2 = (t0 + 5152);
     *((int *)t2) = 1;
     t3 = (t0 + 4336);
@@ -335,7 +335,7 @@ LAB2:    xsi_set_current_line(190, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(191, ng0);
+LAB4:    xsi_set_current_line(167, ng0);
     t4 = (t0 + 1528U);
     t5 = *((char **)t4);
     t4 = ((char*)((ng2)));
@@ -371,7 +371,7 @@ LAB8:    t22 = (t6 + 4);
     if (t27 > 0)
         goto LAB9;
 
-LAB10:    xsi_set_current_line(192, ng0);
+LAB10:    xsi_set_current_line(168, ng0);
     t2 = (t0 + 2568);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
@@ -394,7 +394,7 @@ LAB7:    t21 = (t6 + 4);
     *((unsigned int *)t21) = 1;
     goto LAB8;
 
-LAB9:    xsi_set_current_line(191, ng0);
+LAB9:    xsi_set_current_line(167, ng0);
     t28 = ((char*)((ng2)));
     t29 = (t0 + 2408);
     xsi_vlogvar_assign_value(t29, t28, 0, 0, 16);
@@ -501,7 +501,7 @@ LAB4:    t3 = (t0 + 2888);
 
 extern void work_m_00000000000335363901_0254784918_init()
 {
-	static char *pe[] = {(void *)Always_181_0,(void *)Always_185_1,(void *)Always_190_2,(void *)impl1_execute,(void *)impl2_execute};
+	static char *pe[] = {(void *)Always_157_0,(void *)Always_161_1,(void *)Always_166_2,(void *)impl1_execute,(void *)impl2_execute};
 	xsi_register_didat("work_m_00000000000335363901_0254784918", "isim/testbench5_isim_beh.exe.sim/work/m_00000000000335363901_0254784918.didat");
 	xsi_register_executes(pe);
 }

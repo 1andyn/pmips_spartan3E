@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\andy.ng\Desktop\sub1\FPGADevice.ncd
-OUTFILE=C:\Users\andy.ng\Desktop\sub1\FPGADevice.bit
+INFILE=D:\Dropbox\Codespace\PMIPS\sub1\FPGADevice.ncd
+OUTFILE=D:\Dropbox\Codespace\PMIPS\sub1\FPGADevice.bit
 FAMILY=Spartan3E
-PART=xc3s100e-4cp132
-WORKINGDIR=C:\Users\andy.ng\Desktop\sub1
+PART=xc3s250e-4cp132
+WORKINGDIR=D:\Dropbox\Codespace\PMIPS\sub1
 LICENSE=WebPack
-USER_INFO=210806279_0_0_877
+USER_INFO=210806279_0_0_750

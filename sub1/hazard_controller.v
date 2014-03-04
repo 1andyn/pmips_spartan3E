@@ -19,10 +19,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module hazard_controller(
-    input [0:15] instruc,
+    input [15:0] instruc,
+	 input [2:0] opcode,
     input clock,
     output stall
     );
+
+//Need check of Branch or Jump 
+//If so, STALL
+
+//Check for R type/ I Type
+
+
 
 
 endmodule

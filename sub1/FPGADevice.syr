@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: FPGADevice.prj
 
@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "FPGADevice"
 Output Format                      : NGC
-Target Device                      : xc3s100e-4-cp132
+Target Device                      : xc3s250e-4-cp132
 
 ---- Source Options
 Top Module Name                    : FPGADevice
@@ -165,9 +165,9 @@ Analyzing module <MUX_PC> in library <work>.
 Module <MUX_PC> is correct for synthesis.
  
 Analyzing module <RegFile> in library <work>.
-WARNING:Xst:905 - "../Temp/MIPS-Parts.V" line 207: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:905 - "../Temp/MIPS-Parts.V" line 162: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <regcell>
-WARNING:Xst:905 - "../Temp/MIPS-Parts.V" line 212: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:905 - "../Temp/MIPS-Parts.V" line 167: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <regcell>
 Module <RegFile> is correct for synthesis.
  
@@ -267,8 +267,8 @@ Unit <MUX2> synthesized.
 
 Synthesizing Unit <ALU>.
     Related source file is "../Temp/MIPS-Parts.V".
-    Found 16-bit adder for signal <result$addsub0000> created at line 249.
-    Found 16-bit subtractor for signal <result$sub0001> created at line 251.
+    Found 16-bit adder for signal <result$addsub0000> created at line 204.
+    Found 16-bit subtractor for signal <result$sub0001> created at line 206.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 Unit <ALU> synthesized.
@@ -611,7 +611,7 @@ INFO:Xst:2261 - The FF/Latch <comp/IDEXMemtoReg> in Unit <FPGADevice> is equival
 INFO:Xst:2261 - The FF/Latch <comp/IDEXRegDst> in Unit <FPGADevice> is equivalent to the following FF/Latch, which will be removed : <comp/IDEXALUOp_1> 
 INFO:Xst:2261 - The FF/Latch <comp/IDEXBranch> in Unit <FPGADevice> is equivalent to the following FF/Latch, which will be removed : <comp/IDEXALUOp_0> 
 INFO:Xst:2261 - The FF/Latch <comp/EXMEMMemRead> in Unit <FPGADevice> is equivalent to the following FF/Latch, which will be removed : <comp/EXMEMMemtoReg> 
-Found area constraint ratio of 100 (+ 5) on block FPGADevice, actual ratio is 17.
+Found area constraint ratio of 100 (+ 5) on block FPGADevice, actual ratio is 6.
 
 Final Macro Processing ...
 
@@ -690,17 +690,17 @@ Cell Usage :
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s100ecp132-4 
+Selected Device : 3s250ecp132-4 
 
- Number of Slices:                      171  out of    960    17%  
- Number of Slice Flip Flops:            171  out of   1920     8%  
- Number of 4 input LUTs:                261  out of   1920    13%  
+ Number of Slices:                      171  out of   2448     6%  
+ Number of Slice Flip Flops:            171  out of   4896     3%  
+ Number of 4 input LUTs:                261  out of   4896     5%  
     Number used as logic:               196
     Number used as Shift registers:       1
     Number used as RAMs:                 64
  Number of IOs:                          11
- Number of bonded IOBs:                  11  out of     83    13%  
- Number of BRAMs:                         1  out of      4    25%  
+ Number of bonded IOBs:                  11  out of     92    11%  
+ Number of BRAMs:                         1  out of     12     8%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -828,14 +828,14 @@ Offset:              4.283ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.05 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.78 secs
  
 --> 
 
-Total memory usage is 248396 kilobytes
+Total memory usage is 248388 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  126 (   0 filtered)
+Number of warnings :  127 (   0 filtered)
 Number of infos    :   27 (   0 filtered)
 

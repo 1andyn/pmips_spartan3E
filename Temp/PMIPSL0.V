@@ -24,37 +24,6 @@ output dmemread;	// read memory enable
 //output probe15; //aluzero
 
 output [15:0] debug;
-/*output [1:0] probe2; //ALUOp
-output [2:0] probe3; //ALUSelect
-output [3:0] probe4; //INSTRIndex
-output [15:0] probe5; //Reg 1
-output [2:0] probe6; //Field 1
-output [15:0] probe7; //Reg 2
-output [2:0] probe8; //Field 2
-output [6:0] probe9; //(Immediate)
-output [15:0] probe10; // write value
-output [2:0] probe11; // Write Address (register)
-output [15:0] probe12; //instruction data
-output [15:0] probe13;
-output probe14;
-output probe17;
-output [15:0] probe18;
-output probe19;
-output probe20;*/
-/*
-output [15:0] probe15; //Data input to ALU1
-output [15:0] probe16; //Data input to ALU2
-
-output [15:0] reg0; //Reg 0
-output [15:0] reg1; //Reg 1
-output [15:0] reg2; //Reg 2
-output [15:0] reg3; //Reg 3
-output [15:0] reg4; //Reg 4
-output [15:0] reg5; //Reg 5
-output [15:0] reg6; //Reg 6
-output [15:0] reg7; //Reg 7
-*/
-
 
 /* Clock */
 input clock;
@@ -133,6 +102,7 @@ reg [15:0] EXMEMALUOut;
 reg [15:0] EXMEMBranchAddr;
 reg [15:0] EXMEMRegRead2; 
 reg [15:0] EXMEMPCPlus2;
+reg [15:0] EXMEMInstr; // instruction
 reg [2:0] EXMEMWriteAddr;
 reg EXMEMMemtoReg;
 reg EXMEMMemRead;
@@ -276,8 +246,8 @@ Control cntrol1(
 	MemtoReg,
 	clock,			
 	IFIDOpcode,	// from the IFID pipeline register	
-	reset
-	//ccode
+	reset,
+	IFIDInstr //entire instruction goes to control for hazard detection
 	);
 
 

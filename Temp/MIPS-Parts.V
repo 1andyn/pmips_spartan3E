@@ -144,19 +144,6 @@ module RegFile(
 
 output [15:0] rdata1, rdata2;
 
-//*DEBUG
-/*
-output [15:0] reg0;
-output [15:0] reg1;
-output [15:0] reg2;
-output [15:0] reg3;
-output [15:0] reg4;
-output [15:0] reg5;
-output [15:0] reg6;
-output [15:0] reg7;
-*/
-//*DEBUG
-
 input clock;
 input [15:0] wdata; 			
 input [2:0] raddr1, raddr2; 	
@@ -166,17 +153,6 @@ input write;
 reg [15:0] rdata1, rdata2;
 
 reg [15:0] regcell[0:7];		// Eight registers
-
-// Writing to a register
-
-/*
-always @(posedge clock)
-	begin
-	regcell[3] = 5;
-	end
-*/
-
-// Initialize all 8 registers to zero upon reset
 
 always @(posedge clock) 
 	if (write==1) regcell[waddr]<=wdata;

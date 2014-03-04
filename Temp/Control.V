@@ -73,8 +73,8 @@ module Control(
 	MemtoReg,
 	clock,			// Clock input signal
 	OpCode,			// Opcode from the IF/ID pipeline register
-	reset			// Used to clear controller
-	//controlcodedebug
+	reset,			// Used to clear controller
+	Instruction
 	);
 
 output PCStall;		
@@ -89,7 +89,8 @@ output MemtoReg;
 //output controlcodedebug; //debug
 input  clock;
 input  [2:0] OpCode;		
-input  reset;		
+input  reset;
+input [15:0] Instruction;		
 
 //assign controlcodedebug = ControlCode;
 
@@ -102,6 +103,7 @@ reg Branch;
 reg MemWrite;
 reg MemRead;
 reg MemtoReg;
+reg Hazard;
 
 // The next always is basically a combinational circuit that
 // drives the output of the controller which controls the
@@ -260,7 +262,38 @@ always @(posedge clock)  // Update state
 			default: state <= 0;
 		endcase
 	end
-
+	
+	
+always @(posedge clock)
+	begin
+		if(state == 0) //Only check for hazard/branching when not stalling 
+		begin
+		
+		end
+	end
+
+/* ---------------------------- ORIGINAL STATE CODE
+	begin
+	if (reset == 1) state  <= 4; //modified from 0 //Works with state <= 4
+	else
+		case(state)
+			0:	case(OpCode) // update state
+				3:	state <= 1; // execute addi (opcode = 3)
+				0: state <= 1; // R type
+				2: state <= 1; // BEQ
+				5: state <= 1;
+				6: state <= 1;
+				default: state <=0;
+				endcase
+			1:	state <= 2;			// stall 1
+			2:	state <= 3;			// stall 2 //originally state <= 0; // Works with state <= 3
+			3: state <= 0; //originally 0
+			4: state <= 0; //call this the RESET state
+			default: state <= 0;
+		endcase
+	end
+	
+	*/
 always @(state) // Output of this sequential circuit, ControlCode
 	case(state)
 		0: ControlCode = 1; // Launch instruction if state = 0;

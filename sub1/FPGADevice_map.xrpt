@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Mon Mar 03 21:26:42 2014">
+  <application stringID="Map" timeStamp="Wed Mar 12 10:20:08 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Xilinx\14.6\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.6\ISE_DS\ISE\\bin\nt64;D:\Xilinx\14.6\ISE_DS\ISE\bin\nt64;D:\Xilinx\14.6\ISE_DS\ISE\lib\nt64;D:\Xilinx\14.6\ISE_DS\ISE\..\..\..\DocNav;D:\Xilinx\14.6\ISE_DS\PlanAhead\bin;D:\Xilinx\14.6\ISE_DS\EDK\bin\nt64;D:\Xilinx\14.6\ISE_DS\EDK\lib\nt64;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\arm\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Xilinx\14.6\ISE_DS\common\bin\nt64;D:\Xilinx\14.6\ISE_DS\common\lib\nt64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Live\Shared;D:\NodeJS\;D:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\fet\bin;D:\OrCAD\OrCAD_16.6_Lite\OpenAccess\bin\win32\opt;D:\OrCAD\OrCAD_16.6_Lite\tools\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\Capture;D:\OrCAD\OrCAD_16.6_Lite\tools\PSpice;C:\Users\supah_000\AppData\Roaming\npm"/>
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="D:\Xilinx\14.6\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.6\ISE_DS\ISE\\bin\nt64;D:\Xilinx\14.6\ISE_DS\ISE\bin\nt64;D:\Xilinx\14.6\ISE_DS\ISE\lib\nt64;D:\Xilinx\14.6\ISE_DS\ISE\..\..\..\DocNav;D:\Xilinx\14.6\ISE_DS\PlanAhead\bin;D:\Xilinx\14.6\ISE_DS\EDK\bin\nt64;D:\Xilinx\14.6\ISE_DS\EDK\lib\nt64;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\arm\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Xilinx\14.6\ISE_DS\common\bin\nt64;D:\Xilinx\14.6\ISE_DS\common\lib\nt64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Live\Shared;D:\NodeJS\;C:\Program Files\MATLAB\R2013a\runtime\win64;C:\Program Files\MATLAB\R2013a\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\fet\bin;D:\OrCAD\OrCAD_16.6_Lite\OpenAccess\bin\win32\opt;D:\OrCAD\OrCAD_16.6_Lite\tools\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\Capture;D:\OrCAD\OrCAD_16.6_Lite\tools\PSpice;C:\Users\supah_000\AppData\Roaming\npm"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -73,18 +73,18 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="261020"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="260936"/>
         <item stringID="MAP_TOTAL_REAL_TIME" value="1 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="1 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="0 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="4896" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="171"/>
-        <item AVAILABLE="4896" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="261">
+        <item AVAILABLE="4896" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="184"/>
+        <item AVAILABLE="4896" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="343">
           <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="4"/>
           <item dataType="int" stringID="MAP_NUM_DP_RAM" value="64"/>
           <item dataType="int" label="Number used as Shift registers" stringID="MAP_NUM_SHIFT" value="1"/>
         </item>
-        <item AVAILABLE="2448" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="196">
+        <item AVAILABLE="2448" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="226">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>

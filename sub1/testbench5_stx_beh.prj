@@ -1,6 +1,7 @@
 verilog isim_temp "../Temp/MIPS-Parts.V"
 verilog isim_temp "../Temp/Control.V"
+verilog isim_temp "Control1.v"
 verilog isim_temp "../Temp/PMIPSL0.V"
-verilog isim_temp "../Temp/IM3.V"
+verilog isim_temp "../Temp/IM1.V"
 verilog isim_temp "../Temp/testbenchSubproject3.V"
 verilog isim_temp "D:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,4 +1,0 @@
-verilog work "../Temp/MIPS-Parts.V"
-verilog work "../Temp/Control.V"
-verilog work "../Temp/PMIPSL0.V"
-verilog work "D:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

@@ -84,3 +84,21 @@ map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o FPGADev
 par -w -intstyle ise -ol high -t 1 FPGADevice_map.ncd FPGADevice.ncd FPGADevice.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGADevice.twx FPGADevice.ncd -o FPGADevice.twr FPGADevice.pcf -ucf FPGADevice.ucf 
 bitgen -intstyle ise -f FPGADevice.ut FPGADevice.ncd 
+xst -intstyle ise -ifn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.xst" -ofn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGADevice.ucf -p xc3s250e-cp132-4 FPGADevice.ngc FPGADevice.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o FPGADevice_map.ncd FPGADevice.ngd FPGADevice.pcf 
+par -w -intstyle ise -ol high -t 1 FPGADevice_map.ncd FPGADevice.ncd FPGADevice.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGADevice.twx FPGADevice.ncd -o FPGADevice.twr FPGADevice.pcf -ucf FPGADevice.ucf 
+bitgen -intstyle ise -f FPGADevice.ut FPGADevice.ncd 
+xst -intstyle ise -ifn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.xst" -ofn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGADevice.ucf -p xc3s250e-cp132-4 FPGADevice.ngc FPGADevice.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o FPGADevice_map.ncd FPGADevice.ngd FPGADevice.pcf 
+par -w -intstyle ise -ol high -t 1 FPGADevice_map.ncd FPGADevice.ncd FPGADevice.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGADevice.twx FPGADevice.ncd -o FPGADevice.twr FPGADevice.pcf -ucf FPGADevice.ucf 
+bitgen -intstyle ise -f FPGADevice.ut FPGADevice.ncd 
+xst -intstyle ise -ifn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.xst" -ofn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGADevice.ucf -p xc3s250e-cp132-4 FPGADevice.ngc FPGADevice.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o FPGADevice_map.ncd FPGADevice.ngd FPGADevice.pcf 
+par -w -intstyle ise -ol high -t 1 FPGADevice_map.ncd FPGADevice.ncd FPGADevice.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FPGADevice.twx FPGADevice.ncd -o FPGADevice.twr FPGADevice.pcf -ucf FPGADevice.ucf 
+bitgen -intstyle ise -f FPGADevice.ut FPGADevice.ncd 

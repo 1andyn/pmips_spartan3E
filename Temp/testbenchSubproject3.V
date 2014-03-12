@@ -21,7 +21,7 @@ wire [15:0] aluout;		// Output from the ALUOut register:  for debugging
 wire [15:0] imemrdata;	// Instruction memory read data
 wire [15:0] dmemrdata;	// Data memory read data
 wire [15:0] debug;
-
+wire stall;
 reg io_sw0;
 reg io_sw1;
 wire [6:0] io_display;
@@ -56,7 +56,7 @@ initial
 
 
 initial
-	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], Debug:[%b]",
+	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], Debug:[%b], Stall: %b",
 		io_display,
 		io_sw0,
 		io_sw1,
@@ -73,7 +73,8 @@ initial
 		clock,
 		reset,
 		$time,
-		debug
+		debug,
+		stall
 		);
 
 
@@ -91,12 +92,13 @@ PMIPSL0 comp(
 	imemrdata,	// Instruction memory read data
 	dmemrdata,	// Data memory read data
 	reset,		// Reset
-	debug
+	debug,
+	stall
 	);
 
 // Instantiation of Instruction Memory (program)
 
-IM3  instrmem(imemrdata,imemaddr);
+IM  instrmem(imemrdata,imemaddr);
 
 
 // Instantiation of Data Memory

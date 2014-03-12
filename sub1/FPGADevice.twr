@@ -45,9 +45,9 @@ Setup/Hold to clock clock
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-io_sw0      |    1.652(R)|   -0.126(R)|clock_BUFGP       |   0.000|
-io_sw1      |    2.069(R)|   -0.461(R)|clock_BUFGP       |   0.000|
-reset       |    3.558(R)|    0.137(R)|clock_BUFGP       |   0.000|
+io_sw0      |    2.624(R)|   -0.914(R)|clock_BUFGP       |   0.000|
+io_sw1      |    1.576(R)|   -0.076(R)|clock_BUFGP       |   0.000|
+reset       |    3.455(R)|    0.286(R)|clock_BUFGP       |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clock to Pad
@@ -55,13 +55,13 @@ Clock clock to Pad
              | clk (edge) |                  | Clock  |
 Destination  |   to PAD   |Internal Clock(s) | Phase  |
 -------------+------------+------------------+--------+
-io_display<0>|    7.697(R)|clock_BUFGP       |   0.000|
-io_display<1>|    7.066(R)|clock_BUFGP       |   0.000|
-io_display<2>|    7.428(R)|clock_BUFGP       |   0.000|
-io_display<3>|    7.082(R)|clock_BUFGP       |   0.000|
+io_display<0>|    7.084(R)|clock_BUFGP       |   0.000|
+io_display<1>|    7.978(R)|clock_BUFGP       |   0.000|
+io_display<2>|    7.701(R)|clock_BUFGP       |   0.000|
+io_display<3>|    7.419(R)|clock_BUFGP       |   0.000|
 io_display<4>|    7.673(R)|clock_BUFGP       |   0.000|
 io_display<5>|    7.877(R)|clock_BUFGP       |   0.000|
-io_display<6>|    7.084(R)|clock_BUFGP       |   0.000|
+io_display<6>|    7.066(R)|clock_BUFGP       |   0.000|
 -------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clock
@@ -69,11 +69,11 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    8.313|    3.760|    3.987|         |
+clock          |    7.831|    3.822|    3.853|         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Mar 03 21:26:57 2014 
+Analysis completed Wed Mar 12 10:20:24 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

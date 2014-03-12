@@ -228,82 +228,192 @@ always @(ControlCode or OpCode or reset)
 			end
 		end
 
-//
-// The next "always" is a sequential (Moore) circuit that controls
-// the output of the datapath over time.  For example,
-// if the controller is about to execute another instruction
-// then it outputs the proper control values to the datapath.
-// Then it will insert bubbles into the datapath until
-// the instruction is completely executed.  This circuit
-// is basically a state machine.  The state register is "state"
-// and a state value 0 means to launch the instruction in IF/ID
-// register into the processor.  Now while in state 0, the
-// controller needs to determine what the instruction is based
-// on the opcode value.  If the opcode = "addi" then it must
-// stall twice.  These stalls are realized by states.
-// If the opcode = "lw" then it may stall in a different
-// way using other states.  The circuit below is implemented
-// for addi
-//
-reg [4:0] state;	// 5-bit state register.  This may be
-					// too many bits but at least we're safe.
 
-always @(posedge clock)  // Update state
-	begin
-	if (reset == 1) state  <= 4; //modified from 0 //Works with state <= 4
-	else
-		case(state)
-			0:	case(OpCode) // update state
-				3:	state <= 1; // execute addi (opcode = 3)
-				0: state <= 1; // R type
-				2: state <= 1; // BEQ
-				5: state <= 1;
-				6: state <= 1;
-				default: state <=0;
-				endcase
-			1:	state <= 2;			// stall 1
-			2:	state <= 3;			// stall 2 //originally state <= 0; // Works with state <= 3
-			3: state <= 0; //originally 0
-			4: state <= 0; //call this the RESET state
-			default: state <= 0;
-		endcase
-	end
-	
-	
+/*
+	I TYPE DESTINATION REGISTER = 9:7
+	R TYPE DESTINATION REGISTER = 6:4
+
+	ADDI READ REGISTER = 12:10
+	RTYPE READ REGISTERS = 12:10, 9:7
+*/
+
+// For this processor only RAW (Read after Write is a Hazard)
 always @(posedge clock)
 	begin
-		if(state == 0) //Only check for hazard/branching when not stalling 
+		if(IDEX[15:3] == 2 || EXMEM[15:3] == 2 || reset == 1)
 		begin
-		
+			ControlCode = 0; // Stall
+		end
+		else
+		begin
+			//III
+			if(IFID[15:3] != 0)
+			begin
+				if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[9:7])
+				begin
+					if(EXMEM[9:7] == 0 && IDEX[9:7] == 0)
+					begin
+						ControlCode = 1; //Don't Stall
+					end
+					else
+					begin
+						ControlCode = 0; //Stall
+					end
+				end
+				else
+				begin
+					ControlCode = 1; // No Stall
+				end
+			end
+			
+			//IIR
+			else if(IFID[15:3] != 0 && IDEX[15:3] != 0 && EXMEM[15:3] == 0)
+			begin
+				if(IFID[12:10] == EXMEM[6:4] || IFID[12:10] == IDEX[9:7])
+				begin
+					if(EXMEM[6:4] == 0 && IDEX[9:7] == 0)
+					begin
+						ControlCode = 1; //Don't Stall
+					end
+					else
+					begin
+						ControlCode = 0; //Stall
+					end
+				end
+				else
+				begin
+					ControlCode = 1;
+				end
+			end
+			
+			
+			//IRI
+			else if(IFID[15:3] != 0 && IDEX[15:3] == 0 && EXMEM[15:3] != 0)
+			begin
+				if(IFID[12:10] == EXMEM[9:7] || IFID[12:10] == IDEX[6:4])
+				begin
+					if(EXMEM[9:7] == 0 && IDEX[6:4] == 0)
+					begin
+						ControlCode = 1; //Don't Stall
+					end
+					else
+					begin
+						ControlCode = 0; //Stall
+					end
+				end
+				else
+				begin
+					ControlCode = 1;
+				end
+			end
+			
+			//IRR
+			else if(IFID[15:3] != 0 && IDEX[15:3] == 0 && EXMEM[15:3] == 0)
+			begin
+				if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[6:4])
+				begin
+					if(EXMEM[6:4] == 0 && IDEX[6:4] == 0)
+					begin
+						ControlCode = 1; //Don't Stall
+					end
+					else
+					begin
+						ControlCode = 0; //Stall
+					end
+				end
+				else
+				begin
+					ControlCode = 1;
+				end
+			end
+			
+			//RII
+			else if(IFID[15:3] == 0 && IDEX[15:3] != 0 && EXMEM[15:3] != 0)
+			begin
+				if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[9:7] ||
+				IFID[9:7] == IDEX[9:7] || IFID[9:7] == EXMEM[9:7])
+				begin
+					if(EXMEM[6:4] == 0 && IDEX[9:7] == 0)
+					begin
+						ControlCode = 1; //Don't Stall
+					end
+					else
+					begin
+						ControlCode = 0; //Stall
+					end
+				end
+				else
+				begin
+					ControlCode = 1;
+				end
+			end
+			
+			//RIR
+			else if(IFID[15:3] == 0 && IDEX[15:3] != 0 && EXMEM[15:3] == 0)
+			begin
+				if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[6:4] ||
+				IFID[9:7] == IDEX[9:7] || IFID[9:7] == EXMEM[6:4])
+				begin
+					if(EXMEM[6:4] == 0 && IDEX[9:7] == 0)
+					begin
+						ControlCode = 1; //Don't Stall
+					end
+					else
+					begin
+						ControlCode = 0; //Stall
+					end
+				end
+				else
+				begin
+					ControlCode = 1;
+				end
+			end
+			
+			//RRI
+			else if(IFID[15:3] == 0 && IDEX[15:3] == 0 && EXMEM[15:3] != 0)
+			begin
+				if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[9:7] ||
+				IFID[9:7] == IDEX[6:4] || IFID[9:7] == EXMEM[9:7])
+				begin
+					if(EXMEM[9:7] == 0 && IDEX[6:4] == 0)
+					begin
+						ControlCode = 1; //Don't Stall
+					end
+					else
+					begin
+						ControlCode = 0; //Stall
+					end
+				end
+				else
+				begin
+					ControlCode = 1;
+				end
+			end
+			
+			//RRR
+			else if(IFID[15:3] == 0 && IDEX[15:3] == 0 && EXMEM[15:3] == 0)
+			begin
+				if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[6:4] ||
+				IFID[9:7] == IDEX[6:4] || IFID[9:7] == EXMEM[6:4])
+				begin
+				begin
+					if(EXMEM[6:4] == 0 && IDEX[6:4] == 0)
+					begin
+						ControlCode = 1; //Don't Stall
+					end
+					else
+					begin
+						ControlCode = 0; //Stall
+					end
+				end
+				end
+				else
+				begin
+					ControlCode = 1;
+				end
+			end
+
 		end
 	end
 
-/* ---------------------------- ORIGINAL STATE CODE
-	begin
-	if (reset == 1) state  <= 4; //modified from 0 //Works with state <= 4
-	else
-		case(state)
-			0:	case(OpCode) // update state
-				3:	state <= 1; // execute addi (opcode = 3)
-				0: state <= 1; // R type
-				2: state <= 1; // BEQ
-				5: state <= 1;
-				6: state <= 1;
-				default: state <=0;
-				endcase
-			1:	state <= 2;			// stall 1
-			2:	state <= 3;			// stall 2 //originally state <= 0; // Works with state <= 3
-			3: state <= 0; //originally 0
-			4: state <= 0; //call this the RESET state
-			default: state <= 0;
-		endcase
-	end
-	
-	*/
-always @(state) // Output of this sequential circuit, ControlCode
-	case(state)
-		0: ControlCode = 1; // Launch instruction if state = 0;
-		default: ControlCode = 0; // Stall PC and insert bubbles for other states
-	endcase
-	
 endmodule

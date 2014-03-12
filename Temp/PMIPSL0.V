@@ -9,7 +9,8 @@ module PMIPSL0(
 	imemrdata,	// Instruction memory read data
 	dmemrdata,	// Data memory read data
 	reset,		// Reset
-	debug
+	debug,
+	stall
 	);
 
 /* Outputs */
@@ -19,7 +20,7 @@ output [15:0] dmemwdata; // Data Memory Data; reading data
 output [15:0] aluresult; // Debug Output	
 output dmemwrite;	// write 2 memory enable
 output dmemread;	// read memory enable
-
+output stall;
 
 //output probe15; //aluzero
 
@@ -70,6 +71,7 @@ wire Branch;
 wire MemWrite;
 wire MemRead;
 wire MemtoReg;
+wire [2:0]RegWriteLoc;
 
 //----------------------------------------------
 //Variables in the ID/EX pipeline register
@@ -104,19 +106,25 @@ reg [15:0] EXMEMRegRead2;
 reg [15:0] EXMEMPCPlus2;
 reg [15:0] EXMEMInstr; // instruction
 reg [2:0] EXMEMWriteAddr;
+reg [2:0] EXMEMRegfield2;
+reg [2:0] EXMEMRegfield3;
 reg EXMEMMemtoReg;
 reg EXMEMMemRead;
 reg EXMEMMemWrite;
 reg EXMEMRegWrite;
 reg EXMEMBranch;
 reg EXMEMALUZero;
+reg EXMEMRegDst;
 
 // MEM/WB Memory Write Back stage
 reg [15:0] MEMWBMemReadData;
 reg [15:0] MEMWBALUOut;
 reg [2:0] MEMWBWriteAddr;
+reg [2:0] MEMWBRegfield2;
+reg [2:0] MEMWBRegfield3;
 reg MEMWBRegWrite;
 reg MEMWBMemtoReg;
+reg MEMWBRegDst;
 
 /* ----------END Buffer Stages----------------*/
 
@@ -148,26 +156,8 @@ assign probe21 = EXMEMBranch;
 assign probe22 = EXMEMPCPlus2;
 assign probe23 = PC;
 assign probe24 = IFIDInstr;
+assign stall = PCStall;
 
-wire [15:0] regf0;
-wire [15:0] regf1;
-wire [15:0] regf2;
-wire [15:0] regf3;
-wire [15:0] regf4;
-wire [15:0] regf5;
-wire [15:0] regf6;
-wire [15:0] regf7;
-
-assign reg0 = regf0;
-assign reg1 = regf1;
-assign reg2 = regf2;
-assign reg3 = regf3;
-assign reg4 = regf4;
-assign reg5 = regf5;
-assign reg6 = regf6;
-assign reg7 = regf7;
-
-wire ccode;
 //------------------------------------------------
 
 wire [15:0] PCMUXOut;
@@ -175,7 +165,6 @@ wire [15:0] PCMUXOut;
 //------------------ IF Stage and PC logic --------------------
 
 assign PCPlus2 = PC + 2; // This is the adder circuit near the PC
-
 
 MUX_PC PC_MUX(
 	PCMUXOut,
@@ -226,7 +215,7 @@ assign negclock = ~clock;  // Reg file is synchronized to pos clock edge, so we 
 	rdata2,	// read data output 2
 	negclock,		// use negative clock edge
 	wdata,			// write data input
-	MEMWBWriteAddr,			// write address
+	RegWriteLoc,			// write address
 	IFIDRegfield1,	// read address 1
 	IFIDRegfield2,	// read address 2
 	MEMWBRegWrite	// write enable
@@ -234,7 +223,7 @@ assign negclock = ~clock;  // Reg file is synchronized to pos clock edge, so we 
 
 assign IFIDSignExt = {{9{IFIDInstr[6]}},IFIDInstr[6:0]};
 
-Control cntrol1(
+Control1 cntrol1(
 	PCStall,				
 	RegWrite,
 	RegDst,
@@ -257,23 +246,23 @@ Control cntrol1(
 
 always @(posedge clock)
 	begin
-		if(Stall == 1)
+		if(PCStall == 1)
 			begin
-				IDEXPCPlus2 <= 0'b0000000000000000; //Insert a blank instruction for "bubble"
-				IDEXRegRead1 <= 0'b0000000000000000;
-				IDEXRegRead2 <= 0'b0000000000000000;
-				IDEXInstr <= 0'b0000000000000000; // I probably don't need the instruction but just in case
-				IDEXRegfield2 <= 0'b000;
-				IDEXRegfield3 <= 0'b000;
-				IDEXSignExtend <= 0'b0000000000000000;
-				IDEXALUSrc <= 0'b0;
-				IDEXALUOp <= 0'b00;
-				IDEXRegDst <= 0'b0;
-				IDEXRegWrite <= 0'b0;
-				IDEXMemRead <= 0'b0;
-				IDEXMemWrite <= 0'b0;
-				IDEXMemtoReg <= 0'b0;
-				IDEXBranch <= 0'b0;
+				IDEXPCPlus2 <= 16'b0000000000000000; //Insert a blank instruction for "bubble"
+				IDEXRegRead1 <= 16'b0000000000000000;
+				IDEXRegRead2 <= 16'b0000000000000000;
+				IDEXInstr <= 16'b0000000000000000; // I probably don't need the instruction but just in case
+				IDEXRegfield2 <= 3'b000;
+				IDEXRegfield3 <= 3'b000;
+				IDEXSignExtend <= 16'b0000000000000000;
+				IDEXALUSrc <= 1'b0;
+				IDEXALUOp <= 2'b00;
+				IDEXRegDst <= 1'b0;
+				IDEXRegWrite <= 1'b0;
+				IDEXMemRead <= 1'b0;
+				IDEXMemWrite <= 1'b0;
+				IDEXMemtoReg <= 1'b0;
+				IDEXBranch <= 1'b0;
 			end
 		else
 			begin
@@ -298,10 +287,10 @@ always @(posedge clock)
 //----------------------------- EXMEM Stage --------------------------------
 
 MUX2_3bit RegDstMux(
-	EXWriteAddr,		// 3-bit Write Address
-	IDEXRegfield2,	   // $rt
-	IDEXRegfield3,	   // $rd
-	IDEXRegDst			// RegDst Mux 0:$rt, 1:$rd
+	RegWriteLoc,		// 3-bit Write Address
+	MEMWBRegfield2,	   // $rt
+	MEMWBRegfield3,	   // $rd
+	MEMWBRegDst			// RegDst Mux 0:$rt, 1:$rd
 	);
 
 MUX2 alumux( // ALU multiplexer
@@ -332,7 +321,7 @@ assign EXBranchAddr = (IDEXSignExtend << 1) + IDEXPCPlus2; //Branch Address
 
 always @(posedge clock)
  	begin
-	EXMEMInstr <= IDEXInstru;
+	EXMEMInstr <= IDEXInstr;
 	EXMEMALUOut <= aluout1;
 	EXMEMALUZero <= aluzero;
 	EXMEMMemtoReg <= IDEXMemtoReg;
@@ -343,6 +332,10 @@ always @(posedge clock)
 	EXMEMRegRead2 <= IDEXRegRead2;
 	EXMEMWriteAddr <= EXWriteAddr;
 	EXMEMPCPlus2 <= EXBranchAddr;
+	EXMEMRegDst <= IDEXRegDst;
+	EXMEMRegfield2 <= IDEXRegfield2;
+	EXMEMRegfield3 <= IDEXRegfield3;
+	
 	end
 
 //---------------------------- MEM Stage -------------------------------
@@ -361,6 +354,9 @@ always @(posedge clock)
 	MEMWBWriteAddr <= EXMEMWriteAddr;
 	MEMWBMemtoReg <= EXMEMMemtoReg;
 	MEMWBRegWrite <= EXMEMRegWrite;
+	MEMWBRegDst <= EXMEMRegDst;
+	MEMWBRegfield2 <= EXMEMRegfield2;
+	MEMWBRegfield3 <= EXMEMRegfield3;
 	end
 
 //----------------------- WB Stage -----------------------------------

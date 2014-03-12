@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Mon Mar 03 21:26:45 2014">
+  <application stringID="par" timeStamp="Wed Mar 12 10:20:11 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Xilinx\14.6\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.6\ISE_DS\ISE\\bin\nt64;D:\Xilinx\14.6\ISE_DS\ISE\bin\nt64;D:\Xilinx\14.6\ISE_DS\ISE\lib\nt64;D:\Xilinx\14.6\ISE_DS\ISE\..\..\..\DocNav;D:\Xilinx\14.6\ISE_DS\PlanAhead\bin;D:\Xilinx\14.6\ISE_DS\EDK\bin\nt64;D:\Xilinx\14.6\ISE_DS\EDK\lib\nt64;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\arm\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Xilinx\14.6\ISE_DS\common\bin\nt64;D:\Xilinx\14.6\ISE_DS\common\lib\nt64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Live\Shared;D:\NodeJS\;D:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\fet\bin;D:\OrCAD\OrCAD_16.6_Lite\OpenAccess\bin\win32\opt;D:\OrCAD\OrCAD_16.6_Lite\tools\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\Capture;D:\OrCAD\OrCAD_16.6_Lite\tools\PSpice;C:\Users\supah_000\AppData\Roaming\npm"/>
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="D:\Xilinx\14.6\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.6\ISE_DS\ISE\\bin\nt64;D:\Xilinx\14.6\ISE_DS\ISE\bin\nt64;D:\Xilinx\14.6\ISE_DS\ISE\lib\nt64;D:\Xilinx\14.6\ISE_DS\ISE\..\..\..\DocNav;D:\Xilinx\14.6\ISE_DS\PlanAhead\bin;D:\Xilinx\14.6\ISE_DS\EDK\bin\nt64;D:\Xilinx\14.6\ISE_DS\EDK\lib\nt64;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\arm\nt\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Xilinx\14.6\ISE_DS\common\bin\nt64;D:\Xilinx\14.6\ISE_DS\common\lib\nt64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Live\Shared;D:\NodeJS\;C:\Program Files\MATLAB\R2013a\runtime\win64;C:\Program Files\MATLAB\R2013a\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\fet\bin;D:\OrCAD\OrCAD_16.6_Lite\OpenAccess\bin\win32\opt;D:\OrCAD\OrCAD_16.6_Lite\tools\bin;D:\OrCAD\OrCAD_16.6_Lite\tools\Capture;D:\OrCAD\OrCAD_16.6_Lite\tools\PSpice;C:\Users\supah_000\AppData\Roaming\npm"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -63,17 +63,17 @@
     </task>
     <task stringID="PAR_DEVICE_UTILIZATION">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item AVAILABLE="2448" dataType="int" stringID="PAR_SLICES" value="196"></item>
+        <item AVAILABLE="2448" dataType="int" stringID="PAR_SLICES" value="226"></item>
       </section>
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="10 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="11 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="10 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="10 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="10 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="11 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="11 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -92,9 +92,9 @@
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y11"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="145.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.046000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.115000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="149.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.045000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.114000"/>
           </row>
         </table>
       </section>

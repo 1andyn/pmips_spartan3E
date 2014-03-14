@@ -21,306 +21,306 @@ ALU[result]
 
 Signals[clock,reset,time]
 Finished circuit initialization process.
-IO[xxxxxxx,1,0] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], Debug:[xxxxxxxxxxxxxxxx], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,3], Debug:[0110000100000011], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,4], Debug:[0110000100000011], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,5], Debug:[0110000100000011], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,6], Debug:[0110000100000011], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    2,0000000001000011] DMEM[    3,    0,    x] ALU[    0] Signals[1,0,7], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    2,0000000001000011] DMEM[    3,    0,    x] ALU[    0] Signals[0,0,8], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,9], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,10], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,11], Debug:[0000000001000011], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,12], Debug:[0000000001000011], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,13], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,14], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,15], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,16], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,17], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,18], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,19], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,20], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,21], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,22], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    3,    0,    0] ALU[    0] Signals[1,0,23], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    3,    0,    0] ALU[    0] Signals[0,0,24], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,25], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,26], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,27], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,28], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    5] Signals[1,0,29], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    5] Signals[0,0,30], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    5,    0,    0] ALU[    0] Signals[1,0,31], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    5,    0,    0] ALU[    0] Signals[0,0,32], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,33], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,34], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,35], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,36], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    2] Signals[1,0,37], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    2] Signals[0,0,38], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    2,    0,    3] ALU[    0] Signals[1,0,39], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    2,    0,    3] ALU[    0] Signals[0,0,40], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,41], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,42], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,43], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,44], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,1,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,45], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,46], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,47], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,48], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,49], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,50], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,51], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,52], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    2] Signals[1,0,53], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    2] Signals[0,0,54], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    2,    0,    0] ALU[    0] Signals[1,0,55], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    2,    0,    0] ALU[    0] Signals[0,0,56], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,57], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,58], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,59], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,60], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   10] Signals[1,0,61], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   10] Signals[0,0,62], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[   10,    0,    5] ALU[    0] Signals[1,0,63], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[   10,    0,    5] ALU[    0] Signals[0,0,64], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,65], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,66], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,67], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,68], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    1] Signals[1,0,69], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    1] Signals[0,0,70], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    1,    0,    2] ALU[    0] Signals[1,0,71], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    1,    0,    2] ALU[    0] Signals[0,0,72], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,73], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,74], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,75], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,76], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,1,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,77], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,78], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,79], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,80], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,81], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,82], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,83], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,84], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    1] Signals[1,0,85], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    1] Signals[0,0,86], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    1,    0,    0] ALU[    0] Signals[1,0,87], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    1,    0,    0] ALU[    0] Signals[0,0,88], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,89], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,90], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,91], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,92], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   15] Signals[1,0,93], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   15] Signals[0,0,94], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[   15,    0,   10] ALU[    0] Signals[1,0,95], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[   15,    0,   10] ALU[    0] Signals[0,0,96], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,97], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,98], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,99], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,1,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,100], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,1,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,101], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,102], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    1] ALU[    0] Signals[1,0,103], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    1] ALU[    0] Signals[0,0,104], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,105], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,106], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,107], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,108], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,109], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,110], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,111], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,112], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,113], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,114], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,115], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,116], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,117], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,118], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,119], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,120], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,121], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,122], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,123], Debug:[0110000100000011], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,124], Debug:[0110000100000011], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,125], Debug:[0110000100000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,126], Debug:[0110000100000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    3,    0,    0] ALU[    0] Signals[1,0,127], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    3,    0,    0] ALU[    0] Signals[0,0,128], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,129], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,130], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,131], Debug:[0000000001000011], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,132], Debug:[0000000001000011], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,133], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,134], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,135], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,136], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,137], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,138], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,139], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,140], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,141], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,142], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    3,    0,    0] ALU[    0] Signals[1,0,143], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    3,    0,    0] ALU[    0] Signals[0,0,144], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,145], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,146], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,147], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,148], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    5] Signals[1,0,149], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    5] Signals[0,0,150], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    5,    0,    0] ALU[    0] Signals[1,0,151], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    5,    0,    0] ALU[    0] Signals[0,0,152], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,153], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,154], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,155], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,156], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    2] Signals[1,0,157], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    2] Signals[0,0,158], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    2,    0,    3] ALU[    0] Signals[1,0,159], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    2,    0,    3] ALU[    0] Signals[0,0,160], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,161], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,162], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,163], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,164], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,165], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,166], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,167], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,168], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,169], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,170], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,171], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,172], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    2] Signals[1,0,173], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    2] Signals[0,0,174], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    2,    0,    0] ALU[    0] Signals[1,0,175], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    2,    0,    0] ALU[    0] Signals[0,0,176], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,177], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,178], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,179], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,180], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   10] Signals[1,0,181], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   10] Signals[0,0,182], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[   10,    0,    5] ALU[    0] Signals[1,0,183], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[   10,    0,    5] ALU[    0] Signals[0,0,184], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,185], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,186], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,187], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,188], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    1] Signals[1,0,189], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    1] Signals[0,0,190], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    1,    0,    2] ALU[    0] Signals[1,0,191], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    1,    0,    2] ALU[    0] Signals[0,0,192], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,193], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,194], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,195], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,196], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,197], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,198], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,199], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,200], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,201], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,202], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,203], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,204], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    1] Signals[1,0,205], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    1] Signals[0,0,206], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    1,    0,    0] ALU[    0] Signals[1,0,207], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    1,    0,    0] ALU[    0] Signals[0,0,208], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,209], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,210], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,211], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,212], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   15] Signals[1,0,213], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   15] Signals[0,0,214], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[   15,    0,   10] ALU[    0] Signals[1,0,215], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[   15,    0,   10] ALU[    0] Signals[0,0,216], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,217], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,218], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,219], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,220], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,221], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,222], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    1] ALU[    0] Signals[1,0,223], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    1] ALU[    0] Signals[0,0,224], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,225], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,226], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,227], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,228], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,229], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,230], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,231], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,232], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,233], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,234], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,235], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,236], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,237], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,238], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,239], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,240], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,241], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,242], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,243], Debug:[0110000100000011], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,244], Debug:[0110000100000011], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,245], Debug:[0110000100000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,246], Debug:[0110000100000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    3,    0,    0] ALU[    0] Signals[1,0,247], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    3,    0,    0] ALU[    0] Signals[0,0,248], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,249], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,250], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,251], Debug:[0000000001000011], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    2,0000000001000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,252], Debug:[0000000001000011], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,253], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,254], Debug:[0000000001000011], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,255], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,256], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,257], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,258], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,259], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,260], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,261], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,262], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    3,    0,    0] ALU[    0] Signals[1,0,263], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    3,    0,    0] ALU[    0] Signals[0,0,264], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,265], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,266], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,267], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,268], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    5] Signals[1,0,269], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    5] Signals[0,0,270], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    5,    0,    0] ALU[    0] Signals[1,0,271], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    5,    0,    0] ALU[    0] Signals[0,0,272], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,273], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,274], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,275], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,276], Debug:[0110100101111111], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    2] Signals[1,0,277], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    2] Signals[0,0,278], Debug:[0110100101111111], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    2,    0,    3] ALU[    0] Signals[1,0,279], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    2,    0,    3] ALU[    0] Signals[0,0,280], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,281], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,282], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,283], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   10,0100000001111100] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,284], Debug:[0100000001111100], Stall: 0
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,285], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,286], Debug:[0100000001111100], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,287], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[   12,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,288], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,289], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,290], Debug:[0000000000000000], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,291], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    4,0100100001111101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,292], Debug:[0100100001111101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    2] Signals[1,0,293], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    2] Signals[0,0,294], Debug:[0100100001111101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    2,    0,    0] ALU[    0] Signals[1,0,295], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    2,    0,    0] ALU[    0] Signals[0,0,296], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,297], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,298], Debug:[0111001000000101], Stall: 1
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,299], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    6,0111001000000101] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,300], Debug:[0111001000000101], Stall: 0
-IO[xxxxxxx,0,0] IMEM[    8,0110100101111111] DMEM[    0,    0,    0] ALU[   10] Signals[1,0,301], Debug:[0111001000000101], Stall: 1
+IO[xxxxxxx,1,0] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], Debug:[xxxxxxxxxxxxxxxx], PCSrc: x, AluZ:x, EXMEMBranch: x, OPCode:xxx
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], Debug:[0000000000000000], PCSrc: x, AluZ:x, EXMEMBranch: x, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], Debug:[0000000000000000], PCSrc: x, AluZ:x, EXMEMBranch: x, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,3], Debug:[0110000100000011], PCSrc: 0, AluZ:x, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,4], Debug:[0110000100000011], PCSrc: 0, AluZ:x, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    4,1101010100100010] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,5], Debug:[0110001010100000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    4,1101010100100010] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,6], Debug:[0110001010100000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[    8,0111001000000101] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[    8,0111001000000101] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   10,1101011000100010] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   10,1101011000100010] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   12,1011011000100010] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,13], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[   12,1011011000100010] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,14], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,15], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,16], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,17], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,18], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    0] ALU[    x] Signals[1,0,19], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,1,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    0] ALU[    x] Signals[0,0,20], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,1,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,21], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,22], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,23], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,24], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,25], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,26], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,27], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,28], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,29], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,30], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,31], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,32], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,33], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,34], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,35], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,36], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,37], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,38], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,39], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,40], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,41], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,42], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,43], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,44], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,45], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,1,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,46], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,1,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,47], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,48], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,49], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,50], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,51], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,52], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,53], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,54], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,55], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,56], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,57], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,58], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,59], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,60], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,61], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,62], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,63], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,64], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,65], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,66], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,67], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,68], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,69], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,70], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,71], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,1,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,72], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,1,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,73], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,74], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,75], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,76], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,77], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,78], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,79], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,80], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,81], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,82], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,83], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,84], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,85], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,86], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,87], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,88], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,89], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,90], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,91], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,92], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,1,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,93], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,94], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,1,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,95], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,96], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,1,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,97], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,1,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,98], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,1,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,99], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,100], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,1,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,101], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,102], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,103], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,104], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,105], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,106], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,107], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,108], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,109], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,110], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,111], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,112], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,113], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,114], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,115], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,116], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,117], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,118], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,119], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,120], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,121], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,122], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,123], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,124], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,125], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,126], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,127], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,128], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,129], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,130], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,131], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,132], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,133], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,134], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,135], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,136], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,137], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,138], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,139], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,140], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,141], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,142], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,143], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,144], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,145], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,146], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,147], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,148], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,149], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,150], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,151], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,152], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,153], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,154], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,155], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,156], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,157], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,158], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,159], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,160], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,161], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,162], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,163], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,164], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,165], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,166], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,167], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,168], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,169], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,170], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,171], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,172], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,173], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,174], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,175], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,176], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,177], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,178], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,179], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,180], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,181], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,182], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,183], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,184], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,185], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,186], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,187], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,188], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,189], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,190], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,191], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,192], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,193], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,194], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,195], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,196], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,197], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,198], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,199], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,200], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,201], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,202], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,203], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,204], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,205], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,206], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,207], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,208], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,209], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,210], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,211], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,212], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,213], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,214], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,215], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,216], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,217], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,218], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,219], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,220], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,221], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,222], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,223], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,224], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,225], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,226], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,227], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,228], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,229], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,230], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,231], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,232], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,233], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,234], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,235], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,236], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,237], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,238], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,239], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,240], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,241], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,242], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,243], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,244], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,245], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,246], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,247], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,248], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,249], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,250], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,251], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,252], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,253], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,254], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,255], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,256], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,257], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,258], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,259], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,260], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,261], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,262], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,263], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,264], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,265], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,266], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,267], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,268], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,269], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,270], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,271], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,272], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,273], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,274], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,275], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,276], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,277], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,278], Debug:[0111001000000010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[1,0,279], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   18,0000000000000000] DMEM[   66,    x,    3] ALU[    x] Signals[0,0,280], Debug:[0100000001110111], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:010
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[1,0,281], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   20,0000000000000000] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,282], Debug:[0000000000000000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,283], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[   22,0000000000000000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,284], Debug:[0000000000000000], PCSrc: 1, AluZ:1, EXMEMBranch: 1, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,285], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,286], Debug:[0000000000000000], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:000
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,287], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    0,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,288], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,289], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,290], Debug:[0110000100000011], PCSrc: 0, AluZ:1, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[1,0,291], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    4,1101010100100010] DMEM[    3,    0,    3] ALU[    3] Signals[0,0,292], Debug:[0110001010100000], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[1,0,293], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    6,1011011000100010] DMEM[    3,    0,    3] ALU[   32] Signals[0,0,294], Debug:[1101010100100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[1,0,295], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[    8,0111001000000101] DMEM[   32,    0,   32] ALU[   66] Signals[0,0,296], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[1,0,297], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   10,1101011000100010] DMEM[   66,    0,    3] ALU[   66] Signals[0,0,298], Debug:[0111001000000101], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:011
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[1,0,299], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   12,1011011000100010] DMEM[   66,    3,    x] ALU[    x] Signals[0,0,300], Debug:[1101011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:110
+IO[xxxxxxx,0,0] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,301], Debug:[1011011000100010], PCSrc: 0, AluZ:0, EXMEMBranch: 0, OPCode:101
 Stopped at time : 302 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54

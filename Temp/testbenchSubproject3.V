@@ -25,7 +25,7 @@ wire stall;
 reg io_sw0;
 reg io_sw1;
 wire [6:0] io_display;
-
+wire [2:0] debug4;
 
 reg  clock;
 reg  reset;		// Reset
@@ -56,7 +56,7 @@ initial
 
 
 initial
-	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], Debug:[%b], Stall: %b",
+	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], Debug:[%b], PCSrc: %b, AluZ:%b, EXMEMBranch: %b, OPCode:%b",
 		io_display,
 		io_sw0,
 		io_sw1,
@@ -74,7 +74,10 @@ initial
 		reset,
 		$time,
 		debug,
-		stall
+		stall,
+		debug2,
+		debug3,
+		debug4
 		);
 
 
@@ -93,12 +96,15 @@ PMIPSL0 comp(
 	dmemrdata,	// Data memory read data
 	reset,		// Reset
 	debug,
-	stall
+	stall,
+	debug2,
+	debug3,
+	debug4
 	);
 
 // Instantiation of Instruction Memory (program)
 
-IM  instrmem(imemrdata,imemaddr);
+IM2  instrmem(imemrdata,imemaddr);
 
 
 // Instantiation of Data Memory

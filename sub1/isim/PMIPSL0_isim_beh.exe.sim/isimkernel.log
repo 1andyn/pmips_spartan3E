@@ -1,0 +1,28 @@
+Command line:
+   PMIPSL0_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  4254
+
+Fri Mar 14 00:49:24 2014
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 519.631 Meg
+
+ Total Signals          : 86
+ Total Nets             : 480
+ Total Signal Drivers   : 61
+ Total Blocks           : 10
+ Total Primitive Blocks : 9
+ Total Processes        : 83
+ Total Traceable Variables  : 83
+ Total Scalar Nets and Variables : 1124
+
+ Total Simulation Time: 0.03125 sec
+
+ Current Memory Usage: 519.631 Meg
+
+Fri Mar 14 00:49:28 2014
+

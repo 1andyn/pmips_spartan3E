@@ -98,8 +98,6 @@ input [15:0] IFID;
 input [15:0] IDEX;
 input [15:0] EXMEM;	
 
-//assign controlcodedebug = ControlCode;
-
 reg PCStall;
 reg RegWrite;
 reg RegDst;
@@ -109,7 +107,13 @@ reg Branch;
 reg MemWrite;
 reg MemRead;
 reg MemtoReg;
-reg Hazard;
+reg NoStall;
+
+always @(NoStall)
+	begin
+	if(NoStall == 1) PCStall = 0;
+	else PCStall = 1;
+	end
 
 // The next always is basically a combinational circuit that
 // drives the output of the controller which controls the
@@ -127,105 +131,78 @@ reg Hazard;
 // has the control for the "addi" instruction, but that's it.
 // Thus, the circuit is incomplete.  Complete it to implement
 // your project.
-	
-reg [1:0] ControlCode;	// This is a 2 bit value that controls
-						// the output of the Controller.  The following
-						// always is a combinational circuit with
-						// the following conversion
-						//
-						// Input   Output
-						// 0       Stall
-						// 1       Use opcode to determine datapath control
-						// 
-						// ControlCode is the output of a sequential 
-						// circuit which is defined later in this file
 
-always @(ControlCode or OpCode or reset)
+always @(OpCode or reset)
 	begin
-	if (ControlCode == 0) // Bubble and PC stall
-		begin
-			PCStall = 1;
-			RegWrite = 0;
-			RegDst = 0;
-			ALUSrc = 0;
-			ALUOp = 0;
-			Branch = 0;
-			MemWrite = 0;
-			MemRead = 0;
-			MemtoReg = 0;
-		end
-	else
-		begin
-			case(OpCode)
-				0: begin // opcode for R-type 
-					PCStall = 0;
-					RegWrite = 1; // 2nd register field
-					RegDst = 1;
-					ALUSrc = 0;
-					ALUOp = 2; // R-type
-					Branch = 0;
-					MemWrite = 0; //No Access to Memory
-					MemRead = 0;
-					MemtoReg = 0;
-					end
-				2: begin // opcode for BEQ
-					PCStall = 0;
-					RegWrite = 0;
-					RegDst = 0; // Doesnt matter
-					ALUSrc = 0;
-					ALUOp = 1; 
-					Branch = 1;
-					MemWrite = 0;
-					MemRead = 0;
-					MemtoReg = 0; // Doesn't matter
-					end
-				3:	begin // opcode for addi is 3
-					PCStall = 0;
-					RegWrite = 1;
-					RegDst = 0;   // 2nd register field
-					ALUSrc = 1;   // Use sign extended constant
-					ALUOp = 0;    // Add
-					Branch = 0; 
-					MemWrite = 0; // No access to memory
-					MemRead = 0; //doesnt matter
-					MemtoReg = 0; // Write reg file from ALU
-					end
-				5: begin   // opcode for load
-					PCStall = 0;
-					RegWrite = 1;
-					RegDst = 0;   
-					ALUSrc = 1;   
-					ALUOp = 0;    
-					Branch = 0; 
-					MemWrite = 0; 
-					MemRead = 1; 
-					MemtoReg = 1;
-					end
-				6: begin   // opcode for store
-					PCStall = 0;
-					RegWrite = 0;
-					RegDst = 0;   // 2nd register field
-					ALUSrc = 1;   // Use sign extended constant
-					ALUOp = 0;    // Add
-					Branch = 0; 
-					MemWrite = 1; // No access to memory
-					MemRead = 0; //doesnt matter
-					MemtoReg = 0; // Write reg file from ALU
-					end
-				default:
-					begin
-					PCStall = 0;
-					RegWrite = 0;
-					RegDst = 0;
-					ALUSrc = 0;
-					ALUOp = 0;
-					Branch = 0;
-					MemWrite = 0;
-					MemRead = 0;
-					MemtoReg = 0;
-					end
-				endcase
-			end
+		case(OpCode)
+			0: begin // opcode for R-type 
+				PCStall = 0;
+				RegWrite = 1; // 2nd register field
+				RegDst = 1;
+				ALUSrc = 0;
+				ALUOp = 2; // R-type
+				Branch = 0;
+				MemWrite = 0; //No Access to Memory
+				MemRead = 0;
+				MemtoReg = 0;
+				end
+			2: begin // opcode for BEQ
+				PCStall = 0;
+				RegWrite = 0;
+				RegDst = 0; // Doesnt matter
+				ALUSrc = 0;
+				ALUOp = 1; 
+				Branch = 1;
+				MemWrite = 0;
+				MemRead = 0;
+				MemtoReg = 0; // Doesn't matter
+				end
+			3:	begin // opcode for addi is 3
+				PCStall = 0;
+				RegWrite = 1;
+				RegDst = 0;   // 2nd register field
+				ALUSrc = 1;   // Use sign extended constant
+				ALUOp = 0;    // Add
+				Branch = 0; 
+				MemWrite = 0; // No access to memory
+				MemRead = 0; //doesnt matter
+				MemtoReg = 0; // Write reg file from ALU
+				end
+			5: begin   // opcode for load
+				PCStall = 0;
+				RegWrite = 1;
+				RegDst = 0;   
+				ALUSrc = 1;   
+				ALUOp = 0;    
+				Branch = 0; 
+				MemWrite = 0; 
+				MemRead = 1; 
+				MemtoReg = 1;
+				end
+			6: begin   // opcode for store
+				PCStall = 0;
+				RegWrite = 0;
+				RegDst = 0;   // 2nd register field
+				ALUSrc = 1;   // Use sign extended constant
+				ALUOp = 0;    // Add
+				Branch = 0; 
+				MemWrite = 1; // No access to memory
+				MemRead = 0; //doesnt matter
+				MemtoReg = 0; // Write reg file from ALU
+				end
+			default:
+				begin
+				PCStall = 0;
+				RegWrite = 0;
+				RegDst = 0;
+				ALUSrc = 0;
+				ALUOp = 0;
+				Branch = 0;
+				MemWrite = 0;
+				MemRead = 0;
+				MemtoReg = 0;
+				end
+			endcase
 		end
 
 
@@ -242,177 +219,163 @@ always @(posedge clock)
 	begin
 		if(IDEX[15:3] == 2 || EXMEM[15:3] == 2 || reset == 1)
 		begin
-			ControlCode = 0; // Stall
+			NoStall = 0; // Stall
 		end
+		
 		else
 		begin
-			//III
-			if(IFID[15:3] != 0)
+			//If both these are bubbles, do NOT STALL
+			if(IDEX[15:0] == 0 && EXMEM[15:0] == 0)
 			begin
-				if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[9:7])
+				NoStall = 1;
+			end
+			//If Only IDEX is a Bubble
+			else if(IDEX[15:0] == 0 && EXMEM[15:0] != 0)
+			//II
+			begin
+				if(IFID[15:13] != 0 && EXMEM[15:13] != 0)
 				begin
-					if(EXMEM[9:7] == 0 && IDEX[9:7] == 0)
+					if(IFID[12:10] == EXMEM[9:7])
 					begin
-						ControlCode = 1; //Don't Stall
+						NoStall = 0; //Stall
 					end
-					else
-					begin
-						ControlCode = 0; //Stall
-					end
+					else NoStall = 1; //No stall
 				end
-				else
+			//IR
+				else if(IFID[15:13] != 0 && EXMEM[15:13] == 0)
 				begin
-					ControlCode = 1; // No Stall
+					if(IFID[12:10] == EXMEM[6:4])
+					begin
+						NoStall = 0; //Stall
+					end
+					else NoStall = 1; //No stall
+				end	
+			//RI
+				else if(IFID[15:13] == 0 && EXMEM[15:13] != 0)
+				begin
+					if(IFID[12:10] == EXMEM[9:7] || IFID[9:7] == EXMEM[9:7])
+					begin
+						NoStall = 0; //Stall
+					end
+					else NoStall = 1; //No stall
+				end	
+			//RR
+				else if(IFID[15:13] == 0 && EXMEM[15:13] == 0)
+				begin
+					if(IFID[12:10] == EXMEM[6:4] || IFID[9:7] == EXMEM[6:4])
+					begin
+						NoStall = 0; //Stall
+					end
+					else NoStall = 1; //No stall
 				end
 			end
 			
-			//IIR
-			else if(IFID[15:3] != 0 && IDEX[15:3] != 0 && EXMEM[15:3] == 0)
+			//Only EXMEM is Bubble
+			else if(IDEX[15:0] != 0 && EXMEM[15:0] == 0)
 			begin
-				if(IFID[12:10] == EXMEM[6:4] || IFID[12:10] == IDEX[9:7])
+				if(IFID[15:13] != 0 && IDEX[15:13] != 0)
 				begin
-					if(EXMEM[6:4] == 0 && IDEX[9:7] == 0)
+					if(IFID[12:10] == IDEX[9:7])
 					begin
-						ControlCode = 1; //Don't Stall
+						NoStall = 0; //Stall
 					end
-					else
-					begin
-						ControlCode = 0; //Stall
-					end
+					else NoStall = 1; //No stall
 				end
-				else
+			//IR
+				else if(IFID[15:13] != 0 && IDEX[15:13] == 0)
 				begin
-					ControlCode = 1;
+					if(IFID[12:10] == IDEX[6:4])
+					begin
+						NoStall = 0; //Stall
+					end
+					else NoStall = 1; //No stall
+				end	
+			//RI
+				else if(IFID[15:13] == 0 && IDEX[15:13] != 0)
+				begin
+					if(IFID[12:10] == IDEX[9:7] || IFID[9:7] == IDEX[9:7])
+					begin
+						NoStall = 0; //Stall
+					end
+					else NoStall = 1; //No stall
+				end	
+			//RR
+				else if(IFID[15:13] == 0 && IDEX[15:13] == 0)
+				begin
+					if(IFID[12:10] == IDEX[6:4] || IFID[9:7] == IDEX[6:4])
+					begin
+						NoStall = 0; //Stall
+					end
+					else NoStall = 1; //No stall
 				end
 			end
 			
+			else
+			begin //BOTH EXMEM AND IDEX ARE NOT BUBBLES
+				
+				//III
+				if(IFID[15:13] != 0 && IDEX[15:13] != 0 && EXMEM[15:13] != 0)
+				begin
+					if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[9:7]) NoStall = 0; //Stall
+					else NoStall = 1; // No Stall
+				end
+				
+				//IIR
+				else if(IFID[15:13] != 0 && IDEX[15:13] != 0 && EXMEM[15:13] == 0)
+				begin
+					if(IFID[12:10] == EXMEM[6:4] || IFID[12:10] == IDEX[9:7]) NoStall = 0; //Stall
+					else NoStall = 1;
+				end
+				
+				//IRI
+				else if(IFID[15:13] != 0 && IDEX[15:13] == 0 && EXMEM[15:13] != 0)
+				begin
+					if(IFID[12:10] == EXMEM[9:7] || IFID[12:10] == IDEX[6:4]) NoStall = 1; //Don't Stall
+					else NoStall = 1;
+				end
+				
+				//IRR
+				else if(IFID[15:13] != 0 && IDEX[15:13] == 0 && EXMEM[15:13] == 0)
+				begin
+					if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[6:4]) NoStall = 0; //Stall
+					else NoStall = 1;
+				end
+				
+				//RII
+				else if(IFID[15:13] == 0 && IDEX[15:13] != 0 && EXMEM[15:13] != 0)
+				begin
+					if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[9:7] ||
+					IFID[9:7] == IDEX[9:7] || IFID[9:7] == EXMEM[9:7]) NoStall = 0; //Stall
+					else NoStall = 1;
+				end
+				
+				//RIR
+				else if(IFID[15:13] == 0 && IDEX[15:13] != 0 && EXMEM[15:13] == 0)
+				begin
+					if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[6:4] ||
+					IFID[9:7] == IDEX[9:7] || IFID[9:7] == EXMEM[6:4]) NoStall = 0; //Stall
+					else NoStall = 1;
+				end
+				
+				//RRI
+				else if(IFID[15:13] == 0 && IDEX[15:13] == 0 && EXMEM[15:13] != 0)
+				begin
+					if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[9:7] ||
+					IFID[9:7] == IDEX[6:4] || IFID[9:7] == EXMEM[9:7]) NoStall = 0; //Stall
+					else NoStall = 1;
+				end
+				
+				//RRR
+				else if(IFID[15:13] == 0 && IDEX[15:13] == 0 && EXMEM[15:13] == 0)
+				begin
+					if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[6:4] ||
+					IFID[9:7] == IDEX[6:4] || IFID[9:7] == EXMEM[6:4]) NoStall = 0; //Stall
+					else NoStall = 1;
+				end
+				
+				else NoStall = 1; //Don't Stall	
+			end	
 			
-			//IRI
-			else if(IFID[15:3] != 0 && IDEX[15:3] == 0 && EXMEM[15:3] != 0)
-			begin
-				if(IFID[12:10] == EXMEM[9:7] || IFID[12:10] == IDEX[6:4])
-				begin
-					if(EXMEM[9:7] == 0 && IDEX[6:4] == 0)
-					begin
-						ControlCode = 1; //Don't Stall
-					end
-					else
-					begin
-						ControlCode = 0; //Stall
-					end
-				end
-				else
-				begin
-					ControlCode = 1;
-				end
-			end
-			
-			//IRR
-			else if(IFID[15:3] != 0 && IDEX[15:3] == 0 && EXMEM[15:3] == 0)
-			begin
-				if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[6:4])
-				begin
-					if(EXMEM[6:4] == 0 && IDEX[6:4] == 0)
-					begin
-						ControlCode = 1; //Don't Stall
-					end
-					else
-					begin
-						ControlCode = 0; //Stall
-					end
-				end
-				else
-				begin
-					ControlCode = 1;
-				end
-			end
-			
-			//RII
-			else if(IFID[15:3] == 0 && IDEX[15:3] != 0 && EXMEM[15:3] != 0)
-			begin
-				if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[9:7] ||
-				IFID[9:7] == IDEX[9:7] || IFID[9:7] == EXMEM[9:7])
-				begin
-					if(EXMEM[6:4] == 0 && IDEX[9:7] == 0)
-					begin
-						ControlCode = 1; //Don't Stall
-					end
-					else
-					begin
-						ControlCode = 0; //Stall
-					end
-				end
-				else
-				begin
-					ControlCode = 1;
-				end
-			end
-			
-			//RIR
-			else if(IFID[15:3] == 0 && IDEX[15:3] != 0 && EXMEM[15:3] == 0)
-			begin
-				if(IFID[12:10] == IDEX[9:7] || IFID[12:10] == EXMEM[6:4] ||
-				IFID[9:7] == IDEX[9:7] || IFID[9:7] == EXMEM[6:4])
-				begin
-					if(EXMEM[6:4] == 0 && IDEX[9:7] == 0)
-					begin
-						ControlCode = 1; //Don't Stall
-					end
-					else
-					begin
-						ControlCode = 0; //Stall
-					end
-				end
-				else
-				begin
-					ControlCode = 1;
-				end
-			end
-			
-			//RRI
-			else if(IFID[15:3] == 0 && IDEX[15:3] == 0 && EXMEM[15:3] != 0)
-			begin
-				if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[9:7] ||
-				IFID[9:7] == IDEX[6:4] || IFID[9:7] == EXMEM[9:7])
-				begin
-					if(EXMEM[9:7] == 0 && IDEX[6:4] == 0)
-					begin
-						ControlCode = 1; //Don't Stall
-					end
-					else
-					begin
-						ControlCode = 0; //Stall
-					end
-				end
-				else
-				begin
-					ControlCode = 1;
-				end
-			end
-			
-			//RRR
-			else if(IFID[15:3] == 0 && IDEX[15:3] == 0 && EXMEM[15:3] == 0)
-			begin
-				if(IFID[12:10] == IDEX[6:4] || IFID[12:10] == EXMEM[6:4] ||
-				IFID[9:7] == IDEX[6:4] || IFID[9:7] == EXMEM[6:4])
-				begin
-				begin
-					if(EXMEM[6:4] == 0 && IDEX[6:4] == 0)
-					begin
-						ControlCode = 1; //Don't Stall
-					end
-					else
-					begin
-						ControlCode = 0; //Stall
-					end
-				end
-				end
-				else
-				begin
-					ControlCode = 1;
-				end
-			end
-
 		end
 	end
 

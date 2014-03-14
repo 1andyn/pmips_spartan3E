@@ -10,7 +10,10 @@ module PMIPSL0(
 	dmemrdata,	// Data memory read data
 	reset,		// Reset
 	debug,
-	stall
+	stall,
+	debug2,
+	debug3,
+	debug4
 	);
 
 /* Outputs */
@@ -21,6 +24,9 @@ output [15:0] aluresult; // Debug Output
 output dmemwrite;	// write 2 memory enable
 output dmemread;	// read memory enable
 output stall;
+output debug2;
+output debug3;
+output [2:0]debug4;
 
 //output probe15; //aluzero
 
@@ -131,32 +137,11 @@ reg MEMWBRegDst;
 //------------------------------------------------
 /* --------------------DEBUG---------------------*/
 
+assign debug4 = IFIDOpcode;
+assign debug2 = EXMEMALUZero;
+assign debug3 = EXMEMBranch;
 assign debug = IFIDInstr;
-assign probe1 = EXMEMALUZero; 
-assign probe2 = IDEXALUOp;
-assign probe3 = ALUSelect;	
-assign probe4 = IDEXInstr[3:0];
-assign probe5 = IDEXRegRead1;
-assign probe6 = IFIDRegfield1;
-assign probe7 = IDEXRegRead2;
-assign probe8 = IFIDRegfield2;
-assign probe9 = IFIDConst;
-assign probe10 = wdata;
-assign probe11 = EXMEMWriteAddr; // MEMWBWriteAddr
-assign probe12 = IFIDInstr; //Original IFIDInstr SignExt
-assign probe13 = MEMWBALUOut;
-assign probe14 = MEMWBRegWrite;
-assign probe15 = IDEXRegRead1;
-assign probe16 = ALUMUXOutput;
-assign probe17 = ALUSrc;
-assign probe18 = ALUMUXOutput;
-assign probe19 = PCSrc;
-assign probe20 = EXMEMALUZero;
-assign probe21 = EXMEMBranch;
-assign probe22 = EXMEMPCPlus2;
-assign probe23 = PC;
-assign probe24 = IFIDInstr;
-assign stall = PCStall;
+assign stall = PCSrc;
 
 //------------------------------------------------
 
@@ -223,7 +208,7 @@ assign negclock = ~clock;  // Reg file is synchronized to pos clock edge, so we 
 
 assign IFIDSignExt = {{9{IFIDInstr[6]}},IFIDInstr[6:0]};
 
-Control1 cntrol1(
+Control cntrol(
 	PCStall,				
 	RegWrite,
 	RegDst,
@@ -263,24 +248,25 @@ always @(posedge clock)
 				IDEXMemWrite <= 1'b0;
 				IDEXMemtoReg <= 1'b0;
 				IDEXBranch <= 1'b0;
+				
 			end
 		else
 			begin
-			IDEXPCPlus2 <= IFIDPCPlus2;
-			IDEXRegRead1 <= rdata1;
-			IDEXRegRead2 <= rdata2;
-			IDEXInstr <= IFIDInstr; // I probably don't need the instruction but just in case
-			IDEXRegfield2 <= IFIDRegfield2;
-			IDEXRegfield3 <= IFIDRegfield3;
-			IDEXSignExtend <= IFIDSignExt;
-			IDEXALUSrc <= ALUSrc;
-			IDEXALUOp <= ALUOp;
-			IDEXRegDst <= RegDst;
-			IDEXRegWrite <= RegWrite;
-			IDEXMemRead <= MemRead;
-			IDEXMemWrite <= MemWrite;
-			IDEXMemtoReg <= MemtoReg;
-			IDEXBranch <= Branch;
+				IDEXPCPlus2 <= IFIDPCPlus2;
+				IDEXRegRead1 <= rdata1;
+				IDEXRegRead2 <= rdata2;
+				IDEXInstr <= IFIDInstr; // I probably don't need the instruction but just in case
+				IDEXRegfield2 <= IFIDRegfield2;
+				IDEXRegfield3 <= IFIDRegfield3;
+				IDEXSignExtend <= IFIDSignExt;
+				IDEXALUSrc <= ALUSrc;
+				IDEXALUOp <= ALUOp;
+				IDEXRegDst <= RegDst;
+				IDEXRegWrite <= RegWrite;
+				IDEXMemRead <= MemRead;
+				IDEXMemWrite <= MemWrite;
+				IDEXMemtoReg <= MemtoReg;
+				IDEXBranch <= Branch;
 			end
 	end
 
@@ -335,11 +321,10 @@ always @(posedge clock)
 	EXMEMRegDst <= IDEXRegDst;
 	EXMEMRegfield2 <= IDEXRegfield2;
 	EXMEMRegfield3 <= IDEXRegfield3;
-	
 	end
 
 //---------------------------- MEM Stage -------------------------------
-assign PCSrc = EXMEMBranch&EXMEMALUZero;
+assign PCSrc = EXMEMBranch & EXMEMALUZero;
 assign dmemaddr = EXMEMALUOut;
 assign dmemwdata = EXMEMRegRead2;
 assign dmemwrite = EXMEMMemWrite;	

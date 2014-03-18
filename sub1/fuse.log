@@ -5,6 +5,8 @@ Turning on mult-threading, number of parallel sub-compilation jobs: 8
 Determining compilation order of HDL files
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/MIPS-Parts.V" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/Control.V" into library work
+Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/new_control.v" into library work
+Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/hazard_ctrl.v" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/PMIPSL0.V" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/IM2.V" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/testbenchSubproject3.V" into library work
@@ -13,7 +15,8 @@ Starting static elaboration
 Completed static elaboration
 Compiling module MUX_PC
 Compiling module RegFile
-Compiling module Control
+Compiling module hazard_ctrl
+Compiling module new_control
 Compiling module MUX2_3bit
 Compiling module MUX2
 Compiling module ALU
@@ -24,9 +27,9 @@ Compiling module DMemory_IO
 Compiling module testbench5
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 3 sub-compilation(s) to finish...
+Waiting for 5 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\testbench5_isim_beh.exe.sim\libPortability.dll".
-Compiled 12 Verilog Units
+Compiled 13 Verilog Units
 Built simulation executable D:/Dropbox/Codespace/PMIPS/sub1/testbench5_isim_beh.exe
-Fuse Memory Usage: 28364 KB
-Fuse CPU Usage: 280 ms
+Fuse Memory Usage: 26972 KB
+Fuse CPU Usage: 327 ms

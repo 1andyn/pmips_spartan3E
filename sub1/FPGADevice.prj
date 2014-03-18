@@ -1,0 +1,5 @@
+verilog work "../Temp/MIPS-Parts.V"
+verilog work "../Temp/Control.V"
+verilog work "../Temp/PMIPSL0.V"
+verilog work "../Temp/IM3.V"
+verilog work "../Temp/SubProject3FPGA.V"

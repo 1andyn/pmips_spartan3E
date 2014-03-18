@@ -136,7 +136,7 @@ always @(OpCode or reset)
 	begin
 		case(OpCode)
 			0: begin // opcode for R-type 
-				PCStall = 0;
+//				PCStall = 0;
 				RegWrite = 1; // 2nd register field
 				RegDst = 1;
 				ALUSrc = 0;
@@ -147,7 +147,7 @@ always @(OpCode or reset)
 				MemtoReg = 0;
 				end
 			2: begin // opcode for BEQ
-				PCStall = 0;
+//				PCStall = 0;
 				RegWrite = 0;
 				RegDst = 0; // Doesnt matter
 				ALUSrc = 0;
@@ -158,7 +158,7 @@ always @(OpCode or reset)
 				MemtoReg = 0; // Doesn't matter
 				end
 			3:	begin // opcode for addi is 3
-				PCStall = 0;
+//				PCStall = 0;
 				RegWrite = 1;
 				RegDst = 0;   // 2nd register field
 				ALUSrc = 1;   // Use sign extended constant
@@ -169,7 +169,7 @@ always @(OpCode or reset)
 				MemtoReg = 0; // Write reg file from ALU
 				end
 			5: begin   // opcode for load
-				PCStall = 0;
+//				PCStall = 0;
 				RegWrite = 1;
 				RegDst = 0;   
 				ALUSrc = 1;   
@@ -180,7 +180,7 @@ always @(OpCode or reset)
 				MemtoReg = 1;
 				end
 			6: begin   // opcode for store
-				PCStall = 0;
+//				PCStall = 0;
 				RegWrite = 0;
 				RegDst = 0;   // 2nd register field
 				ALUSrc = 1;   // Use sign extended constant
@@ -192,7 +192,7 @@ always @(OpCode or reset)
 				end
 			default:
 				begin
-				PCStall = 0;
+//				PCStall = 0;
 				RegWrite = 0;
 				RegDst = 0;
 				ALUSrc = 0;
@@ -204,8 +204,6 @@ always @(OpCode or reset)
 				end
 			endcase
 		end
-
-
 /*
 	I TYPE DESTINATION REGISTER = 9:7
 	R TYPE DESTINATION REGISTER = 6:4
@@ -217,7 +215,7 @@ always @(OpCode or reset)
 // For this processor only RAW (Read after Write is a Hazard)
 always @(posedge clock)
 	begin
-		if(IDEX[15:3] == 2 || EXMEM[15:3] == 2 || reset == 1)
+		if(reset == 1)
 		begin
 			NoStall = 0; // Stall
 		end

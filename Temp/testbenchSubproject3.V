@@ -21,11 +21,15 @@ wire [15:0] aluout;		// Output from the ALUOut register:  for debugging
 wire [15:0] imemrdata;	// Instruction memory read data
 wire [15:0] dmemrdata;	// Data memory read data
 wire [15:0] debug;
+wire [15:0] debug2;
+wire [15:0] debug3;
+wire [15:0] debug4;
+
 wire stall;
 reg io_sw0;
 reg io_sw1;
 wire [6:0] io_display;
-wire [2:0] debug4;
+
 
 reg  clock;
 reg  reset;		// Reset
@@ -56,7 +60,7 @@ initial
 
 
 initial
-	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], Debug:[%b], PCSrc: %b, AluZ:%b, EXMEMBranch: %b, OPCode:%b",
+	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], ALUOUT:[%b], Stall: %b, IFID:%b, IDEX: %b, EXMEM:%b",
 		io_display,
 		io_sw0,
 		io_sw1,

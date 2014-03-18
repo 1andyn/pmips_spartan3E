@@ -24,9 +24,7 @@ output [15:0] aluresult; // Debug Output
 output dmemwrite;	// write 2 memory enable
 output dmemread;	// read memory enable
 output stall;
-output debug2;
-output debug3;
-output [2:0]debug4;
+
 
 //output probe15; //aluzero
 
@@ -137,11 +135,15 @@ reg MEMWBRegDst;
 //------------------------------------------------
 /* --------------------DEBUG---------------------*/
 
-assign debug4 = IFIDOpcode;
-assign debug2 = EXMEMALUZero;
-assign debug3 = EXMEMBranch;
-assign debug = IFIDInstr;
-assign stall = PCSrc;
+output [15:0]debug2;
+output [15:0]debug3;
+output [15:0]debug4;
+
+assign debug4 = EXMEMInstr;
+assign debug2 = IFIDInstr;
+assign debug3 = IDEXInstr;
+assign debug = EXMEMALUOut;
+assign stall = PCStall;
 
 //------------------------------------------------
 
@@ -181,8 +183,16 @@ always @(posedge clock)
 		end
 	else
 		begin
-		IFIDPCPlus2 <= PCPlus2;
-		IFIDInstr <= imemrdata;
+		if(PCStall == 1)
+			begin
+				IFIDInstr = IFIDInstr;
+				IFIDPCPlus2 <= IFIDPCPlus2;
+			end
+		else
+			begin
+				IFIDPCPlus2 <= PCPlus2;
+				IFIDInstr <= imemrdata;
+			end
 		end
 	end
 
@@ -208,8 +218,20 @@ assign negclock = ~clock;  // Reg file is synchronized to pos clock edge, so we 
 
 assign IFIDSignExt = {{9{IFIDInstr[6]}},IFIDInstr[6:0]};
 
-Control cntrol(
-	PCStall,				
+hazard_ctrl hzc(
+	PCStall,		// if asserted it will stall the PC (hold value)
+	clock,			// Clock input signal
+	reset,			// Used to clear controller
+	IFIDInstr, //entire instruction goes to control for hazard detection
+	IDEXInstr,
+	EXMEMInstr,
+	EXMEMRegWrite,
+	EXMEMRegDst,
+	IDEXRegWrite,
+	IDEXRegDst
+	);
+
+new_control cntrol(			
 	RegWrite,
 	RegDst,
 	ALUSrc,
@@ -220,10 +242,7 @@ Control cntrol(
 	MemtoReg,
 	clock,			
 	IFIDOpcode,	// from the IFID pipeline register	
-	reset,
-	IFIDInstr, //entire instruction goes to control for hazard detection
-	IDEXInstr,
-	EXMEMInstr
+	reset
 	);
 
 
@@ -233,13 +252,7 @@ always @(posedge clock)
 	begin
 		if(PCStall == 1)
 			begin
-				IDEXPCPlus2 <= 16'b0000000000000000; //Insert a blank instruction for "bubble"
-				IDEXRegRead1 <= 16'b0000000000000000;
-				IDEXRegRead2 <= 16'b0000000000000000;
-				IDEXInstr <= 16'b0000000000000000; // I probably don't need the instruction but just in case
-				IDEXRegfield2 <= 3'b000;
-				IDEXRegfield3 <= 3'b000;
-				IDEXSignExtend <= 16'b0000000000000000;
+				IDEXInstr <= 16'b0000000000000000;
 				IDEXALUSrc <= 1'b0;
 				IDEXALUOp <= 2'b00;
 				IDEXRegDst <= 1'b0;
@@ -248,7 +261,6 @@ always @(posedge clock)
 				IDEXMemWrite <= 1'b0;
 				IDEXMemtoReg <= 1'b0;
 				IDEXBranch <= 1'b0;
-				
 			end
 		else
 			begin
@@ -307,20 +319,27 @@ assign EXBranchAddr = (IDEXSignExtend << 1) + IDEXPCPlus2; //Branch Address
 
 always @(posedge clock)
  	begin
-	EXMEMInstr <= IDEXInstr;
-	EXMEMALUOut <= aluout1;
-	EXMEMALUZero <= aluzero;
-	EXMEMMemtoReg <= IDEXMemtoReg;
-	EXMEMMemRead <= IDEXMemRead;
-	EXMEMMemWrite <= IDEXMemWrite;
-	EXMEMRegWrite <= IDEXRegWrite;
-	EXMEMBranch <= IDEXBranch;
-	EXMEMRegRead2 <= IDEXRegRead2;
-	EXMEMWriteAddr <= EXWriteAddr;
-	EXMEMPCPlus2 <= EXBranchAddr;
-	EXMEMRegDst <= IDEXRegDst;
-	EXMEMRegfield2 <= IDEXRegfield2;
-	EXMEMRegfield3 <= IDEXRegfield3;
+		if(reset == 1)
+			begin
+				EXMEMRegWrite <= 1'b0;
+			end
+		else
+			begin
+				EXMEMInstr <= IDEXInstr;
+				EXMEMALUOut <= aluout1;
+				EXMEMALUZero <= aluzero;
+				EXMEMMemtoReg <= IDEXMemtoReg;
+				EXMEMMemRead <= IDEXMemRead;
+				EXMEMMemWrite <= IDEXMemWrite;
+				EXMEMRegWrite <= IDEXRegWrite;
+				EXMEMBranch <= IDEXBranch;
+				EXMEMRegRead2 <= IDEXRegRead2;
+				EXMEMWriteAddr <= EXWriteAddr;
+				EXMEMPCPlus2 <= EXBranchAddr;
+				EXMEMRegDst <= IDEXRegDst;
+				EXMEMRegfield2 <= IDEXRegfield2;
+				EXMEMRegfield3 <= IDEXRegfield3;
+			end
 	end
 
 //---------------------------- MEM Stage -------------------------------
@@ -334,14 +353,21 @@ assign dmemread = EXMEMMemRead;
 
 always @(posedge clock)
  	begin
-	MEMWBMemReadData <= dmemrdata;
-	MEMWBALUOut <= EXMEMALUOut;
-	MEMWBWriteAddr <= EXMEMWriteAddr;
-	MEMWBMemtoReg <= EXMEMMemtoReg;
-	MEMWBRegWrite <= EXMEMRegWrite;
-	MEMWBRegDst <= EXMEMRegDst;
-	MEMWBRegfield2 <= EXMEMRegfield2;
-	MEMWBRegfield3 <= EXMEMRegfield3;
+		if(reset == 1)
+			begin
+				MEMWBRegWrite <= 1'b0;
+			end
+		else
+			begin
+				MEMWBMemReadData <= dmemrdata;
+				MEMWBALUOut <= EXMEMALUOut;
+				MEMWBWriteAddr <= EXMEMWriteAddr;
+				MEMWBMemtoReg <= EXMEMMemtoReg;
+				MEMWBRegWrite <= EXMEMRegWrite;
+				MEMWBRegDst <= EXMEMRegDst;
+				MEMWBRegfield2 <= EXMEMRegfield2;
+				MEMWBRegfield3 <= EXMEMRegfield3;
+			end
 	end
 
 //----------------------- WB Stage -----------------------------------

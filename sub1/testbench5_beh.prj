@@ -1,5 +1,7 @@
 verilog work "../Temp/MIPS-Parts.V"
 verilog work "../Temp/Control.V"
+verilog work "new_control.v"
+verilog work "hazard_ctrl.v"
 verilog work "../Temp/PMIPSL0.V"
 verilog work "../Temp/IM2.V"
 verilog work "../Temp/testbenchSubproject3.V"

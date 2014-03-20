@@ -31,5 +31,5 @@ Waiting for 6 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\testbench5_isim_beh.exe.sim\libPortability.dll".
 Compiled 13 Verilog Units
 Built simulation executable D:/Dropbox/Codespace/PMIPS/sub1/testbench5_isim_beh.exe
-Fuse Memory Usage: 26664 KB
-Fuse CPU Usage: 311 ms
+Fuse Memory Usage: 26740 KB
+Fuse CPU Usage: 327 ms

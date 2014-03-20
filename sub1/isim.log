@@ -21,19 +21,29 @@ ALU[result]
 
 Signals[clock,reset,time]
 Finished circuit initialization process.
-IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:x, EXMEMWrite:x
-IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:1, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:1, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:1, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:1, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0
-Stopped at time : 12 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 53
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:x, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
 ISim P.68d (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -52,26 +62,481 @@ ALU[result]
 
 Signals[clock,reset,time]
 Finished circuit initialization process.
-IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:x, EXMEMWrite:x
-IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:1, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:1, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:1, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:1, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:1, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:1, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:1, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:1, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:0, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:0, EXMEMWrite:1
-IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:1, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:1, EXMEMWrite:0
-IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXWrite:1, EXMEMWrite:1
-Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 53
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:x, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:x, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:x, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:x, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:x, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:x, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWrite:0, EXMEMWrite:1, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWrite:1, EXMEMWrite:0, REG2Value:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWrite:0, EXMEMWrite:1, REG2Value:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, REG2Value:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:x, EXMEMWrite:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,3], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,4], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    x] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[1,0,11], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWrite:1, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    x,    0,    x] ALU[    x] Signals[0,0,12], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWrite:1, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWrite:0, EXMEMWrite:1, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWrite:0, EXMEMWrite:1, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWrite:1, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWrite:1, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWrite:0, EXMEMWrite:1, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWrite:0, EXMEMWrite:1, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:x, EXMEMWrite:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,3], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,4], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,11], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWrite:1, EXMEMWrite:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,12], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWrite:1, EXMEMWrite:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWrite:0, EXMEMWrite:1, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWrite:0, EXMEMWrite:1, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWrite:1, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWrite:1, EXMEMWrite:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWrite:0, EXMEMWrite:1, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWrite:0, EXMEMWrite:1, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXMEMWrite:0, EXMEMWrite:0, EXMEMALUOUT:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 106.  For instance testbench5/comp/, width 16 of formal port debug5 is not equal to width 1 of actual signal debug5.
+WARNING: File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 107.  For instance testbench5/comp/, width 16 of formal port debug6 is not equal to width 1 of actual signal debug6.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:x, Register:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:0, Register:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:0, Register:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,3], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, ALUMUXOutput:x, Register:x, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,4], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, ALUMUXOutput:x, Register:x, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:1, Register:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:1, Register:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, ALUMUXOutput:0, Register:0, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, ALUMUXOutput:0, Register:0, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, ALUMUXOutput:0, Register:0, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, ALUMUXOutput:0, Register:0, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,11], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, ALUMUXOutput:0, Register:x, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,12], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, ALUMUXOutput:0, Register:x, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, ALUMUXOutput:0, Register:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, ALUMUXOutput:0, Register:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, ALUMUXOutput:1, Register:x, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, ALUMUXOutput:1, Register:x, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, ALUMUXOutput:0, Register:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, ALUMUXOutput:0, Register:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, ALUMUXOutput:0, Register:0, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, ALUMUXOutput:0, Register:0, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, ALUMUXOutput:0, Register:x, EXMEMALUOUT:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 54
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:xxxxxxxxxxxxxxxx, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:xxxxxxxxxxxxxxxx, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,3], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, ALUMUXOutput:xxxxxxxxxxxxxxxx, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,4], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: xxxxxxxxxxxxxxxx, EXMEM:0000000000000000, ALUMUXOutput:xxxxxxxxxxxxxxxx, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[1,0,5], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:0000000000000011, Register:0000000000000000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    x,    0,    x] ALU[    3] Signals[0,0,6], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:0000000000000011, Register:0000000000000000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, ALUMUXOutput:0000000000100000, Register:0000000000000000, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, ALUMUXOutput:0000000000100000, Register:0000000000000000, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,11], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, ALUMUXOutput:0000000000100010, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,12], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, ALUMUXOutput:0000000000100010, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, ALUMUXOutput:0000000000000101, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, ALUMUXOutput:0000000000000101, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, ALUMUXOutput:0000000000000010, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 56
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:xxxxxxxxxxxxxxxx, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:0000000000000000, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0000000000000000, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,3], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: 0000000000000000, EXMEM:0000000000000000, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,4], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: 0000000000000000, EXMEM:0000000000000000, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,5], ALUOUT:[0000000000000000], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:0000000000000000, ALUMUXOutput:0000000000000011, Register:0000000000000000, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,6], ALUOUT:[0000000000000000], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:0000000000000000, ALUMUXOutput:0000000000000011, Register:0000000000000000, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, ALUMUXOutput:0000000000100000, Register:0000000000000000, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, ALUMUXOutput:0000000000100000, Register:0000000000000000, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, ALUMUXOutput:0000000000000000, Register:0000000000000000, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,11], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, ALUMUXOutput:0000000000100010, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,12], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, ALUMUXOutput:0000000000100010, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, ALUMUXOutput:0000000000000101, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, ALUMUXOutput:0000000000000101, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, ALUMUXOutput:0000000000100010, Register:0000000000100000, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, ALUMUXOutput:0000000000000010, Register:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 56
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 28.  For instance testbench5/comp/, width 16 of formal port debug5 is not equal to width 1 of actual signal debug5.
+WARNING: File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 29.  For instance testbench5/comp/, width 16 of formal port debug6 is not equal to width 1 of actual signal debug6.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWRITE:x, EXMEMWRITE:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:0000000000000000, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWRITE:0, EXMEMWRITE:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0000000000000000, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWRITE:0, EXMEMWRITE:x, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,3], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: 0000000000000000, EXMEM:0000000000000000, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,4], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: 0000000000000000, EXMEM:0000000000000000, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,5], ALUOUT:[0000000000000000], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:0000000000000000, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,6], ALUOUT:[0000000000000000], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:0000000000000000, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,11], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWRITE:1, EXMEMWRITE:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,12], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWRITE:1, EXMEMWRITE:0, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWRITE:0, EXMEMWRITE:1, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWRITE:0, EXMEMWRITE:1, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWRITE:1, EXMEMWRITE:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWRITE:1, EXMEMWRITE:0, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWRITE:0, EXMEMWRITE:1, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWRITE:0, EXMEMWRITE:1, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXMEMWRITE:0, EXMEMWRITE:0, EXMEMALUOUT:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 56
+ISim P.68d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+
+IO[display,switch0,switch1]
+
+IMEM[PC,Instr]
+
+DMEM[address, rdata, wdata]
+
+ALU[result]
+
+Signals[clock,reset,time]
+Finished circuit initialization process.
+IO[xxxxxxx,x,x] IMEM[    x,xxxxxxxxxxxxxxxx] DMEM[    x,    0,    x] ALU[    x] Signals[0,1,0], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:xxxxxxxxxxxxxxxx, IDEX: xxxxxxxxxxxxxxxx, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWRITE:xxxxxxxxxxxxxxxx, EXMEMWRITE:xxxxxxxxxxxxxxxx, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[1,1,1], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 1, IFID:0000000000000000, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWRITE:0000000000000000, EXMEMWRITE:0000000000000000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    0,0110000100000011] DMEM[    x,    0,    x] ALU[    0] Signals[0,0,2], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0000000000000000, IDEX: 0000000000000000, EXMEM:xxxxxxxxxxxxxxxx, IDEXMEMWRITE:0000000000000000, EXMEMWRITE:0000000000000000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,3], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: 0000000000000000, EXMEM:0000000000000000, IDEXMEMWRITE:0000000000000000, EXMEMWRITE:0000000000000000, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    2,0110001010100000] DMEM[    0,    0,    0] ALU[    0] Signals[0,0,4], ALUOUT:[0000000000000000], Stall: 0, IFID:0110000100000011, IDEX: 0000000000000000, EXMEM:0000000000000000, IDEXMEMWRITE:0000000000000000, EXMEMWRITE:0000000000000000, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    0,    0,    0] ALU[    3] Signals[1,0,5], ALUOUT:[0000000000000000], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:0000000000000000, IDEXMEMWRITE:0000000000000011, EXMEMWRITE:0000000000000000, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    4,1101010100100010] DMEM[    0,    0,    0] ALU[    3] Signals[0,0,6], ALUOUT:[0000000000000000], Stall: 0, IFID:0110001010100000, IDEX: 0110000100000011, EXMEM:0000000000000000, IDEXMEMWRITE:0000000000000011, EXMEMWRITE:0000000000000000, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[1,0,7], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWRITE:0000000000100000, EXMEMWRITE:0000000000000000, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[    3,    0,    x] ALU[   32] Signals[0,0,8], ALUOUT:[0000000000000011], Stall: 1, IFID:1101010100100010, IDEX: 0110001010100000, EXMEM:0110000100000011, IDEXMEMWRITE:0000000000100000, EXMEMWRITE:0000000000000000, EXMEMALUOUT:0000000000000011
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[1,0,9], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWRITE:0000000000000000, EXMEMWRITE:0000000000000000, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    6,1011011000100010] DMEM[   32,    0,    x] ALU[    0] Signals[0,0,10], ALUOUT:[0000000000100000], Stall: 0, IFID:1101010100100010, IDEX: 0000000000000000, EXMEM:0110001010100000, IDEXMEMWRITE:0000000000000000, EXMEMWRITE:0000000000000000, EXMEMALUOUT:0000000000100000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[1,0,11], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWRITE:0000000000100010, EXMEMWRITE:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[    8,0111001000000101] DMEM[    0,    0,    0] ALU[    x] Signals[0,0,12], ALUOUT:[0000000000000000], Stall: 0, IFID:1011011000100010, IDEX: 1101010100100010, EXMEM:0000000000000000, IDEXMEMWRITE:0000000000100010, EXMEMWRITE:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000000000000
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[1,0,13], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWRITE:0000000000100010, EXMEMWRITE:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   10,1101011000100010] DMEM[    x,    0,    3] ALU[   66] Signals[0,0,14], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:0111001000000101, IDEX: 1011011000100010, EXMEM:1101010100100010, IDEXMEMWRITE:0000000000100010, EXMEMWRITE:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,15], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWRITE:0000000000000101, EXMEMWRITE:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   12,1011011000100010] DMEM[   66,    x,    x] ALU[    x] Signals[0,0,16], ALUOUT:[0000000001000010], Stall: 0, IFID:1101011000100010, IDEX: 0111001000000101, EXMEM:1011011000100010, IDEXMEMWRITE:0000000000000101, EXMEMWRITE:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[1,0,17], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWRITE:0000000000100010, EXMEMWRITE:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   14,0111001000000010] DMEM[    x,    0,    x] ALU[   66] Signals[0,0,18], ALUOUT:[xxxxxxxxxxxxxxxx], Stall: 0, IFID:1011011000100010, IDEX: 1101011000100010, EXMEM:0111001000000101, IDEXMEMWRITE:0000000000100010, EXMEMWRITE:0000000000100000, EXMEMALUOUT:xxxxxxxxxxxxxxxx
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[1,0,19], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWRITE:0000000000100010, EXMEMWRITE:0000000000100000, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   16,0100000001110111] DMEM[   66,    0,    x] ALU[   66] Signals[0,0,20], ALUOUT:[0000000001000010], Stall: 0, IFID:0111001000000010, IDEX: 1011011000100010, EXMEM:1101011000100010, IDEXMEMWRITE:0000000000100010, EXMEMWRITE:0000000000100000, EXMEMALUOUT:0000000001000010
+IO[xxxxxxx,x,x] IMEM[   18,0000000000000000] DMEM[   66,    x,    x] ALU[    x] Signals[1,0,21], ALUOUT:[0000000001000010], Stall: 0, IFID:0100000001110111, IDEX: 0111001000000010, EXMEM:1011011000100010, IDEXMEMWRITE:0000000000000010, EXMEMWRITE:xxxxxxxxxxxxxxxx, EXMEMALUOUT:0000000001000010
+Stopped at time : 22 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 56

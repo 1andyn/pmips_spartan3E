@@ -15,7 +15,8 @@ module PMIPSL0(
 	debug3,
 	debug4,
 	debug5,
-	debug6
+	debug6,
+	debug7
 	);
 
 /* Outputs */
@@ -137,15 +138,16 @@ reg MEMWBRegDst;
 //------------------------------------------------
 /* --------------------DEBUG---------------------*/
 
+output [15:0]debug7;
 output [15:0]debug2;
 output [15:0]debug3;
 output [15:0]debug4;
-output debug5;
-output debug6;
+output [15:0]debug5;
+output [15:0]debug6;
 
-
-assign debug6 = EXMEMRegWrite;
-assign debug5 = IDEXRegWrite;
+assign debug7 = EXMEMALUOut;
+assign debug6 = IDEXRegRead1;
+assign debug5 = ALUMUXOutput;
 assign debug4 = EXMEMInstr;
 assign debug2 = IFIDInstr;
 assign debug3 = IDEXInstr;
@@ -185,6 +187,7 @@ always @(posedge clock)
 	begin
 	if (reset == 1)
 		begin
+		IFIDInstr <= 0;
 		IFIDPCPlus2 <= 0;
 		end
 	else
@@ -247,7 +250,8 @@ new_control cntrol(
 	MemRead,
 	MemtoReg,
 	clock,			
-	IFIDOpcode,	// from the IFID pipeline register	
+	IFIDOpcode,	// from the IFID pipeline register
+	IFIDInstr,
 	reset
 	);
 
@@ -259,6 +263,11 @@ always @(posedge clock)
 		if(PCStall == 1)
 			begin
 				IDEXInstr <= 16'b0000000000000000;
+				IDEXRegRead1 <= 0;
+				IDEXRegRead2 <= 0;
+				IDEXRegfield2 <= 0;
+				IDEXRegfield3 <= 0;
+				IDEXSignExtend <= 0;
 				IDEXALUSrc <= 0;
 				IDEXALUOp <= 0;
 				IDEXRegDst <= 0;

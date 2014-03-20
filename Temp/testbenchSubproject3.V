@@ -24,6 +24,9 @@ wire [15:0] debug;
 wire [15:0] debug2;
 wire [15:0] debug3;
 wire [15:0] debug4;
+wire [15:0] debug7;
+wire [15:0]debug5;
+wire [15:0]debug6;
 
 wire stall;
 reg io_sw0;
@@ -55,7 +58,7 @@ initial
 
 
 initial
-	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], ALUOUT:[%b], Stall: %b, IFID:%b, IDEX: %b, EXMEM:%b, IDEXWrite:%b, EXMEMWrite:%b",
+	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], ALUOUT:[%b], Stall: %b, IFID:%b, IDEX: %b, EXMEM:%b, IDEXMEMWRITE:%b, EXMEMWRITE:%b, EXMEMALUOUT:%b",
 		io_display,
 		io_sw0,
 		io_sw1,
@@ -78,7 +81,8 @@ initial
 		debug3,
 		debug4,
 		debug5,
-		debug6
+		debug6,
+		debug7
 		);
 
 
@@ -102,7 +106,8 @@ PMIPSL0 comp(
 	debug3,
 	debug4,
 	debug5,
-	debug6
+	debug6,
+	debug7
 	);
 
 // Instantiation of Instruction Memory (program)

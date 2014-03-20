@@ -9,9 +9,19 @@ module hazard_ctrl(
 	EXMEMRegDst,
 	IDEXWrite,
 	IDEXRegDst
+//	debug,
+//	debug1,
+//	debug2,
+//	debug3,
+//	debug4
 	);
 
 output PCStall;		
+//output [2:0] debug;
+//output [2:0] debug1;
+//output [2:0] debug2;
+//output [2:0] debug3;
+//output [2:0] debug4;
 
 input  clock;
 input  reset;
@@ -31,9 +41,10 @@ wire [2:0]IFIDOP;
 reg [2:0]EXMEMWriteReg;
 reg [2:0]IDEXWriteReg;
 
-
 //assign Regfield2 IFIDInstr[9:7]; REGDST = 0
 //assign Regfield3 IFIDInstr[6:4]; REGDST = 1
+
+assign IFIDOP = IFID[15:13];
 
 //Assign Write Addr for EXMEM
 always @ (EXMEMRegDst)
@@ -42,7 +53,7 @@ always @ (EXMEMRegDst)
 		0: EXMEMWriteReg <= EXMEM[9:7];
 		1: EXMEMWriteReg <= EXMEM[6:4];
 		default: EXMEMWriteReg <= EXMEM[9:7];
-		endcase;
+		endcase
 	end
 
 //Assign Write Addr for IDEX
@@ -52,12 +63,14 @@ always @ (IDEXRegDst)
 		0: IDEXWriteReg <= IDEX[9:7];
 		1: IDEXWriteReg <= IDEX[6:4];
 		default: IDEXWriteReg <= IDEX[9:7];
-		endcase;
+		endcase
 	end
 
-
-assign IFIDOP = IFID[15:13];
-
+//assign debug = IDEXWriteReg;
+//assign debug1 = EXMEMWriteReg;
+//assign debug2 = IFID[12:10];
+//assign debug3 = IFID[9:7];
+//assign debug4 = IFIDOP;
 /*
 	ITYPE READ REGISTER = 12:10
 	RTYPE READ REGISTERS = 12:10, 9:7
@@ -65,71 +78,83 @@ assign IFIDOP = IFID[15:13];
 
 always @(posedge clock)
 	begin
-		//IFID is R Type
-		if(IFIDOP == 2)
+		//IFID is R Type STALL BEQ for now
+		if(IDEXWrite == 0 && EXMEMWrite == 0 || IDEX[15:13] == 2 || EXMEM [15:13] == 2)
 			begin
-				if(IDEXWrite == 1)
-					begin
-						if(IFID[12:10] == IDEXWriteReg || IFID[9:7] == IDEXWriteReg)
-							begin
-								StallCode = 1; //Stall
-							end
-						else
-							begin
-								StallCode = 0;
-							end
-					end
-				else if(EXMEMWrite == 1)
-						if(IFID[12:10] == EXMEMWriteReg || IFID[9:7] == EXMEMWriteReg)
-							begin
-								StallCode = 1; //Stall
-							end
-						else
-							begin
-								StallCode = 0;
-							end
-				else
-					begin
-						StallCode = 0;
-					end
+				StallCode = 0;
 			end
-			
-		//IFID is I Type
 		else
-			begin
-				if(IDEXWrite == 1)
-					begin
-						if(IFID[12:10] == IDEXWriteReg)
-							begin
-								StallCode = 1; //Stall
-							end
-						else
-							begin
-								StallCode = 0;
-							end
-					end
-				else if(EXMEMWrite == 1)
-						if(IFID[12:10] == EXMEMWriteReg)
-							begin
-								StallCode = 1; //Stall
-							end
-						else
-							begin
-								StallCode = 0;
-							end
-				else
-					begin
-						StallCode = 0;
-					end
+		begin
+			if(IFIDOP == 0)
+				begin
+					if(IDEXWrite == 1)
+						begin
+							if(IFID[12:10] == IDEXWriteReg || IFID[9:7] == IDEXWriteReg)
+								begin
+									StallCode = 1; //Stall
+								end
+							else
+								begin
+									StallCode = 0;
+								end
+						end
+					else if(EXMEMWrite == 1)
+							if(IFID[12:10] == EXMEMWriteReg || IFID[9:7] == EXMEMWriteReg)
+								begin
+									StallCode = 1; //Stall
+								end
+							else
+								begin
+									StallCode = 0;
+								end
+					else
+						begin
+							StallCode = 0;
+						end
+				end
+				
+			//IFID is I Type
+			else
+				begin
+					if(IDEXWrite == 1)
+						begin
+							if(IFID[12:10] == IDEXWriteReg)
+								begin
+									StallCode = 1; //Stall
+								end
+							else
+								begin
+									StallCode = 0;
+								end
+						end
+					else if(EXMEMWrite == 1)
+							if(IFID[12:10] == EXMEMWriteReg)
+								begin
+									StallCode = 1; //Stall
+								end
+							else
+								begin
+									StallCode = 0;
+								end
+					else
+						begin
+							StallCode = 0;
+						end
+				end
 			end
 	end
 
 always @ (StallCode or reset)
 	begin
-		case(StallCode)
-		1: PCStall = 1;
-		default: PCStall = 0;
-		endcase;
+		if(reset == 1) PCStall = 1;
+		else
+		begin
+			case(StallCode)
+			0: PCStall = 0;
+			1: PCStall = 1;
+			default: PCStall = 0;
+			endcase
+		end
 	end
 
 endmodule

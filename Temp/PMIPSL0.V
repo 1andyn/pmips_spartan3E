@@ -13,7 +13,9 @@ module PMIPSL0(
 	stall,
 	debug2,
 	debug3,
-	debug4
+	debug4,
+	debug5,
+	debug6
 	);
 
 /* Outputs */
@@ -138,7 +140,12 @@ reg MEMWBRegDst;
 output [15:0]debug2;
 output [15:0]debug3;
 output [15:0]debug4;
+output debug5;
+output debug6;
 
+
+assign debug6 = EXMEMRegWrite;
+assign debug5 = IDEXRegWrite;
 assign debug4 = EXMEMInstr;
 assign debug2 = IFIDInstr;
 assign debug3 = IDEXInstr;
@@ -178,14 +185,13 @@ always @(posedge clock)
 	begin
 	if (reset == 1)
 		begin
-		IFIDInstr <= 0; //normally 0
 		IFIDPCPlus2 <= 0;
 		end
 	else
 		begin
 		if(PCStall == 1)
 			begin
-				IFIDInstr = IFIDInstr;
+				IFIDInstr <= IFIDInstr;
 				IFIDPCPlus2 <= IFIDPCPlus2;
 			end
 		else
@@ -253,21 +259,21 @@ always @(posedge clock)
 		if(PCStall == 1)
 			begin
 				IDEXInstr <= 16'b0000000000000000;
-				IDEXALUSrc <= 1'b0;
-				IDEXALUOp <= 2'b00;
-				IDEXRegDst <= 1'b0;
-				IDEXRegWrite <= 1'b0;
-				IDEXMemRead <= 1'b0;
-				IDEXMemWrite <= 1'b0;
-				IDEXMemtoReg <= 1'b0;
-				IDEXBranch <= 1'b0;
+				IDEXALUSrc <= 0;
+				IDEXALUOp <= 0;
+				IDEXRegDst <= 0;
+				IDEXRegWrite <= 0;
+				IDEXMemRead <= 0;
+				IDEXMemWrite <= 0;
+				IDEXMemtoReg <= 0;
+				IDEXBranch <= 0;
 			end
 		else
 			begin
 				IDEXPCPlus2 <= IFIDPCPlus2;
 				IDEXRegRead1 <= rdata1;
 				IDEXRegRead2 <= rdata2;
-				IDEXInstr <= IFIDInstr; // I probably don't need the instruction but just in case
+				IDEXInstr <= IFIDInstr; 
 				IDEXRegfield2 <= IFIDRegfield2;
 				IDEXRegfield3 <= IFIDRegfield3;
 				IDEXSignExtend <= IFIDSignExt;
@@ -321,7 +327,7 @@ always @(posedge clock)
  	begin
 		if(reset == 1)
 			begin
-				EXMEMRegWrite <= 1'b0;
+				EXMEMRegWrite <= 0;
 			end
 		else
 			begin
@@ -355,7 +361,7 @@ always @(posedge clock)
  	begin
 		if(reset == 1)
 			begin
-				MEMWBRegWrite <= 1'b0;
+				MEMWBRegWrite <= 0;
 			end
 		else
 			begin

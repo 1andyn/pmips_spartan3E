@@ -45,9 +45,9 @@ Setup/Hold to clock clock
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-io_sw0      |    2.012(R)|   -0.419(R)|clock_BUFGP       |   0.000|
-io_sw1      |    2.047(R)|   -0.452(R)|clock_BUFGP       |   0.000|
-reset       |    2.324(R)|    0.284(R)|clock_BUFGP       |   0.000|
+io_sw0      |    2.010(R)|   -0.421(R)|clock_BUFGP       |   0.000|
+io_sw1      |    1.563(R)|   -0.064(R)|clock_BUFGP       |   0.000|
+reset       |    5.083(R)|    0.515(R)|clock_BUFGP       |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clock to Pad
@@ -55,13 +55,13 @@ Clock clock to Pad
              | clk (edge) |                  | Clock  |
 Destination  |   to PAD   |Internal Clock(s) | Phase  |
 -------------+------------+------------------+--------+
-io_display<0>|    7.084(R)|clock_BUFGP       |   0.000|
-io_display<1>|    7.705(R)|clock_BUFGP       |   0.000|
-io_display<2>|    7.637(R)|clock_BUFGP       |   0.000|
-io_display<3>|    7.077(R)|clock_BUFGP       |   0.000|
-io_display<4>|    7.742(R)|clock_BUFGP       |   0.000|
-io_display<5>|    7.918(R)|clock_BUFGP       |   0.000|
-io_display<6>|    7.612(R)|clock_BUFGP       |   0.000|
+io_display<0>|    7.149(R)|clock_BUFGP       |   0.000|
+io_display<1>|    7.606(R)|clock_BUFGP       |   0.000|
+io_display<2>|    7.702(R)|clock_BUFGP       |   0.000|
+io_display<3>|    7.142(R)|clock_BUFGP       |   0.000|
+io_display<4>|    7.938(R)|clock_BUFGP       |   0.000|
+io_display<5>|    7.877(R)|clock_BUFGP       |   0.000|
+io_display<6>|    7.066(R)|clock_BUFGP       |   0.000|
 -------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clock
@@ -69,11 +69,11 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    8.105|    3.809|    3.940|         |
+clock          |    8.247|    4.018|    4.155|         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Mar 14 00:55:13 2014 
+Analysis completed Thu Mar 20 10:22:18 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

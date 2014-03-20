@@ -2,12 +2,12 @@
 <BODY TEXT='#000000' BGCOLOR='#FFFFFF' LINK='#0000EE' VLINK='#551A8B' ALINK='#FF0000'>
 <TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'>
-<TD ALIGN=CENTER COLSPAN='4'><B>FPGADevice Project Status (03/12/2014 - 10:20:35)</B></TD></TR>
+<TD ALIGN=CENTER COLSPAN='4'><B>FPGADevice Project Status (03/20/2014 - 10:22:31)</B></TD></TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project File:</B></TD>
 <TD>sub1.xise</TD>
 <TD BGCOLOR='#FFFF99'><b>Parser Errors:</b></TD>
-<TD ALIGN=LEFT><font color='red'; face='Arial'><b>X </b></font><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/pn_parser.xmsgs?&DataKey=Error'>2 Errors</A></TD>
+<TD> No Errors </TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Module Name:</B></TD>
@@ -25,7 +25,7 @@ No Errors</TD>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Product Version:</B></TD><TD>ISE 14.6</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Warnings:</B></LI></UL></TD>
-<TD ALIGN=LEFT><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/*.xmsgs?&DataKey=Warning'>56 Warnings (44 new)</A></TD>
+<TD ALIGN=LEFT><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/*.xmsgs?&DataKey=Warning'>87 Warnings (86 new)</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Design Goal:</B></dif></TD>
@@ -64,44 +64,56 @@ System Settings</A>
 <TR ALIGN=CENTER BGCOLOR='#FFFF99'>
 <TD ALIGN=LEFT><B>Logic Utilization</B></TD><TD><B>Used</B></TD><TD><B>Available</B></TD><TD><B>Utilization</B></TD><TD COLSPAN='2'><B>Note(s)</B></TD>
 </TR>
-<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of Slice Flip Flops</TD>
-<TD ALIGN=RIGHT>185</TD>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Total Number Slice Registers</TD>
+<TD ALIGN=RIGHT>196</TD>
 <TD ALIGN=RIGHT>4,896</TD>
-<TD ALIGN=RIGHT>3%</TD>
+<TD ALIGN=RIGHT>4%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Flip Flops</TD>
+<TD ALIGN=RIGHT>190</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Latches</TD>
+<TD ALIGN=RIGHT>6</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of 4 input LUTs</TD>
-<TD ALIGN=RIGHT>324</TD>
+<TD ALIGN=RIGHT>318</TD>
 <TD ALIGN=RIGHT>4,896</TD>
 <TD ALIGN=RIGHT>6%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of occupied Slices</TD>
-<TD ALIGN=RIGHT>221</TD>
+<TD ALIGN=RIGHT>227</TD>
 <TD ALIGN=RIGHT>2,448</TD>
 <TD ALIGN=RIGHT>9%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of Slices containing only related logic</TD>
-<TD ALIGN=RIGHT>221</TD>
-<TD ALIGN=RIGHT>221</TD>
+<TD ALIGN=RIGHT>227</TD>
+<TD ALIGN=RIGHT>227</TD>
 <TD ALIGN=RIGHT>100%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of Slices containing unrelated logic</TD>
 <TD ALIGN=RIGHT>0</TD>
-<TD ALIGN=RIGHT>221</TD>
+<TD ALIGN=RIGHT>227</TD>
 <TD ALIGN=RIGHT>0%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Total Number of 4 input LUTs</TD>
-<TD ALIGN=RIGHT>328</TD>
+<TD ALIGN=RIGHT>322</TD>
 <TD ALIGN=RIGHT>4,896</TD>
 <TD ALIGN=RIGHT>6%</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as logic</TD>
-<TD ALIGN=RIGHT>258</TD>
+<TD ALIGN=RIGHT>249</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
@@ -119,7 +131,7 @@ System Settings</A>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Shift registers</TD>
-<TD ALIGN=RIGHT>2</TD>
+<TD ALIGN=RIGHT>5</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
@@ -143,7 +155,7 @@ System Settings</A>
 <TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Average Fanout of Non-Clock Nets</TD>
-<TD ALIGN=RIGHT>3.26</TD>
+<TD ALIGN=RIGHT>3.47</TD>
 <TD>&nbsp;</TD>
 <TD>&nbsp;</TD>
 <TD COLSPAN='2'>&nbsp;</TD>
@@ -180,25 +192,25 @@ System Settings</A>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='6'><B>Detailed Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=DetailedReports"><B>[-]</B></a></TD></TR>
 <TR BGCOLOR='#FFFF99'><TD><B>Report Name</B></TD><TD><B>Status</B></TD><TD><B>Generated</B></TD>
 <TD ALIGN=LEFT><B>Errors</B></TD><TD ALIGN=LEFT><B>Warnings</B></TD><TD ALIGN=LEFT COLSPAN='2'><B>Infos</B></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>Fri Mar 14 00:54:39 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/xst.xmsgs?&DataKey=Warning'>56 Warnings (44 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/xst.xmsgs?&DataKey=Info'>46 Infos (33 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.bld'>Translation Report</A></TD><TD>Current</TD><TD>Fri Mar 14 00:54:47 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice_map.mrp'>Map Report</A></TD><TD>Current</TD><TD>Fri Mar 14 00:54:56 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/map.xmsgs?&DataKey=Info'>4 Infos (4 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.par'>Place and Route Report</A></TD><TD>Current</TD><TD>Fri Mar 14 00:55:10 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/par.xmsgs?&DataKey=Info'>2 Infos (2 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>Thu Mar 20 10:21:41 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/xst.xmsgs?&DataKey=Warning'>86 Warnings (85 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/xst.xmsgs?&DataKey=Info'>39 Infos (39 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.bld'>Translation Report</A></TD><TD>Current</TD><TD>Thu Mar 20 10:21:49 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice_map.mrp'>Map Report</A></TD><TD>Current</TD><TD>Thu Mar 20 10:21:58 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/map.xmsgs?&DataKey=Warning'>1 Warning (1 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/map.xmsgs?&DataKey=Info'>4 Infos (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.par'>Place and Route Report</A></TD><TD>Current</TD><TD>Thu Mar 20 10:22:15 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/par.xmsgs?&DataKey=Info'>2 Infos (0 new)</A></TD></TR>
 <TR ALIGN=LEFT><TD>Power Report</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.twr'>Post-PAR Static Timing Report</A></TD><TD>Current</TD><TD>Fri Mar 14 00:55:13 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/trce.xmsgs?&DataKey=Info'>6 Infos (6 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.bgn'>Bitgen Report</A></TD><TD>Current</TD><TD>Fri Mar 14 00:55:18 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.twr'>Post-PAR Static Timing Report</A></TD><TD>Current</TD><TD>Thu Mar 20 10:22:18 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/trce.xmsgs?&DataKey=Info'>6 Infos (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.bgn'>Bitgen Report</A></TD><TD>Current</TD><TD>Thu Mar 20 10:22:24 2014</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\_xmsgs/bitgen.xmsgs?&DataKey=Warning'>1 Warning (1 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
 </TABLE>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='3'><B>Secondary Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=SecondaryReports"><B>[-]</B></a></TD></TR>
 <TR BGCOLOR='#FFFF99'><TD><B>Report Name</B></TD><TD><B>Status</B></TD><TD COLSPAN='2'><B>Generated</B></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\isim.log'>ISIM Simulator Log</A></TD><TD>Current</TD><TD COLSPAN='2'>Tue Mar 18 10:48:54 2014</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice_map.map'>Map Log File</A></TD><TD>Current</TD><TD COLSPAN='2'>Fri Mar 14 00:54:56 2014</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice_pad.txt'>Pad Report</A></TD><TD>Current</TD><TD COLSPAN='2'>Fri Mar 14 00:55:10 2014</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.unroutes'>Unroutes Report</A></TD><TD>Current</TD><TD COLSPAN='2'>Fri Mar 14 00:55:10 2014</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\usage_statistics_webtalk.html'>WebTalk Report</A></TD><TD>Current</TD><TD COLSPAN='2'>Fri Mar 14 00:55:19 2014</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\webtalk.log'>WebTalk Log File</A></TD><TD>Current</TD><TD COLSPAN='2'>Fri Mar 14 00:55:25 2014</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\isim.log'>ISIM Simulator Log</A></TD><TD>Out of Date</TD><TD COLSPAN='2'>Thu Mar 20 10:18:40 2014</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice_map.map'>Map Log File</A></TD><TD>Out of Date</TD><TD COLSPAN='2'>Thu Mar 20 10:21:58 2014</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice_pad.txt'>Pad Report</A></TD><TD>Out of Date</TD><TD COLSPAN='2'>Thu Mar 20 10:22:15 2014</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\FPGADevice.unroutes'>Unroutes Report</A></TD><TD>Out of Date</TD><TD COLSPAN='2'>Thu Mar 20 10:22:15 2014</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\usage_statistics_webtalk.html'>WebTalk Report</A></TD><TD>Out of Date</TD><TD COLSPAN='2'>Thu Mar 20 10:22:24 2014</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='D:/Dropbox/Codespace/PMIPS/sub1\webtalk.log'>WebTalk Log File</A></TD><TD>Out of Date</TD><TD COLSPAN='2'>Thu Mar 20 10:22:31 2014</TD></TR>
 </TABLE>
 
 
-<br><center><b>Date Generated:</b> 03/18/2014 - 11:09:35</center>
+<br><center><b>Date Generated:</b> 03/20/2014 - 10:26:03</center>
 </BODY></HTML>

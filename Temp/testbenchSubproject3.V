@@ -47,20 +47,15 @@ initial
 	$display("ALU[result]\n");
 	$display("Signals[clock,reset,time]");
 	reset=1;
-	io_sw0=1;
-	io_sw1=0;
 	#2
 	reset=0;
-	#100
-	io_sw0=0;
-	io_sw1=0;
-	#200
+	#20
 	$finish;
 	end
 
 
 initial
-	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], ALUOUT:[%b], Stall: %b, IFID:%b, IDEX: %b, EXMEM:%b",
+	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], ALUOUT:[%b], Stall: %b, IFID:%b, IDEX: %b, EXMEM:%b, IDEXWrite:%b, EXMEMWrite:%b",
 		io_display,
 		io_sw0,
 		io_sw1,
@@ -81,7 +76,9 @@ initial
 		stall,
 		debug2,
 		debug3,
-		debug4
+		debug4,
+		debug5,
+		debug6
 		);
 
 
@@ -103,7 +100,9 @@ PMIPSL0 comp(
 	stall,
 	debug2,
 	debug3,
-	debug4
+	debug4,
+	debug5,
+	debug6
 	);
 
 // Instantiation of Instruction Memory (program)

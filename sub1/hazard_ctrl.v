@@ -93,12 +93,24 @@ always @(posedge clock)
 								begin
 									StallCode = 1; //Stall
 								end
+							else if(EXMEMWrite == 1)
+								begin
+									if(IFID[12:10] == EXMEMWriteReg || IFID[9:7] == EXMEMWriteReg)
+										begin
+											StallCode = 1; //Stall
+										end
+									else
+										begin
+											StallCode = 0;
+										end
+								end	
 							else
 								begin
 									StallCode = 0;
 								end
 						end
 					else if(EXMEMWrite == 1)
+						begin
 							if(IFID[12:10] == EXMEMWriteReg || IFID[9:7] == EXMEMWriteReg)
 								begin
 									StallCode = 1; //Stall
@@ -107,6 +119,7 @@ always @(posedge clock)
 								begin
 									StallCode = 0;
 								end
+						end
 					else
 						begin
 							StallCode = 0;
@@ -122,12 +135,24 @@ always @(posedge clock)
 								begin
 									StallCode = 1; //Stall
 								end
+							else if(EXMEMWrite == 1)
+								begin
+									if(IFID[12:10] == EXMEMWriteReg)
+										begin
+											StallCode = 1; //Stall
+										end
+									else
+										begin
+											StallCode = 0;
+										end
+								end	
 							else
 								begin
 									StallCode = 0;
 								end
 						end
 					else if(EXMEMWrite == 1)
+						begin
 							if(IFID[12:10] == EXMEMWriteReg)
 								begin
 									StallCode = 1; //Stall
@@ -136,6 +161,7 @@ always @(posedge clock)
 								begin
 									StallCode = 0;
 								end
+						end
 					else
 						begin
 							StallCode = 0;

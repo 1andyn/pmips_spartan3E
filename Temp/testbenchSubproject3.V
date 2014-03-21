@@ -25,7 +25,7 @@ wire [15:0] debug2;
 wire [15:0] debug3;
 wire [15:0] debug4;
 wire [15:0] debug7;
-wire [15:0]debug5;
+wire debug5;
 wire [15:0]debug6;
 
 wire stall;
@@ -52,13 +52,13 @@ initial
 	reset=1;
 	#2
 	reset=0;
-	#20
+	#50
 	$finish;
 	end
 
 
 initial
-	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], ALUOUT:[%b], Stall: %b, IFID:%b, IDEX: %b, EXMEM:%b, IDEXMEMWRITE:%b, EXMEMWRITE:%b, EXMEMALUOUT:%b",
+	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], ALUOUT:[%b], Stall: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, EXMEMALUOUT:%b",
 		io_display,
 		io_sw0,
 		io_sw1,

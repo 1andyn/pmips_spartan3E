@@ -132,6 +132,7 @@ reg [2:0] MEMWBRegfield3;
 reg MEMWBRegWrite;
 reg MEMWBMemtoReg;
 reg MEMWBRegDst;
+reg MEMWBWrite;
 
 /* ----------END Buffer Stages----------------*/
 
@@ -142,12 +143,12 @@ output [15:0]debug7;
 output [15:0]debug2;
 output [15:0]debug3;
 output [15:0]debug4;
-output [15:0]debug5;
+output debug5;
 output [15:0]debug6;
 
 assign debug7 = EXMEMALUOut;
-assign debug6 = IDEXRegRead1;
-assign debug5 = ALUMUXOutput;
+assign debug6 = EXMEMRegRead2;
+assign debug5 = EXMEMMemWrite;
 assign debug4 = EXMEMInstr;
 assign debug2 = IFIDInstr;
 assign debug3 = IDEXInstr;

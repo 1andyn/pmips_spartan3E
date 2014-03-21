@@ -1,5 +1,7 @@
 verilog isim_temp "../Temp/MIPS-Parts.V"
 verilog isim_temp "../Temp/Control.V"
+verilog isim_temp "new_control.v"
+verilog isim_temp "hazard_ctrl.v"
 verilog isim_temp "../Temp/PMIPSL0.V"
 verilog isim_temp "../Temp/IM2.V"
 verilog isim_temp "../Temp/testbenchSubproject3.V"

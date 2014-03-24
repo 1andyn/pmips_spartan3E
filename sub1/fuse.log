@@ -1,4 +1,4 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/Dropbox/Codespace/PMIPS/sub1/testbench5_isim_beh.exe" -prj "D:/Dropbox/Codespace/PMIPS/sub1/testbench5_beh.prj" "work.testbench5" "work.glbl" 
+Running: D:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/Dropbox/Codespace/PMIPS/sub1/testbench5_isim_beh.exe -prj D:/Dropbox/Codespace/PMIPS/sub1/testbench5_beh.prj work.testbench5 work.glbl 
 ISim P.68d (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -8,7 +8,7 @@ Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/Control.V" into 
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/new_control.v" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/hazard_ctrl.v" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/PMIPSL0.V" into library work
-Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/IM2.V" into library work
+Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/IM4.v" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/testbenchSubproject3.V" into library work
 Analyzing Verilog file "D:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
@@ -21,15 +21,15 @@ Compiling module MUX2_3bit
 Compiling module MUX2
 Compiling module ALU
 Compiling module ALUControl
-Compiling module PMIPSL0
-Compiling module IM2
+Compiling module PMIPSL1
+Compiling module IM4
 Compiling module DMemory_IO
 Compiling module testbench5
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 5 sub-compilation(s) to finish...
+Waiting for 6 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\testbench5_isim_beh.exe.sim\libPortability.dll".
 Compiled 13 Verilog Units
 Built simulation executable D:/Dropbox/Codespace/PMIPS/sub1/testbench5_isim_beh.exe
-Fuse Memory Usage: 26596 KB
-Fuse CPU Usage: 296 ms
+Fuse Memory Usage: 27088 KB
+Fuse CPU Usage: 311 ms

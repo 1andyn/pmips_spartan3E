@@ -89,7 +89,7 @@ initial
 // Instantiation of processor
 
 	
-PMIPSL0 comp(
+PMIPSL1 comp(
 	imemaddr, 	// Instruction memory addr
 	dmemaddr,	// Data memory addr
 	dmemwdata,	// Data memory write-data
@@ -112,7 +112,7 @@ PMIPSL0 comp(
 
 // Instantiation of Instruction Memory (program)
 
-IM2  instrmem(imemrdata,imemaddr);
+IM4  instrmem(imemrdata,imemaddr);
 
 
 // Instantiation of Data Memory

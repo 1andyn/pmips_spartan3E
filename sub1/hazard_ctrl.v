@@ -1,4 +1,5 @@
 module hazard_ctrl(
+	MP, //MisPrediction
 	PCStall,		// if asserted it will stall the PC (hold value)
 	clock,			// Clock input signal
 	reset,			// Used to clear controller
@@ -8,23 +9,19 @@ module hazard_ctrl(
 	EXMEMWrite,
 	EXMEMRegDst,
 	IDEXWrite,
-	IDEXRegDst
-//	debug,
-//	debug1,
-//	debug2,
-//	debug3,
-//	debug4
+	IDEXRegDst,
+	PCSrc
 	);
 
+output MP;
 output PCStall;		
-//output [2:0] debug;
-//output [2:0] debug1;
-//output [2:0] debug2;
-//output [2:0] debug3;
-//output [2:0] debug4;
 
+input PCSrc;
 input  clock;
 input  reset;
+
+reg [2:0]Predict;
+
 
 //Instruction Registers
 input [15:0] IFID;
@@ -37,14 +34,51 @@ input IDEXRegDst; //Selects Register Written to
 
 reg PCStall;
 reg StallCode;
+reg MP;
 wire [2:0]IFIDOP;
 reg [2:0]EXMEMWriteReg;
 reg [2:0]IDEXWriteReg;
 
-//assign Regfield2 IFIDInstr[9:7]; REGDST = 0
-//assign Regfield3 IFIDInstr[6:4]; REGDST = 1
-
 assign IFIDOP = IFID[15:13];
+
+always @ (posedge clock)
+begin
+	if(IFIDOP == 2) //If IFID is BEQ
+		begin
+			Predict <= 1;
+		end
+end
+
+always @ (posedge clock)
+begin
+	case(Predict)
+	1: Predict <= 2;
+	2: Predict <= 0;
+	default: Predict <= 0;
+	endcase
+end
+
+
+/* Brand Predictor*/
+always @(Predict)
+begin
+	case(Predict)
+	0: MP <= 0;
+	1: MP <= 0;
+	2:
+		begin
+			if(PCSrc == 1)
+				begin
+					MP <= 0;
+				end
+			else
+				begin
+					MP <= 1;
+				end
+		end
+	default: MP <= 0;
+	endcase
+end
 
 //Assign Write Addr for EXMEM
 always @ (EXMEMRegDst)
@@ -66,11 +100,6 @@ always @ (IDEXRegDst)
 		endcase
 	end
 
-//assign debug = IDEXWriteReg;
-//assign debug1 = EXMEMWriteReg;
-//assign debug2 = IFID[12:10];
-//assign debug3 = IFID[9:7];
-//assign debug4 = IFIDOP;
 /*
 	ITYPE READ REGISTER = 12:10
 	RTYPE READ REGISTERS = 12:10, 9:7
@@ -78,7 +107,7 @@ always @ (IDEXRegDst)
 
 always @(posedge clock)
 	begin
-		//IFID is R Type STALL BEQ for now
+		//IFID is R Type 
 		if(IDEXWrite == 0 && EXMEMWrite == 0)
 			begin
 				StallCode = 0;

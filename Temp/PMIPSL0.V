@@ -1,4 +1,4 @@
-module PMIPSL0(
+module PMIPSL1(
 	imemaddr, 	// Instruction memory addr
 	dmemaddr,	// Data memory addr
 	dmemwdata,	// Data memory write-data
@@ -104,6 +104,7 @@ wire [15:0] aluout1;		// OUTPUT OF ALU
 wire [15:0] EXBranchAddr; //Branch address 
 wire [2:0] ALUSelect;
 wire [2:0] EXWriteAddr;
+wire Flush;
 wire aluzero;
 //----------------------------------------------
 // Variables in the EX/MEM pipeline register 
@@ -158,10 +159,14 @@ assign stall = PCStall;
 //------------------------------------------------
 
 wire [15:0] PCMUXOut;
+wire [15:0] NEXTPC;
+reg [15:0] ori;
+assign NEXTPC = (IFIDSignExt << 1) + IFIDPCPlus2; //Branch Address
 
 //------------------ IF Stage and PC logic --------------------
 
 assign PCPlus2 = PC + 2; // This is the adder circuit near the PC
+assign imemaddr = PC; // PC = instruction memory address
 
 MUX_PC PC_MUX(
 	PCMUXOut,
@@ -174,14 +179,20 @@ always @(posedge clock)
 	begin
 	if (reset == 1) 	
 		PC <= 0;
-	else if (PCSrc == 1) 
-		PC <= EXMEMPCPlus2;
+	else if (IFIDOpcode == 2) 
+		begin
+			PC <= NEXTPC;
+			ori <= PCMUXOut;
+		end
+		//Original Code
+		//PC <= EXMEMPCPlus2;
+	else if (Flush == 1)
+		PC <= ori;
 	else
 		PC <= PCMUXOut;
 	end
 
-assign imemaddr = PC; // PC = instruction memory address
-	
+
 //------------------ IF/ID Pipeline Register---------------------
 
 always @(posedge clock)
@@ -229,6 +240,7 @@ assign negclock = ~clock;  // Reg file is synchronized to pos clock edge, so we 
 assign IFIDSignExt = {{9{IFIDInstr[6]}},IFIDInstr[6:0]};
 
 hazard_ctrl hzc(
+	Flush,
 	PCStall,		// if asserted it will stall the PC (hold value)
 	clock,			// Clock input signal
 	reset,			// Used to clear controller
@@ -238,7 +250,8 @@ hazard_ctrl hzc(
 	EXMEMRegWrite,
 	EXMEMRegDst,
 	IDEXRegWrite,
-	IDEXRegDst
+	IDEXRegDst,
+	PCSrc
 	);
 
 new_control cntrol(			
@@ -261,7 +274,7 @@ new_control cntrol(
 
 always @(posedge clock)
 	begin
-		if(PCStall == 1)
+		if(PCStall == 1 || Flush)
 			begin
 				IDEXInstr <= 16'b0000000000000000;
 				IDEXRegRead1 <= 0;
@@ -335,9 +348,19 @@ assign EXBranchAddr = (IDEXSignExtend << 1) + IDEXPCPlus2; //Branch Address
 
 always @(posedge clock)
  	begin
-		if(reset == 1)
+		if(reset == 1 || Flush)
 			begin
 				EXMEMRegWrite <= 0;
+				EXMEMInstr <= 16'b0000000000000000;
+				EXMEMRegRead2 <= 0;
+				EXMEMRegfield2 <= 0;
+				EXMEMRegfield3 <= 0;
+				EXMEMRegDst <= 0;
+				EXMEMRegWrite <= 0;
+				EXMEMMemRead <= 0;
+				EXMEMMemWrite <= 0;
+				EXMEMMemtoReg <= 0;
+				EXMEMBranch <= 0;
 			end
 		else
 			begin

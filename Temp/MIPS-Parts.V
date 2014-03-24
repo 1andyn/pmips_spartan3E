@@ -126,8 +126,6 @@ always @(posedge clock)
 
 endmodule
 
-
-
 //----------------------------------------------------------
 
 // 8x16 Register File

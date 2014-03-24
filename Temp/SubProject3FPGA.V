@@ -22,7 +22,7 @@ wire [15:0] imemrdata;	// Instruction memory read data
 wire [15:0] dmemrdata;	
 
 	
-PMIPSL0 comp(
+PMIPSL1 comp(
 	imemaddr, 	// Instruction memory addr
 	dmemaddr,	// Data memory addr
 	dmemwdata,	// Data memory write-data

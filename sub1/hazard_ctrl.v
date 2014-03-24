@@ -79,7 +79,7 @@ always @ (IDEXRegDst)
 always @(posedge clock)
 	begin
 		//IFID is R Type STALL BEQ for now
-		if(IDEXWrite == 0 && EXMEMWrite == 0 || IDEX[15:13] == 2 || EXMEM [15:13] == 2)
+		if(IDEXWrite == 0 && EXMEMWrite == 0)
 			begin
 				StallCode = 0;
 			end

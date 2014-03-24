@@ -27,9 +27,9 @@ Compiling module DMemory_IO
 Compiling module testbench5
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 6 sub-compilation(s) to finish...
+Waiting for 5 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\testbench5_isim_beh.exe.sim\libPortability.dll".
 Compiled 13 Verilog Units
 Built simulation executable D:/Dropbox/Codespace/PMIPS/sub1/testbench5_isim_beh.exe
-Fuse Memory Usage: 26716 KB
-Fuse CPU Usage: 311 ms
+Fuse Memory Usage: 26596 KB
+Fuse CPU Usage: 296 ms

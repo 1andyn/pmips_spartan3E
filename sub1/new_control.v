@@ -102,7 +102,15 @@ always @(OpCode or reset)
 					MemRead = 0; //doesnt matter
 					MemtoReg = 0; // Write reg file from ALU
 					end
-				7: begin
+				7: begin // jump
+					RegWrite = 0;
+					RegDst = 0;   // 2nd register field
+					ALUSrc = 0;   // Use sign extended constant
+					ALUOp = 0;    // Add
+					Branch = 0; 
+					MemWrite = 0; // No access to memory
+					MemRead = 0; //doesnt matter
+					MemtoReg = 0; // Write reg file from ALU
 					end
 				8: begin
 					end

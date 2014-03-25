@@ -10,7 +10,8 @@ module hazard_ctrl(
 	EXMEMRegDst,
 	IDEXWrite,
 	IDEXRegDst,
-	PCSrc
+	PCSrc,
+	Predict
 	);
 
 output MP;
@@ -20,6 +21,7 @@ input PCSrc;
 input  clock;
 input  reset;
 
+output [2:0] Predict;
 reg [2:0]Predict;
 
 
@@ -52,9 +54,9 @@ end
 always @ (posedge clock)
 begin
 	case(Predict)
-	1: Predict <= 2;
+	1: Predict <= 2; //Three Stages for TAKEN, 2 for NONTAKEN
 	2: Predict <= 0;
-	default: Predict <= 0;
+	3: Predict <= 0;
 	endcase
 end
 
@@ -65,15 +67,16 @@ begin
 	case(Predict)
 	0: MP <= 0;
 	1: MP <= 0;
+	//2: MP <= 0;
 	2:
 		begin
 			if(PCSrc == 1)
 				begin
-					MP <= 0;
+					MP <= 1;
 				end
 			else
 				begin
-					MP <= 1;
+					MP <= 0;
 				end
 		end
 	default: MP <= 0;
@@ -114,9 +117,9 @@ always @(posedge clock)
 			end
 		else
 		begin
-			if(IFIDOP == 0)
+			if(IFIDOP == 0 || IFIDOP == 6)
 				begin
-					if(IDEXWrite == 1)
+					if(IDEXWrite == 1 )
 						begin
 							if(IFID[12:10] == IDEXWriteReg || IFID[9:7] == IDEXWriteReg)
 								begin

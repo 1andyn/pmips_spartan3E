@@ -20,13 +20,15 @@ wire [15:0] aluout;		// Output from the ALUOut register:  for debugging
 
 wire [15:0] imemrdata;	// Instruction memory read data
 wire [15:0] dmemrdata;	// Data memory read data
-wire [15:0] debug;
+wire debug;
 wire [15:0] debug2;
 wire [15:0] debug3;
 wire [15:0] debug4;
 wire [15:0] debug7;
 wire debug5;
 wire [15:0]debug6;
+wire debug8;
+wire [2:0] Predict;
 
 wire stall;
 reg io_sw0;
@@ -52,17 +54,14 @@ initial
 	reset=1;
 	#2
 	reset=0;
-	#50
+	#125
 	$finish;
 	end
 
 
 initial
-	$monitor("IO[%b,%b,%b] IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], ALUOUT:[%b], Stall: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, EXMEMALUOUT:%b",
-		io_display,
-		io_sw0,
-		io_sw1,
-		
+	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, EXMEMALUOUT:%b, Predict Stage: %d",
+
 		imemaddr,
 		imemrdata,
 		
@@ -76,13 +75,15 @@ initial
 		reset,
 		$time,
 		debug,
+		debug8,
 		stall,
 		debug2,
 		debug3,
 		debug4,
 		debug5,
 		debug6,
-		debug7
+		debug7,
+		Predict
 		);
 
 
@@ -101,18 +102,20 @@ PMIPSL1 comp(
 	dmemrdata,	// Data memory read data
 	reset,		// Reset
 	debug,
+	debug8,
 	stall,
 	debug2,
 	debug3,
 	debug4,
 	debug5,
 	debug6,
-	debug7
+	debug7,
+	Predict
 	);
 
 // Instantiation of Instruction Memory (program)
 
-IM4  instrmem(imemrdata,imemaddr);
+IM  instrmem(imemrdata,imemaddr);
 
 
 // Instantiation of Data Memory

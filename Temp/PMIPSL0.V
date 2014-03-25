@@ -10,13 +10,15 @@ module PMIPSL1(
 	dmemrdata,	// Data memory read data
 	reset,		// Reset
 	debug,
+	debug8,
 	stall,
 	debug2,
 	debug3,
 	debug4,
 	debug5,
 	debug6,
-	debug7
+	debug7,
+	Predict
 	);
 
 /* Outputs */
@@ -27,11 +29,11 @@ output [15:0] aluresult; // Debug Output
 output dmemwrite;	// write 2 memory enable
 output dmemread;	// read memory enable
 output stall;
-
-
+output debug8;
+output [2:0] Predict;
 //output probe15; //aluzero
 
-output [15:0] debug;
+output debug;
 
 /* Clock */
 input clock;
@@ -146,22 +148,21 @@ output [15:0]debug3;
 output [15:0]debug4;
 output debug5;
 output [15:0]debug6;
-
+assign debug8 = PCStall;
 assign debug7 = EXMEMALUOut;
 assign debug6 = EXMEMRegRead2;
 assign debug5 = EXMEMMemWrite;
 assign debug4 = EXMEMInstr;
 assign debug2 = IFIDInstr;
 assign debug3 = IDEXInstr;
-assign debug = EXMEMALUOut;
-assign stall = PCStall;
+assign debug = PCSrc;
+assign stall = Flush;
 
 //------------------------------------------------
 
 wire [15:0] PCMUXOut;
 wire [15:0] NEXTPC;
 reg [15:0] ori;
-assign NEXTPC = (IFIDSignExt << 1) + IFIDPCPlus2; //Branch Address
 
 //------------------ IF Stage and PC logic --------------------
 
@@ -175,19 +176,31 @@ MUX_PC PC_MUX(
 	PCStall			
 	);
 
+wire [15:0] sign_ext;
+assign sign_ext = {{9{imemrdata[6]}},imemrdata[6:0]};	
+assign NEXTPC = (sign_ext << 1) + PCPlus2; //Branch Address
+
 always @(posedge clock)
 	begin
 	if (reset == 1) 	
 		PC <= 0;
-	else if (IFIDOpcode == 2) 
+		/* This is for Branch TAKEN
+	else if (imemrdata[15:13] == 2 && PCStall == 0) 
 		begin
 			PC <= NEXTPC;
 			ori <= PCMUXOut;
+		end*/
+	else if(PCSrc == 1)
+		begin
+			PC <= EXBranchAddr;
 		end
-		//Original Code
-		//PC <= EXMEMPCPlus2;
+	else if(imemrdata[15:13] == 7)
+		begin
+			PC <= NEXTPC;
+		end
+		/* Bracn Taken only
 	else if (Flush == 1)
-		PC <= ori;
+		PC <= ori;*/
 	else
 		PC <= PCMUXOut;
 	end
@@ -251,7 +264,8 @@ hazard_ctrl hzc(
 	EXMEMRegDst,
 	IDEXRegWrite,
 	IDEXRegDst,
-	PCSrc
+	PCSrc,
+	Predict
 	);
 
 new_control cntrol(			

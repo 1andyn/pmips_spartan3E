@@ -18,7 +18,8 @@ module PMIPSL1(
 	debug5,
 	debug6,
 	debug7,
-	Predict
+	Predict,
+	stage
 	);
 
 /* Outputs */
@@ -31,6 +32,7 @@ output dmemread;	// read memory enable
 output stall;
 output debug8;
 output [2:0] Predict;
+output [3:0] stage;
 //output probe15; //aluzero
 
 output debug;
@@ -179,6 +181,8 @@ MUX_PC PC_MUX(
 wire [15:0] sign_ext;
 assign sign_ext = {{9{imemrdata[6]}},imemrdata[6:0]};	
 assign NEXTPC = (sign_ext << 1) + PCPlus2; //Branch Address
+wire [15:0] jmp;
+assign jmp = {{3{imemrdata[12]}},imemrdata[12:0]};
 
 always @(posedge clock)
 	begin
@@ -196,7 +200,7 @@ always @(posedge clock)
 		end
 	else if(imemrdata[15:13] == 7)
 		begin
-			PC <= NEXTPC;
+			PC <= jmp;
 		end
 		/* Bracn Taken only
 	else if (Flush == 1)
@@ -265,7 +269,8 @@ hazard_ctrl hzc(
 	IDEXRegWrite,
 	IDEXRegDst,
 	PCSrc,
-	Predict
+	Predict,
+	stage
 	);
 
 new_control cntrol(			

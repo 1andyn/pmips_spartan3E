@@ -94,41 +94,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1395739583" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1395739583">
+    <transform xil_pn:end_ts="1395744335" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1395744335">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1395739583" xil_pn:in_ck="-6368515564813074264" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1395739583">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="../Temp/Control.V"/>
-      <outfile xil_pn:name="../Temp/IM1.V"/>
-      <outfile xil_pn:name="../Temp/IM2.V"/>
-      <outfile xil_pn:name="../Temp/IM3.V"/>
-      <outfile xil_pn:name="../Temp/MIPS-Parts.V"/>
-      <outfile xil_pn:name="../Temp/PMIPSL0.V"/>
-      <outfile xil_pn:name="../Temp/SubProject3FPGA.V"/>
-      <outfile xil_pn:name="../Temp/testbenchFPGADevice.V"/>
-      <outfile xil_pn:name="../Temp/testbenchSubproject3.V"/>
-      <outfile xil_pn:name="Control1.v"/>
-      <outfile xil_pn:name="IM4.v"/>
-      <outfile xil_pn:name="hazard_ctrl.v"/>
-      <outfile xil_pn:name="new_control.v"/>
-      <outfile xil_pn:name="testbench_hc.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1395739583" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5043250451585636652" xil_pn:start_ts="1395739583">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1395739583" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5527780426987678610" xil_pn:start_ts="1395739583">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1395739583" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7178071614635119542" xil_pn:start_ts="1395739583">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1395739583" xil_pn:in_ck="-6368515564813074264" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1395739583">
+    <transform xil_pn:end_ts="1395744335" xil_pn:in_ck="-6368515564813074264" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1395744335">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../Temp/Control.V"/>
@@ -146,7 +116,37 @@
       <outfile xil_pn:name="new_control.v"/>
       <outfile xil_pn:name="testbench_hc.v"/>
     </transform>
-    <transform xil_pn:end_ts="1395739586" xil_pn:in_ck="-6368515564813074264" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3552356295272275783" xil_pn:start_ts="1395739583">
+    <transform xil_pn:end_ts="1395744335" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5043250451585636652" xil_pn:start_ts="1395744335">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1395744335" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5527780426987678610" xil_pn:start_ts="1395744335">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1395744335" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7178071614635119542" xil_pn:start_ts="1395744335">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1395744335" xil_pn:in_ck="-6368515564813074264" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1395744335">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../Temp/Control.V"/>
+      <outfile xil_pn:name="../Temp/IM1.V"/>
+      <outfile xil_pn:name="../Temp/IM2.V"/>
+      <outfile xil_pn:name="../Temp/IM3.V"/>
+      <outfile xil_pn:name="../Temp/MIPS-Parts.V"/>
+      <outfile xil_pn:name="../Temp/PMIPSL0.V"/>
+      <outfile xil_pn:name="../Temp/SubProject3FPGA.V"/>
+      <outfile xil_pn:name="../Temp/testbenchFPGADevice.V"/>
+      <outfile xil_pn:name="../Temp/testbenchSubproject3.V"/>
+      <outfile xil_pn:name="Control1.v"/>
+      <outfile xil_pn:name="IM4.v"/>
+      <outfile xil_pn:name="hazard_ctrl.v"/>
+      <outfile xil_pn:name="new_control.v"/>
+      <outfile xil_pn:name="testbench_hc.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1395744338" xil_pn:in_ck="-6368515564813074264" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3552356295272275783" xil_pn:start_ts="1395744335">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -156,7 +156,7 @@
       <outfile xil_pn:name="testbench5_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1395739586" xil_pn:in_ck="2721864788465459622" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-9001727184716567652" xil_pn:start_ts="1395739586">
+    <transform xil_pn:end_ts="1395744338" xil_pn:in_ck="2721864788465459622" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-9001727184716567652" xil_pn:start_ts="1395744338">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>

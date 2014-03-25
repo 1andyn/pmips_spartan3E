@@ -29,6 +29,7 @@ wire debug5;
 wire [15:0]debug6;
 wire debug8;
 wire [2:0] Predict;
+wire [3:0] code;
 
 wire stall;
 reg io_sw0;
@@ -60,7 +61,7 @@ initial
 
 
 initial
-	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, EXMEMALUOUT:%b, Predict Stage: %d",
+	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, EXMEMALUOUT:%b, Predict Stage: %d, Code: %d",
 
 		imemaddr,
 		imemrdata,
@@ -83,7 +84,8 @@ initial
 		debug5,
 		debug6,
 		debug7,
-		Predict
+		Predict,
+		code
 		);
 
 
@@ -110,7 +112,8 @@ PMIPSL1 comp(
 	debug5,
 	debug6,
 	debug7,
-	Predict
+	Predict,
+	code
 	);
 
 // Instantiation of Instruction Memory (program)

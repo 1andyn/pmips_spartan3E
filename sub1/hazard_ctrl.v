@@ -11,7 +11,8 @@ module hazard_ctrl(
 	IDEXWrite,
 	IDEXRegDst,
 	PCSrc,
-	Predict
+	Predict,
+	code
 	);
 
 output MP;
@@ -20,8 +21,10 @@ output PCStall;
 input PCSrc;
 input  clock;
 input  reset;
-
+output [3:0]code;
 output [2:0] Predict;
+
+reg [3:0] code;
 reg [2:0]Predict;
 
 
@@ -110,24 +113,27 @@ always @ (IDEXRegDst)
 
 always @(posedge clock)
 	begin
+		code = 9;
 		//IFID is R Type 
 		if(IDEXWrite == 0 && EXMEMWrite == 0)
 			begin
+				code = 3;
 				StallCode = 0;
 			end
 		else
 		begin
 			if(IFIDOP == 0 || IFIDOP == 6)
 				begin
+					code = 1;
 					if(IDEXWrite == 1 )
 						begin
-							if(IFID[12:10] == IDEXWriteReg || IFID[9:7] == IDEXWriteReg)
+							if(IFID[12:10] == IDEXWriteReg || IFID[9:7] == IDEXWriteReg )
 								begin
 									StallCode = 1; //Stall
 								end
 							else if(EXMEMWrite == 1)
 								begin
-									if(IFID[12:10] == EXMEMWriteReg || IFID[9:7] == EXMEMWriteReg)
+									if(IFID[12:10] == EXMEMWriteReg || IFID[9:7] == EXMEMWriteReg )
 										begin
 											StallCode = 1; //Stall
 										end
@@ -161,14 +167,17 @@ always @(posedge clock)
 			//IFID is I Type
 			else
 				begin
+					code = 2;
 					if(IDEXWrite == 1)
 						begin
 							if(IFID[12:10] == IDEXWriteReg)
 								begin
+								code = 5;
 									StallCode = 1; //Stall
 								end
 							else if(EXMEMWrite == 1)
 								begin
+									code = 6;
 									if(IFID[12:10] == EXMEMWriteReg)
 										begin
 											StallCode = 1; //Stall
@@ -185,12 +194,14 @@ always @(posedge clock)
 						end
 					else if(EXMEMWrite == 1)
 						begin
+							code = 4;
 							if(IFID[12:10] == EXMEMWriteReg)
 								begin
 									StallCode = 1; //Stall
 								end
 							else
 								begin
+									code = 7;
 									StallCode = 0;
 								end
 						end

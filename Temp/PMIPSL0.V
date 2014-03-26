@@ -76,12 +76,12 @@ wire [1:0] ALUOp;
 wire PCStall;	// Stall signal for PC
 wire PCSrc;		// These signals are for the datapath
 wire RegWrite;
-wire RegDst;
+wire [1:0]RegDst;
 wire ALUSrc;
 wire Branch;
 wire MemWrite;
 wire MemRead;
-wire MemtoReg;
+wire [1:0]MemtoReg;
 wire [2:0]RegWriteLoc;
 
 //----------------------------------------------
@@ -94,10 +94,10 @@ reg [15:0] IDEXSignExtend;
 reg [2:0] IDEXRegfield2;
 reg [2:0] IDEXRegfield3;
 reg [1:0] IDEXALUOp;reg IDEXALUSrc;
-reg IDEXRegDst; //Register destination signal
+reg [1:0]IDEXRegDst; //Register destination signal
 reg IDEXRegWrite; //Write to register signal
 reg IDEXMemRead; //Read from memroy signal
-reg IDEXMemtoReg; //Write from memory to register signal
+reg [1:0]IDEXMemtoReg; //Write from memory to register signal
 reg IDEXMemWrite; //Write to memory signal
 reg IDEXBranch; //Branch signalwire [15:0] IDSignExt; // Sign extension
 
@@ -120,23 +120,24 @@ reg [15:0] EXMEMInstr; // instruction
 reg [2:0] EXMEMWriteAddr;
 reg [2:0] EXMEMRegfield2;
 reg [2:0] EXMEMRegfield3;
-reg EXMEMMemtoReg;
+reg [1:0]EXMEMMemtoReg;
 reg EXMEMMemRead;
 reg EXMEMMemWrite;
 reg EXMEMRegWrite;
 reg EXMEMBranch;
 reg EXMEMALUZero;
-reg EXMEMRegDst;
+reg [1:0]EXMEMRegDst;
 
 // MEM/WB Memory Write Back stage
 reg [15:0] MEMWBMemReadData;
+reg [15:0] MEMWBPCPlus2;
 reg [15:0] MEMWBALUOut;
 reg [2:0] MEMWBWriteAddr;
 reg [2:0] MEMWBRegfield2;
 reg [2:0] MEMWBRegfield3;
 reg MEMWBRegWrite;
-reg MEMWBMemtoReg;
-reg MEMWBRegDst;
+reg [1:0]MEMWBMemtoReg;
+reg [1:0]MEMWBRegDst;
 reg MEMWBWrite;
 
 /* ----------END Buffer Stages----------------*/
@@ -153,7 +154,7 @@ output [15:0]debug6;
 assign debug8 = PCStall;
 assign debug7 = EXMEMALUOut;
 assign debug6 = EXMEMRegRead2;
-assign debug5 = EXMEMMemWrite;
+assign debug5 = MEMWBRegWrite;
 assign debug4 = EXMEMInstr;
 assign debug2 = IFIDInstr;
 assign debug3 = IDEXInstr;
@@ -330,13 +331,16 @@ always @(posedge clock)
 			end
 	end
 
+wire [2:0]return_addr;
+assign return_addr = 7;  
 //----------------------------- EXMEM Stage --------------------------------
 
-MUX2_3bit RegDstMux(
+MUX3_3bit RegDstMux(
 	RegWriteLoc,		// 3-bit Write Address
 	MEMWBRegfield2,	   // $rt
 	MEMWBRegfield3,	   // $rd
-	MEMWBRegDst			// RegDst Mux 0:$rt, 1:$rd
+	return_addr,
+	MEMWBRegDst			// RegDst Mux 0:$rt, 1:$rd, 2: reg 7
 	);
 
 MUX2 alumux( // ALU multiplexer
@@ -406,7 +410,6 @@ assign dmemaddr = EXMEMALUOut;
 assign dmemwdata = EXMEMRegRead2;
 assign dmemwrite = EXMEMMemWrite;	
 assign dmemread = EXMEMMemRead;	
-
 //--------------------- MEM/WB pipeline register ---------------------
 
 always @(posedge clock)
@@ -425,15 +428,17 @@ always @(posedge clock)
 				MEMWBRegDst <= EXMEMRegDst;
 				MEMWBRegfield2 <= EXMEMRegfield2;
 				MEMWBRegfield3 <= EXMEMRegfield3;
+				MEMWBPCPlus2 <= EXMEMPCPlus2;
 			end
 	end
 
 //----------------------- WB Stage -----------------------------------
 
-MUX2 WriteBackMux(
+MUX3 WriteBackMux(
 	wdata,
 	MEMWBALUOut,	
 	MEMWBMemReadData,
+	MEMWBPCPlus2,
 	MEMWBMemtoReg		
 	);	
 	

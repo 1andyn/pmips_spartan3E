@@ -237,7 +237,32 @@ always @(indata0 or indata1 or select)
 	endcase
 
 endmodule
+//----------------------------------------------------------
 
+// 3:1 Multiplexer (3-bit Output)
+
+module MUX3_3bit(
+	result,		// Output of multiplexer
+	indata0,	   // Input 0
+	indata1,	   // Input 1
+	indata2,
+	select		// 1-bit select
+	);	
+
+output [2:0] result;
+input [2:0] indata0, indata1, indata2;
+input select;
+
+reg [2:0] result;
+
+always @(indata0 or indata1 or indata2 or select)
+	case(select)
+	0: result = indata0;
+	1: result = indata1;
+	2: result = indata2;
+	endcase
+
+endmodule
 //----------------------------------------------------------
 
 // 2:1 Multiplexer
@@ -283,6 +308,32 @@ always @(indata0 or indata1 or select)
 	case(select)
 	0: result = indata0;
 	1: result = indata1;
+	endcase
+
+endmodule
+
+//----------------------------------------------------------
+
+// 3:1 Multiplexer
+module MUX3(
+	result,		// 16 bit output
+	indata0,	// Input 0
+	indata1,	// Input 1
+	indata2,	// Input 2
+	select		// 2-bit select input
+	);	
+
+output [15:0] result;
+input [15:0] indata0, indata1, indata2;
+input [1:0] select;
+
+reg [15:0] result;
+
+always @(indata0 or indata1 or indata2 or select)
+	case(select)
+	0: result = indata0;
+	1: result = indata1;
+	2: result = indata2;
 	endcase
 
 endmodule

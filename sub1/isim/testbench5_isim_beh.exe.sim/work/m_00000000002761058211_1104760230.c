@@ -24,10 +24,11 @@
 static const char *ng0 = "D:/Dropbox/Codespace/PMIPS/Temp/MIPS-Parts.V";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
+static int ng3[] = {2, 0};
 
 
 
-static void Always_307_0(char *t0)
+static void Always_332_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -38,58 +39,70 @@ static void Always_307_0(char *t0)
     char *t7;
     char *t8;
 
-LAB0:    t1 = (t0 + 2688U);
+LAB0:    t1 = (t0 + 2848U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(307, ng0);
-    t2 = (t0 + 3008);
+LAB2:    xsi_set_current_line(332, ng0);
+    t2 = (t0 + 3168);
     *((int *)t2) = 1;
-    t3 = (t0 + 2720);
+    t3 = (t0 + 2880);
     *((char **)t3) = t2;
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(308, ng0);
-    t4 = (t0 + 1368U);
+LAB4:    xsi_set_current_line(333, ng0);
+    t4 = (t0 + 1528U);
     t5 = *((char **)t4);
 
 LAB5:    t4 = ((char*)((ng1)));
-    t6 = xsi_vlog_unsigned_case_compare(t5, 1, t4, 32);
+    t6 = xsi_vlog_unsigned_case_compare(t5, 2, t4, 32);
     if (t6 == 1)
         goto LAB6;
 
 LAB7:    t2 = ((char*)((ng2)));
-    t6 = xsi_vlog_unsigned_case_compare(t5, 1, t2, 32);
+    t6 = xsi_vlog_unsigned_case_compare(t5, 2, t2, 32);
     if (t6 == 1)
         goto LAB8;
 
-LAB9:
-LAB10:    goto LAB2;
+LAB9:    t2 = ((char*)((ng3)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 2, t2, 32);
+    if (t6 == 1)
+        goto LAB10;
 
-LAB6:    xsi_set_current_line(309, ng0);
+LAB11:
+LAB12:    goto LAB2;
+
+LAB6:    xsi_set_current_line(334, ng0);
     t7 = (t0 + 1048U);
     t8 = *((char **)t7);
-    t7 = (t0 + 1768);
+    t7 = (t0 + 1928);
     xsi_vlogvar_assign_value(t7, t8, 0, 0, 16);
-    goto LAB10;
+    goto LAB12;
 
-LAB8:    xsi_set_current_line(310, ng0);
+LAB8:    xsi_set_current_line(335, ng0);
     t3 = (t0 + 1208U);
     t4 = *((char **)t3);
-    t3 = (t0 + 1768);
+    t3 = (t0 + 1928);
     xsi_vlogvar_assign_value(t3, t4, 0, 0, 16);
-    goto LAB10;
+    goto LAB12;
+
+LAB10:    xsi_set_current_line(336, ng0);
+    t3 = (t0 + 1368U);
+    t4 = *((char **)t3);
+    t3 = (t0 + 1928);
+    xsi_vlogvar_assign_value(t3, t4, 0, 0, 16);
+    goto LAB12;
 
 }
 
 
-extern void work_m_00000000001088398038_2841360810_init()
+extern void work_m_00000000002761058211_1104760230_init()
 {
-	static char *pe[] = {(void *)Always_307_0};
-	xsi_register_didat("work_m_00000000001088398038_2841360810", "isim/testbench5_isim_beh.exe.sim/work/m_00000000001088398038_2841360810.didat");
+	static char *pe[] = {(void *)Always_332_0};
+	xsi_register_didat("work_m_00000000002761058211_1104760230", "isim/testbench5_isim_beh.exe.sim/work/m_00000000002761058211_1104760230.didat");
 	xsi_register_executes(pe);
 }

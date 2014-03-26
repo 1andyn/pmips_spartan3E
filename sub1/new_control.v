@@ -14,13 +14,13 @@ module new_control(
 	);
 	
 output RegWrite;
-output RegDst;
+output [1:0]RegDst;
 output ALUSrc;
 output [1:0] ALUOp;
 output Branch;
 output MemWrite;
 output MemRead;
-output MemtoReg;
+output [1:0]MemtoReg;
 
 input  clock;
 input  [2:0] OpCode;		
@@ -28,13 +28,13 @@ input  reset;
 input [15:0] Instr;
 
 reg RegWrite;
-reg RegDst;
+reg [1:0]RegDst;
 reg ALUSrc;
 reg [1:0] ALUOp;
 reg Branch;
 reg MemWrite;
 reg MemRead;
-reg MemtoReg;
+reg [1:0]MemtoReg;
 
 always @(OpCode or reset)
 	begin
@@ -112,7 +112,15 @@ always @(OpCode or reset)
 					MemRead = 0; //doesnt matter
 					MemtoReg = 0; // Write reg file from ALU
 					end
-				8: begin
+				8: begin //jump and link
+					RegWrite = 1;
+					RegDst = 2;   // 3rd Reg field
+					ALUSrc = 0;   // Use sign extended constant
+					ALUOp = 0;    // Add
+					Branch = 0; 
+					MemWrite = 0; // No access to memory
+					MemRead = 0; //doesnt matter
+					MemtoReg = 2; // Write reg file from PCPLUS2
 					end
 				default:
 					begin

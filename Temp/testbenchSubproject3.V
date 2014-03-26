@@ -126,7 +126,7 @@ PMIPSL1 comp(
 
 // Instantiation of Instruction Memory (program)
 
-IM  instrmem(imemrdata,imemaddr);
+IM2  instrmem(imemrdata,imemaddr);
 
 
 // Instantiation of Data Memory

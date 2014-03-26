@@ -22,11 +22,12 @@ module PMIPSL1(
 	stage,
 	wdata,
 	RegWriteLoc,
-	EXBranchAddr
+	test,
 	);
 
 /* Outputs */
-output [15:0] EXBranchAddr;
+output [15:0] test;//EXBranchAddr;
+assign6 test = {IDEXSignExtend << 1};
 output [15:0] imemaddr; //16bit register for PC Instruction memory
 output [15:0] dmemaddr; //Data memory address for ALU results [EXMEM]
 output [15:0] dmemwdata; // Data Memory Data; reading data
@@ -161,7 +162,7 @@ output [15:0]debug6;
 assign debug8 = PCStall;
 assign debug7 = IDEXRegRead1;
 assign debug6 = EXMEMRegRead2;
-assign debug5 = EXMEMRegWrite;
+assign debug5 = MEMWBRegWrite;
 assign debug4 = EXMEMInstr;
 assign debug2 = IFIDInstr;
 assign debug3 = IDEXInstr;
@@ -195,23 +196,14 @@ always @(posedge clock)
 	begin
 	if (reset == 1) 	
 		PC <= 0;
-		/* This is for Branch TAKEN
-	else if (imemrdata[15:13] == 2 && PCStall == 0) 
-		begin
-			PC <= NEXTPC;
-			ori <= PCMUXOut;
-		end*/
 	else if(PCSrc == 1)
 		begin
 			PC <= EXBranchAddr;
 		end
-	else if(imemrdata[15:13] == 7)
+	else if(imemrdata[15:13] == 7 || imemrdata[15:13] == 8)
 		begin
 			PC <= jmp;
 		end
-		/* Bracn Taken only
-	else if (Flush == 1)
-		PC <= ori;*/
 	else
 		PC <= PCMUXOut;
 	end
@@ -232,6 +224,11 @@ always @(posedge clock)
 			begin
 				IFIDInstr <= IFIDInstr;
 				IFIDPCPlus2 <= IFIDPCPlus2;
+			end
+		else if(Flush == 1)
+			begin
+				IFIDInstr <= 0;
+				IFIDPCPlus2 <= PCPlus2;				
 			end
 		else
 			begin

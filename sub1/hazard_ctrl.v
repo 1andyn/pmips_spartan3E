@@ -1,6 +1,6 @@
 module hazard_ctrl(
 	MP, //MisPrediction
-	PCStall,		// if asserted it will stall the PC (hold value)
+	PCStall,		// if asserted it will stall the PC (hold value) //PCStall
 	clock,			// Clock input signal
 	reset,			// Used to clear controller
 	IFID, //IFID Instruction
@@ -12,12 +12,14 @@ module hazard_ctrl(
 	IDEXRegDst,
 	PCSrc,
 	Predict,
-	code
+	code,
+	negclock
 	);
 
 output MP;
-output PCStall;		
+output PCStall;	
 
+input negclock;
 input PCSrc;
 input  clock;
 input  reset;
@@ -111,7 +113,7 @@ always @ (IDEXRegDst)
 	RTYPE READ REGISTERS = 12:10, 9:7
 */
 
-always @(posedge clock)
+always @(posedge negclock)
 	begin
 		code = 9;
 		//IFID is R Type 
@@ -127,7 +129,7 @@ always @(posedge clock)
 					code = 1;
 					if(IDEXWrite == 1 )
 						begin
-							if(IFID[12:10] == IDEXWriteReg  && IFID[12:10] != 0 || IFID[9:7] == IDEXWriteReg && IFID[12:10] != 0)
+							if(IFID[12:10] == IDEXWriteReg && IFID[12:10] != 0 || IFID[9:7] == IDEXWriteReg && IFID[12:10] != 0)
 								begin
 									StallCode = 1; //Stall
 								end
@@ -172,7 +174,7 @@ always @(posedge clock)
 						begin
 							if(IFID[12:10] == IDEXWriteReg && IFID[12:10] != 0)
 								begin
-								code = 5;
+									code = 5;
 									StallCode = 1; //Stall
 								end
 							else if(EXMEMWrite == 1)
@@ -184,6 +186,7 @@ always @(posedge clock)
 										end
 									else
 										begin
+											code = 15;
 											StallCode = 0;
 										end
 								end	
@@ -212,6 +215,7 @@ always @(posedge clock)
 				end
 			end
 	end
+
 
 always @ (StallCode or reset)
 	begin

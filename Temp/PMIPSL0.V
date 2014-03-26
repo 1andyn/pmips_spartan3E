@@ -19,10 +19,14 @@ module PMIPSL1(
 	debug6,
 	debug7,
 	Predict,
-	stage
+	stage,
+	wdata,
+	RegWriteLoc,
+	EXBranchAddr
 	);
 
 /* Outputs */
+output [15:0] EXBranchAddr;
 output [15:0] imemaddr; //16bit register for PC Instruction memory
 output [15:0] dmemaddr; //Data memory address for ALU results [EXMEM]
 output [15:0] dmemwdata; // Data Memory Data; reading data
@@ -33,6 +37,9 @@ output stall;
 output debug8;
 output [2:0] Predict;
 output [3:0] stage;
+output [15:0] wdata;
+output [2:0] RegWriteLoc;
+
 //output probe15; //aluzero
 
 output debug;
@@ -152,15 +159,14 @@ output [15:0]debug4;
 output debug5;
 output [15:0]debug6;
 assign debug8 = PCStall;
-assign debug7 = EXMEMALUOut;
+assign debug7 = IDEXRegRead1;
 assign debug6 = EXMEMRegRead2;
-assign debug5 = MEMWBRegWrite;
+assign debug5 = EXMEMRegWrite;
 assign debug4 = EXMEMInstr;
 assign debug2 = IFIDInstr;
 assign debug3 = IDEXInstr;
 assign debug = PCSrc;
 assign stall = Flush;
-
 //------------------------------------------------
 
 wire [15:0] PCMUXOut;
@@ -271,7 +277,8 @@ hazard_ctrl hzc(
 	IDEXRegDst,
 	PCSrc,
 	Predict,
-	stage
+	stage,
+	negclock
 	);
 
 new_control cntrol(			

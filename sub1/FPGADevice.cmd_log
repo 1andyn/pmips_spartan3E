@@ -16,3 +16,5 @@ bitgen -intstyle ise -f FPGADevice.ut FPGADevice.ncd
 xst -intstyle ise -ifn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.xst" -ofn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.syr" 
 xst -intstyle ise -ifn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.xst" -ofn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.syr" 
 xst -intstyle ise -ifn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.xst" -ofn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.syr" 
+xst -intstyle ise -ifn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.xst" -ofn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.syr" 
+xst -intstyle ise -ifn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.xst" -ofn "D:/Dropbox/Codespace/PMIPS/sub1/FPGADevice.syr" 

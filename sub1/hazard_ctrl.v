@@ -12,7 +12,7 @@ module hazard_ctrl(
 	IDEXRegDst,
 	PCSrc,
 	Predict,
-	code,
+	//code,
 	negclock,
 	debug1,
 	debug2,
@@ -36,10 +36,10 @@ input negclock;
 input PCSrc;
 input  clock;
 input  reset;
-output [3:0]code;
+//output [3:0]code;
 output [2:0] Predict;
 
-reg [3:0] code;
+//reg [3:0] //code;
 reg [2:0]Predict;
 
 //Instruction Registers
@@ -60,6 +60,7 @@ reg [2:0]IDEXWriteReg;
 
 assign IFIDOP = IFID[15:13];
 
+/*
 always @ (posedge clock)
 begin
 	if(IFIDOP == 2) //If IFID is BEQ
@@ -67,13 +68,25 @@ begin
 			Predict <= 1;
 		end
 end
+*/
 
 always @ (posedge clock)
 begin
-	case(Predict)
-	1: Predict <= 2; //Three Stages for TAKEN, 2 for NONTAKEN
-	2: Predict <= 0;
-	endcase
+	if(IFIDOP == 2) //If IFID is BEQ
+		begin
+			Predict <= 1;
+		end
+	else if (reset == 1)
+		begin
+			Predict <= 0;
+		end
+	else
+	begin
+		case(Predict)
+		1: Predict <= 2; //Three Stages for TAKEN, 2 for NONTAKEN
+		2: Predict <= 0;
+		endcase
+	end
 end
 
 
@@ -97,27 +110,7 @@ begin
 	default: MP <= 0;
 	endcase
 end
-/*
-//Assign Write Addr for EXMEM
-always @ (posedge clock)
-	begin
-		case(EXMEMRegDst)
-		0: EXMEMWriteReg <= EXMEM[9:7];
-		1: EXMEMWriteReg <= EXMEM[6:4];
-		default: EXMEMWriteReg <= EXMEM[9:7];
-		endcase
-	end
 
-//Assign Write Addr for IDEX
-always @ (posedge clock)
-	begin
-		case(IDEXRegDst)
-		0: IDEXWriteReg <= IDEX[9:7];
-		1: IDEXWriteReg <= IDEX[6:4];
-		default: IDEXWriteReg <= IDEX[9:7];
-		endcase
-	end
-*/
 /*
 	ITYPE READ REGISTER = 12:10
 	RTYPE READ REGISTERS = 12:10, 9:7
@@ -137,28 +130,28 @@ always @*
 		default: IDEXWriteReg <= IDEX[9:7];
 		endcase
 	
-		code = 9;
+		//code = 9;
 		//IFID is R Type 
 		if(IDEXWrite == 0 && EXMEMWrite == 0)
 			begin
-				code = 3;
+				//code = 3;
 				StallCode = 0;
 			end
 		else
 		begin
 			if(IFIDOP == 0 || IFIDOP == 2 || IFIDOP == 6)
 				begin
-					code = 1;
+					//code = 1;
 					if(IDEXWrite == 1 )
 						begin
-							code = 13;
+							//code = 13;
 							if(IFID[12:10] == IDEXWriteReg && IFID[12:10] != 0 || IFID[9:7] == IDEXWriteReg && IFID[12:10] != 0)
 								begin
 									StallCode = 1; //Stall
 								end
 							else if(EXMEMWrite == 1)
 								begin
-									code = 10;
+									//code = 10;
 									if(IFID[12:10] == EXMEMWriteReg  && IFID[12:10] != 0 || IFID[9:7] == EXMEMWriteReg && IFID[12:10] != 0)
 										begin
 											StallCode = 1; //Stall
@@ -170,20 +163,20 @@ always @*
 								end	
 							else
 								begin
-									code = 12;
+									//code = 12;
 									StallCode = 0;
 								end
 						end
 					else if(EXMEMWrite == 1)
 						begin
-							code = 11;
+							//code = 11;
 							if(IFID[12:10] == EXMEMWriteReg && IFID[12:10] != 0 || IFID[9:7] == EXMEMWriteReg  && IFID[12:10] != 0)
 								begin			
 									StallCode = 1; //Stall
 								end
 							else
 								begin
-									code = 9;
+									//code = 9;
 									StallCode = 0;
 								end
 						end
@@ -196,24 +189,24 @@ always @*
 			//IFID is I Type
 			else
 				begin
-					code = 2;
+					//code = 2;
 					if(IDEXWrite == 1)
 						begin
 							if(IFID[12:10] == IDEXWriteReg && IFID[12:10] != 0)
 								begin
-									code = 5;
+									//code = 5;
 									StallCode = 1; //Stall
 								end
 							else if(EXMEMWrite == 1)
 								begin
-									code = 6;
+									//code = 6;
 									if(IFID[12:10] == EXMEMWriteReg && IFID[12:10] != 0)
 										begin
 											StallCode = 1; //Stall
 										end
 									else
 										begin
-											code = 15;
+											//code = 15;
 											StallCode = 0;
 										end
 								end	
@@ -224,14 +217,14 @@ always @*
 						end
 					else if(EXMEMWrite == 1)
 						begin
-							code = 4;
+							//code = 4;
 							if(IFID[12:10] == EXMEMWriteReg && IFID[12:10] != 0)
 								begin
 									StallCode = 1; //Stall
 								end
 							else
 								begin
-									code = 7;
+									//code = 7;
 									StallCode = 0;
 								end
 						end
@@ -249,8 +242,6 @@ always @ (StallCode or reset)
 		if(reset == 1) 
 			begin
 			PCStall = 1;
-			code = 0;
-			Predict = 0;
 			end
 		else
 		begin

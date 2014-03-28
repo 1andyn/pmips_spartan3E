@@ -182,7 +182,7 @@ WARNING:Xst:905 - "../Temp/MIPS-Parts.V" line 165: One or more signals are missi
 Module <RegFile> is correct for synthesis.
  
 Analyzing module <hazard_ctrl> in library <work>.
-WARNING:Xst:905 - "hazard_ctrl.v" line 82: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:905 - "hazard_ctrl.v" line 91: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <PCSrc>
 Module <hazard_ctrl> is correct for synthesis.
  
@@ -218,9 +218,7 @@ Module <DMemory_IO> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <Predict> in unit <hazard_ctrl> has a constant value of 001 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <Predict> in unit <hazard_ctrl> has a constant value of 000 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <code> in unit <hazard_ctrl> has a constant value of 0000 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <IM3>.
     Related source file is "../Temp/IM3.V".
@@ -270,10 +268,10 @@ WARNING:Xst:647 - Input <IFID<6:0>> is never used. This port will be preserved a
 WARNING:Xst:647 - Input <EXMEM<15:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EXMEM<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 3-bit register for signal <Predict>.
-    Found 3-bit comparator equal for signal <code$cmp_eq0003> created at line 155.
-    Found 3-bit comparator equal for signal <code$cmp_eq0004> created at line 155.
-    Found 3-bit comparator equal for signal <code$cmp_eq0005> created at line 180.
-    Found 3-bit comparator equal for signal <code$cmp_eq0006> created at line 180.
+    Found 3-bit comparator equal for signal <StallCode$cmp_eq0002> created at line 169.
+    Found 3-bit comparator equal for signal <StallCode$cmp_eq0003> created at line 169.
+    Found 3-bit comparator equal for signal <StallCode$cmp_eq0004> created at line 144.
+    Found 3-bit comparator equal for signal <StallCode$cmp_eq0005> created at line 144.
     Summary:
 	inferred   3 D-type flip-flop(s).
 	inferred   4 Comparator(s).
@@ -440,8 +438,6 @@ INFO:Xst:2261 - The FF/Latch <EXMEMInstr_9> in Unit <comp> is equivalent to the 
 INFO:Xst:2261 - The FF/Latch <EXMEMInstr_5> in Unit <comp> is equivalent to the following FF/Latch, which will be removed : <EXMEMRegfield3_1> 
 INFO:Xst:2261 - The FF/Latch <EXMEMInstr_4> in Unit <comp> is equivalent to the following FF/Latch, which will be removed : <EXMEMRegfield3_0> 
 INFO:Xst:2261 - The FF/Latch <EXMEMInstr_6> in Unit <comp> is equivalent to the following FF/Latch, which will be removed : <EXMEMRegfield3_2> 
-WARNING:Xst:1710 - FF/Latch <Predict_0> (without init value) has a constant value of 0 in block <hzc>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Predict_2> (without init value) has a constant value of 0 in block <hzc>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <IDEXMemtoReg_1> (without init value) has a constant value of 0 in block <comp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <EXMEMMemtoReg_1> (without init value) has a constant value of 0 in block <comp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MEMWBMemtoReg_1> (without init value) has a constant value of 0 in block <comp>. This FF/Latch will be trimmed during the optimization process.
@@ -576,49 +572,31 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <Predict_0> (without init value) has a constant value of 0 in block <hazard_ctrl>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Predict_2> (without init value) has a constant value of 0 in block <hazard_ctrl>. This FF/Latch will be trimmed during the optimization process.
+
+ERROR:Xst:528 - Multi-source in Unit <hazard_ctrl> on signal <Predict<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Output signal of FD instance <comp/hzc/Predict_2>
+   Signal <comp/hzc/Predict<2>> in Unit <hazard_ctrl> is assigned to GND
 
 ERROR:Xst:528 - Multi-source in Unit <hazard_ctrl> on signal <Predict<1>>; this signal is connected to multiple drivers.
 Drivers are: 
    Output signal of FD instance <comp/hzc/Predict_1>
    Signal <comp/hzc/Predict<1>> in Unit <hazard_ctrl> is assigned to GND
 
-ERROR:Xst:528 - Multi-source in Unit <hazard_ctrl> on signal <Predict<2>>; this signal is connected to multiple drivers.
+ERROR:Xst:528 - Multi-source in Unit <hazard_ctrl> on signal <Predict<0>>; this signal is connected to multiple drivers.
 Drivers are: 
-   Dangling signal <comp/hzc/debug4<0>> in Unit <hazard_ctrl> is tied to 0 by XST
-   Dangling signal <comp/hzc/Predict<2>> in Unit <hazard_ctrl> is tied to 0 by XST
-   Signal <comp/hzc/Predict<0>> in Unit <hazard_ctrl> is assigned to VCC
-
-ERROR:Xst:528 - Multi-source in Unit <hazard_ctrl> on signal <code<3>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <comp/hzc/code<3>> is assigned to logic
-   Signal <comp/hzc/code<3>> in Unit <hazard_ctrl> is assigned to GND
-
-ERROR:Xst:528 - Multi-source in Unit <hazard_ctrl> on signal <code<2>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <comp/hzc/code<2>> is assigned to logic
-   Signal <comp/hzc/code<2>> in Unit <hazard_ctrl> is assigned to GND
-
-ERROR:Xst:528 - Multi-source in Unit <hazard_ctrl> on signal <code<1>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <comp/hzc/code<1>> is assigned to logic
-   Signal <comp/hzc/code<1>> in Unit <hazard_ctrl> is assigned to GND
-
-ERROR:Xst:528 - Multi-source in Unit <hazard_ctrl> on signal <code<0>>; this signal is connected to multiple drivers.
-Drivers are: 
-   Signal <comp/hzc/code<0>> is assigned to logic
-   Signal <comp/hzc/code<0>> in Unit <hazard_ctrl> is assigned to GND
+   Output signal of FD instance <comp/hzc/Predict_0>
+   Signal <comp/hzc/Predict<0>> in Unit <hazard_ctrl> is assigned to GND
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.69 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.65 secs
  
 --> 
 
-Total memory usage is 248400 kilobytes
+Total memory usage is 248404 kilobytes
 
-Number of errors   :    6 (   0 filtered)
-Number of warnings :   86 (   0 filtered)
-Number of infos    :   21 (   0 filtered)
+Number of errors   :    3 (   0 filtered)
+Number of warnings :   82 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
 

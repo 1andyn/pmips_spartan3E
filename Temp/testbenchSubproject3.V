@@ -29,7 +29,6 @@ wire debug5;
 wire [15:0]debug6;
 wire debug8;
 wire [2:0] Predict;
-wire [3:0] code;
 
 wire stall;
 reg io_sw0;
@@ -63,7 +62,7 @@ initial
 
 
 initial
-	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, wdata:%d, Predict Stage: %d, Code: %d, WriteData: %d, WriteRegister: %d, Branch:%d",
+	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, wdata:%d, Predict Stage: %d, WriteData: %d, WriteRegister: %d, Branch:%d",
 
 		imemaddr,
 		imemrdata,
@@ -87,7 +86,6 @@ initial
 		debug6,
 		debug7,
 		Predict,
-		code,
 		RegDst,
 		regg,
 		branch
@@ -118,7 +116,6 @@ PMIPSL1 comp(
 	debug6,
 	debug7,
 	Predict,
-	code,
 	RegDst,
 	regg,
 	branch

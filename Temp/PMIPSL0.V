@@ -19,7 +19,7 @@ module PMIPSL1(
 	debug6,
 	debug7,
 	Predict,
-	stage,
+	//stage,
 	wdata,
 	RegWriteLoc,
 	delayed_addr
@@ -37,7 +37,7 @@ output dmemread;	// read memory enable
 output stall;
 output debug8;
 output [2:0] Predict;
-output [3:0] stage;
+//output [3:0] stage;
 output [15:0] wdata;
 output [2:0] RegWriteLoc;
 
@@ -276,7 +276,7 @@ hazard_ctrl hzc(
 	IDEXRegDst,
 	PCSrc,
 	Predict,
-	stage,
+	//stage,
 	negclock
 	);
 

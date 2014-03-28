@@ -22,12 +22,12 @@ module PMIPSL1(
 	stage,
 	wdata,
 	RegWriteLoc,
-	test,
+	delayed_addr
 	);
 
 /* Outputs */
-output [15:0] test;//EXBranchAddr;
-assign6 test = {IDEXSignExtend << 1};
+output [15:0] delayed_addr;//EXBranchAddr;
+//assign6 test = {IDEXSignExtend << 1};
 output [15:0] imemaddr; //16bit register for PC Instruction memory
 output [15:0] dmemaddr; //Data memory address for ALU results [EXMEM]
 output [15:0] dmemwdata; // Data Memory Data; reading data
@@ -160,12 +160,14 @@ output [15:0]debug4;
 output debug5;
 output [15:0]debug6;
 assign debug8 = PCStall;
-assign debug7 = IDEXRegRead1;
+
+assign debug7 = EXMEMALUOut;
+
 assign debug6 = EXMEMRegRead2;
 assign debug5 = MEMWBRegWrite;
 assign debug4 = EXMEMInstr;
-assign debug2 = IFIDInstr;
 assign debug3 = IDEXInstr;
+assign debug2 = IFIDInstr;
 assign debug = PCSrc;
 assign stall = Flush;
 //------------------------------------------------
@@ -198,7 +200,7 @@ always @(posedge clock)
 		PC <= 0;
 	else if(PCSrc == 1)
 		begin
-			PC <= EXBranchAddr;
+			PC <= EXMEMPCPlus2;
 		end
 	else if(imemrdata[15:13] == 7 || imemrdata[15:13] == 8)
 		begin
@@ -225,11 +227,11 @@ always @(posedge clock)
 				IFIDInstr <= IFIDInstr;
 				IFIDPCPlus2 <= IFIDPCPlus2;
 			end
-		else if(Flush == 1)
+		/*else if(Flush == 1)
 			begin
 				IFIDInstr <= 0;
 				IFIDPCPlus2 <= PCPlus2;				
-			end
+			end*/
 		else
 			begin
 				IFIDPCPlus2 <= PCPlus2;
@@ -263,7 +265,7 @@ assign IFIDSignExt = {{9{IFIDInstr[6]}},IFIDInstr[6:0]};
 hazard_ctrl hzc(
 	Flush,
 	PCStall,		// if asserted it will stall the PC (hold value)
-	clock,			// Clock input signal
+	clock,			// originally clock
 	reset,			// Used to clear controller
 	IFIDInstr, //entire instruction goes to control for hazard detection
 	IDEXInstr,
@@ -305,7 +307,6 @@ always @(posedge clock)
 				IDEXRegRead2 <= 0;
 				IDEXRegfield2 <= 0;
 				IDEXRegfield3 <= 0;
-				IDEXSignExtend <= 0;
 				IDEXALUSrc <= 0;
 				IDEXALUOp <= 0;
 				IDEXRegDst <= 0;
@@ -369,7 +370,14 @@ ALUControl alucntrl1(
 	);
 
 assign aluresult = aluout1; // Connect the alu with the outside world
-assign EXBranchAddr = (IDEXSignExtend << 1) + IDEXPCPlus2; //Branch Address
+assign EXBranchAddr = (IDEXSignExtend << 1) + (IDEXPCPlus2);
+assign test = (IDEXSignExtend << 1);
+
+reg [15:0] delayed_addr;
+always @ (posedge clock)
+begin
+	delayed_addr <= EXBranchAddr;
+end
 
 //----------------- EX/MEM pipeline register ---------------------------
 

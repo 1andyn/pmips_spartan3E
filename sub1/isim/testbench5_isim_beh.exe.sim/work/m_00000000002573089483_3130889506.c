@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, EXMEMALUOUT:%b, Predict Stage: %d, Code: %d, WriteData: %d, WriteRegister: %d, Branch:%d";
+static const char *ng0 = "IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, wdata:%d, Predict Stage: %d, Code: %d, WriteData: %d, WriteRegister: %d, Branch:%d";
 static const char *ng1 = "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V";
 static int ng2[] = {0, 0};
 static const char *ng3 = "\nIO[display,switch0,switch1]\n";
@@ -265,7 +265,7 @@ LAB5:    xsi_set_current_line(59, ng1);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 1);
     xsi_set_current_line(60, ng1);
     t2 = (t0 + 6832);
-    xsi_process_wait(t2, 84000LL);
+    xsi_process_wait(t2, 70000LL);
     *((char **)t1) = &&LAB6;
     goto LAB1;
 

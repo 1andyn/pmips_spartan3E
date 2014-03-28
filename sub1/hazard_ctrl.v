@@ -13,9 +13,22 @@ module hazard_ctrl(
 	PCSrc,
 	Predict,
 	code,
-	negclock
+	negclock,
+	debug1,
+	debug2,
+	debug3,
+	debug4
 	);
 
+
+output [2:0]debug1;
+output [2:0]debug2;
+output [2:0]debug3;
+output [2:0]debug4;
+//assign debug1 = EXMEMWriteReg;
+//assign debug2 = IDEXWriteReg;
+//assign debug3 = IFID[12:10];
+//assign debug4 = IFID[9:7];
 output MP;
 output PCStall;	
 
@@ -28,7 +41,6 @@ output [2:0] Predict;
 
 reg [3:0] code;
 reg [2:0]Predict;
-
 
 //Instruction Registers
 input [15:0] IFID;
@@ -61,7 +73,6 @@ begin
 	case(Predict)
 	1: Predict <= 2; //Three Stages for TAKEN, 2 for NONTAKEN
 	2: Predict <= 0;
-	3: Predict <= 0;
 	endcase
 end
 
@@ -72,7 +83,6 @@ begin
 	case(Predict)
 	0: MP <= 0;
 	1: MP <= 0;
-	//2: MP <= 0;
 	2:
 		begin
 			if(PCSrc == 1)
@@ -87,9 +97,9 @@ begin
 	default: MP <= 0;
 	endcase
 end
-
+/*
 //Assign Write Addr for EXMEM
-always @ (EXMEMRegDst)
+always @ (posedge clock)
 	begin
 		case(EXMEMRegDst)
 		0: EXMEMWriteReg <= EXMEM[9:7];
@@ -99,7 +109,7 @@ always @ (EXMEMRegDst)
 	end
 
 //Assign Write Addr for IDEX
-always @ (IDEXRegDst)
+always @ (posedge clock)
 	begin
 		case(IDEXRegDst)
 		0: IDEXWriteReg <= IDEX[9:7];
@@ -107,14 +117,26 @@ always @ (IDEXRegDst)
 		default: IDEXWriteReg <= IDEX[9:7];
 		endcase
 	end
-
+*/
 /*
 	ITYPE READ REGISTER = 12:10
 	RTYPE READ REGISTERS = 12:10, 9:7
 */
 
-always @(posedge negclock)
+always @*
 	begin
+		case(EXMEMRegDst)
+		0: EXMEMWriteReg <= EXMEM[9:7];
+		1: EXMEMWriteReg <= EXMEM[6:4];
+		default: EXMEMWriteReg <= EXMEM[9:7];
+		endcase
+		
+		case(IDEXRegDst)
+		0: IDEXWriteReg <= IDEX[9:7];
+		1: IDEXWriteReg <= IDEX[6:4];
+		default: IDEXWriteReg <= IDEX[9:7];
+		endcase
+	
 		code = 9;
 		//IFID is R Type 
 		if(IDEXWrite == 0 && EXMEMWrite == 0)
@@ -124,17 +146,19 @@ always @(posedge negclock)
 			end
 		else
 		begin
-			if(IFIDOP == 0 || IFIDOP == 6)
+			if(IFIDOP == 0 || IFIDOP == 2 || IFIDOP == 6)
 				begin
 					code = 1;
 					if(IDEXWrite == 1 )
 						begin
+							code = 13;
 							if(IFID[12:10] == IDEXWriteReg && IFID[12:10] != 0 || IFID[9:7] == IDEXWriteReg && IFID[12:10] != 0)
 								begin
 									StallCode = 1; //Stall
 								end
 							else if(EXMEMWrite == 1)
 								begin
+									code = 10;
 									if(IFID[12:10] == EXMEMWriteReg  && IFID[12:10] != 0 || IFID[9:7] == EXMEMWriteReg && IFID[12:10] != 0)
 										begin
 											StallCode = 1; //Stall
@@ -146,17 +170,20 @@ always @(posedge negclock)
 								end	
 							else
 								begin
+									code = 12;
 									StallCode = 0;
 								end
 						end
 					else if(EXMEMWrite == 1)
 						begin
+							code = 11;
 							if(IFID[12:10] == EXMEMWriteReg && IFID[12:10] != 0 || IFID[9:7] == EXMEMWriteReg  && IFID[12:10] != 0)
-								begin
+								begin			
 									StallCode = 1; //Stall
 								end
 							else
 								begin
+									code = 9;
 									StallCode = 0;
 								end
 						end
@@ -219,7 +246,12 @@ always @(posedge negclock)
 
 always @ (StallCode or reset)
 	begin
-		if(reset == 1) PCStall = 1;
+		if(reset == 1) 
+			begin
+			PCStall = 1;
+			code = 0;
+			Predict = 0;
+			end
 		else
 		begin
 			case(StallCode)

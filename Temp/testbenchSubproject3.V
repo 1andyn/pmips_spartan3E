@@ -57,13 +57,13 @@ initial
 	reset=1;
 	#2
 	reset=0;
-	#84
+	#70
 	$finish;
 	end
 
 
 initial
-	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, EXMEMALUOUT:%b, Predict Stage: %d, Code: %d, WriteData: %d, WriteRegister: %d, Branch:%d",
+	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, wdata:%d, Predict Stage: %d, Code: %d, WriteData: %d, WriteRegister: %d, Branch:%d",
 
 		imemaddr,
 		imemrdata,

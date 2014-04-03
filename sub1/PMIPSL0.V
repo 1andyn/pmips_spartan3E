@@ -27,7 +27,6 @@ module PMIPSL1(
 
 /* Outputs */
 output [15:0] delayed_addr;//EXBranchAddr;
-//assign6 test = {IDEXSignExtend << 1};
 output [15:0] imemaddr; //16bit register for PC Instruction memory
 output [15:0] dmemaddr; //Data memory address for ALU results [EXMEM]
 output [15:0] dmemwdata; // Data Memory Data; reading data
@@ -275,9 +274,7 @@ hazard_ctrl hzc(
 	IDEXRegWrite,
 	IDEXRegDst,
 	PCSrc,
-	Predict,
-	//stage,
-	negclock
+	Predict
 	);
 
 new_control cntrol(			
@@ -371,7 +368,6 @@ ALUControl alucntrl1(
 
 assign aluresult = aluout1; // Connect the alu with the outside world
 assign EXBranchAddr = (IDEXSignExtend << 1) + (IDEXPCPlus2);
-assign test = (IDEXSignExtend << 1);
 
 reg [15:0] delayed_addr;
 always @ (posedge clock)

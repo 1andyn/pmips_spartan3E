@@ -11,25 +11,12 @@ module hazard_ctrl(
 	IDEXWrite,
 	IDEXRegDst,
 	PCSrc,
-	Predict,
-	//code,
-	negclock,
-	debug1,
-	debug2,
-	debug3,
-	debug4
+	Predict
 	);
-
-
-output [2:0]debug1;
-output [2:0]debug2;
-output [2:0]debug3;
-output [2:0]debug4;
 
 output MP;
 output PCStall;	
 
-input negclock;
 input PCSrc;
 input  clock;
 input  reset;

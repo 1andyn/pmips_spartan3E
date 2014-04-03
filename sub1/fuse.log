@@ -3,19 +3,19 @@ ISim P.68d (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/MIPS-Parts.V" into library work
-Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/Control.V" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/new_control.v" into library work
+Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/MIPS-Parts.V" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/hazard_ctrl.v" into library work
-Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/PMIPSL0.V" into library work
+Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/Control.V" into library work
+Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V" into library work
 Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/IM5.v" into library work
-Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/testbenchSubproject3.V" into library work
+Analyzing Verilog file "D:/Dropbox/Codespace/PMIPS/sub1/testbenchSubproject3.V" into library work
 Analyzing Verilog file "D:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/PMIPSL0.V" Line 265: Port debug1 is not connected to this instance
-WARNING:HDLCompiler:189 - "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/PMIPSL0.V" Line 274: Size mismatch in connection of port <EXMEMRegDst>. Formal port size is 1-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/PMIPSL0.V" Line 276: Size mismatch in connection of port <IDEXRegDst>. Formal port size is 1-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "D:/Dropbox/Codespace/PMIPS/sub1/../Temp/PMIPSL0.V" Line 348: Size mismatch in connection of port <select>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:1016 - "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V" Line 265: Port debug1 is not connected to this instance
+WARNING:HDLCompiler:189 - "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V" Line 274: Size mismatch in connection of port <EXMEMRegDst>. Formal port size is 1-bit while actual signal size is 3-bit.
+WARNING:HDLCompiler:189 - "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V" Line 276: Size mismatch in connection of port <IDEXRegDst>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V" Line 348: Size mismatch in connection of port <select>. Formal port size is 1-bit while actual signal size is 2-bit.
 Completed static elaboration
 Compiling module MUX_PC
 Compiling module RegFile
@@ -32,9 +32,9 @@ Compiling module DMemory_IO
 Compiling module testbench5
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 6 sub-compilation(s) to finish...
+Waiting for 7 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\testbench5_isim_beh.exe.sim\libPortability.dll".
 Compiled 14 Verilog Units
 Built simulation executable D:/Dropbox/Codespace/PMIPS/sub1/testbench5_isim_beh.exe
-Fuse Memory Usage: 27608 KB
-Fuse CPU Usage: 311 ms
+Fuse Memory Usage: 27524 KB
+Fuse CPU Usage: 312 ms

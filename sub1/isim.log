@@ -5,9 +5,9 @@ WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
-WARNING: File "D:/Dropbox/Codespace/PMIPS/Temp/PMIPSL0.V" Line 137.  For instance comp/hzc/, width 1 of formal port EXMEMRegDst is not equal to width 2 of actual variable EXMEMRegDst. 
-WARNING: File "D:/Dropbox/Codespace/PMIPS/Temp/PMIPSL0.V" Line 105.  For instance comp/hzc/, width 1 of formal port IDEXRegDst is not equal to width 2 of actual variable IDEXRegDst. 
-WARNING: File "D:/Dropbox/Codespace/PMIPS/Temp/PMIPSL0.V" Line 148.  For instance comp/RegDstMux/, width 1 of formal port select is not equal to width 2 of actual variable MEMWBRegDst. 
+WARNING: File "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V" Line 137.  For instance comp/hzc/, width 1 of formal port EXMEMRegDst is not equal to width 3 of actual variable EXMEMRegDst. 
+WARNING: File "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V" Line 105.  For instance comp/hzc/, width 1 of formal port IDEXRegDst is not equal to width 2 of actual variable IDEXRegDst. 
+WARNING: File "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V" Line 148.  For instance comp/RegDstMux/, width 1 of formal port select is not equal to width 2 of actual variable MEMWBRegDst. 
 Time resolution is 1 ps
 # onerror resume
 # wave add /
@@ -48,4 +48,4 @@ IMEM[    8,0010000000000000] DMEM[    3,    0,    3] ALU[    8] Signals[0,0,20],
 IMEM[    0,0110000010000011] DMEM[    8,    0,    8] ALU[    0] Signals[1,0,21], PCStall:[0], Flush: 0, IFID:0010000000000000, IDEX: 0000000001000011, EXMEM:0110000110001000 
 IMEM[    0,0110000010000011] DMEM[    8,    0,    8] ALU[    0] Signals[0,0,22], PCStall:[0], Flush: 0, IFID:0010000000000000, IDEX: 0000000001000011, EXMEM:0110000110001000 
 IMEM[    2,0110000100000011] DMEM[    0,    0,    0] ALU[    0] Signals[1,0,23], PCStall:[0], Flush: 0, IFID:0110000010000011, IDEX: 0010000000000000, EXMEM:0000000001000011 
-Stopped at time : 24 ns : File "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V" Line 60
+Stopped at time : 24 ns : File "D:/Dropbox/Codespace/PMIPS/sub1/testbenchSubproject3.V" Line 60

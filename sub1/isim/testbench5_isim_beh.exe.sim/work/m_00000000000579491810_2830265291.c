@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Dropbox/Codespace/PMIPS/Temp/PMIPSL0.V";
+static const char *ng0 = "D:/Dropbox/Codespace/PMIPS/sub1/PMIPSL0.V";
 static int ng1[] = {2, 0};
 static int ng2[] = {9, 0};
 static int ng3[] = {1, 0};
@@ -3040,8 +3040,9 @@ LAB28:    xsi_set_current_line(402, ng0);
     t2 = (t0 + 12168);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
+    memcpy(t6, t4, 8);
     t5 = (t0 + 15368);
-    xsi_vlogvar_wait_assign_value(t5, t4, 0, 0, 2, 0LL);
+    xsi_vlogvar_wait_assign_value(t5, t6, 0, 0, 3, 0LL);
     xsi_set_current_line(414, ng0);
     t2 = (t0 + 11528);
     t3 = (t2 + 56U);
@@ -3158,7 +3159,7 @@ LAB27:    xsi_set_current_line(388, ng0);
     xsi_set_current_line(393, ng0);
     t2 = ((char*)((ng5)));
     t3 = (t0 + 15368);
-    xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 2, 0LL);
+    xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 3, 0LL);
     xsi_set_current_line(394, ng0);
     t2 = ((char*)((ng5)));
     t3 = (t0 + 14888);

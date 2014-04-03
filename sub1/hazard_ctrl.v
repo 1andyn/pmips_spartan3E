@@ -1,11 +1,11 @@
 module hazard_ctrl(
-	MP, //MisPrediction
+	MP, 			//MisPrediction
 	PCStall,		// if asserted it will stall the PC (hold value) //PCStall
-	clock,			// Clock input signal
-	reset,			// Used to clear controller
-	IFID, //IFID Instruction
-	IDEX, //IDEX Instruction
-	EXMEM, //EXMEMInstruction
+	clock,		// Clock input signal
+	reset,		// Used to clear controller
+	IFID, 		//IFID Instruction
+	IDEX, 		//IDEX Instruction
+	EXMEM, 		//EXMEMInstruction
 	EXMEMWrite,
 	EXMEMRegDst,
 	IDEXWrite,

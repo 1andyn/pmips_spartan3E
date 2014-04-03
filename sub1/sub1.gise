@@ -23,8 +23,85 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="FPGADevice_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testbench5_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testbench5_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testbench5_isim_beh.wdb"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1396568499" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1396568499">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1396568499" xil_pn:in_ck="-6484861504505119673" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1396568499">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Control.V"/>
+      <outfile xil_pn:name="Control1.v"/>
+      <outfile xil_pn:name="IM1.V"/>
+      <outfile xil_pn:name="IM2.V"/>
+      <outfile xil_pn:name="IM3.V"/>
+      <outfile xil_pn:name="IM4.v"/>
+      <outfile xil_pn:name="IM5.v"/>
+      <outfile xil_pn:name="MIPS-Parts.V"/>
+      <outfile xil_pn:name="PMIPSL0.V"/>
+      <outfile xil_pn:name="SubProject3FPGA.V"/>
+      <outfile xil_pn:name="hazard_ctrl.v"/>
+      <outfile xil_pn:name="new_control.v"/>
+      <outfile xil_pn:name="testbenchFPGADevice.V"/>
+      <outfile xil_pn:name="testbenchSubproject3.V"/>
+      <outfile xil_pn:name="testbench_hc.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1396568499" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5043250451585636652" xil_pn:start_ts="1396568499">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1396568499" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5527780426987678610" xil_pn:start_ts="1396568499">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1396568499" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7178071614635119542" xil_pn:start_ts="1396568499">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1396568499" xil_pn:in_ck="-6484861504505119673" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1396568499">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Control.V"/>
+      <outfile xil_pn:name="Control1.v"/>
+      <outfile xil_pn:name="IM1.V"/>
+      <outfile xil_pn:name="IM2.V"/>
+      <outfile xil_pn:name="IM3.V"/>
+      <outfile xil_pn:name="IM4.v"/>
+      <outfile xil_pn:name="IM5.v"/>
+      <outfile xil_pn:name="MIPS-Parts.V"/>
+      <outfile xil_pn:name="PMIPSL0.V"/>
+      <outfile xil_pn:name="SubProject3FPGA.V"/>
+      <outfile xil_pn:name="hazard_ctrl.v"/>
+      <outfile xil_pn:name="new_control.v"/>
+      <outfile xil_pn:name="testbenchFPGADevice.V"/>
+      <outfile xil_pn:name="testbenchSubproject3.V"/>
+      <outfile xil_pn:name="testbench_hc.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1396568502" xil_pn:in_ck="-6484861504505119673" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3552356295272275783" xil_pn:start_ts="1396568499">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="testbench5_beh.prj"/>
+      <outfile xil_pn:name="testbench5_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1396568502" xil_pn:in_ck="-9066890694248699900" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-9001727184716567652" xil_pn:start_ts="1396568502">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="testbench5_isim_beh.wdb"/>
+    </transform>
+  </transforms>
 
 </generated_project>

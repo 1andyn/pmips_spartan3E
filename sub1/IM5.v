@@ -1,12 +1,9 @@
 // Program or Instuction Memory
-// Program for Subproject 1
-// Multiplies 3 by 5 and the product is in $4
-//
+// Test JUMP AND LINK
 module IM5(idata,iaddr);
 
 output [15:0] idata;
 input  [15:0] iaddr;
-
 reg    [15:0] idata;
 
 always @(iaddr[3:1])
@@ -23,5 +20,3 @@ always @(iaddr[3:1])
   endcase
 
 endmodule
-
-//        4: idata={3'd7, 3'd0, 3'd0,7'd0};  		 // L1: jmp   L0 JUMP TEST

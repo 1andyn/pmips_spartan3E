@@ -19,7 +19,6 @@ module PMIPSL1(
 	debug6,
 	debug7,
 	Predict,
-	//stage,
 	wdata,
 	RegWriteLoc,
 	delayed_addr
@@ -149,7 +148,6 @@ reg MEMWBWrite;
 
 /* ----------END Buffer Stages----------------*/
 
-//------------------------------------------------
 /* --------------------DEBUG---------------------*/
 
 output [15:0]debug7;
@@ -159,9 +157,7 @@ output [15:0]debug4;
 output debug5;
 output [15:0]debug6;
 assign debug8 = PCStall;
-
 assign debug7 = EXMEMALUOut;
-
 assign debug6 = EXMEMRegRead2;
 assign debug5 = MEMWBRegWrite;
 assign debug4 = EXMEMInstr;
@@ -190,8 +186,8 @@ MUX_PC PC_MUX(
 wire [15:0] sign_ext;
 assign sign_ext = {{9{imemrdata[6]}},imemrdata[6:0]};	
 assign NEXTPC = (sign_ext << 1) + PCPlus2; //Branch Address
-wire [15:0] jmp;
-assign jmp = {{3{imemrdata[12]}},imemrdata[12:0]};
+wire [15:0] JMP;
+assign JMP = {{3{imemrdata[12]}},imemrdata[12:0]};
 
 always @(posedge clock)
 	begin
@@ -203,12 +199,11 @@ always @(posedge clock)
 		end
 	else if(imemrdata[15:13] == 7 || imemrdata[15:13] == 1)
 		begin
-			PC <= jmp;
+			PC <= JMP;
 		end
 	else
 		PC <= PCMUXOut;
 	end
-
 
 //------------------ IF/ID Pipeline Register---------------------
 
@@ -226,11 +221,6 @@ always @(posedge clock)
 				IFIDInstr <= IFIDInstr;
 				IFIDPCPlus2 <= IFIDPCPlus2;
 			end
-		/*else if(Flush == 1)
-			begin
-				IFIDInstr <= 0;
-				IFIDPCPlus2 <= PCPlus2;				
-			end*/
 		else
 			begin
 				IFIDPCPlus2 <= PCPlus2;

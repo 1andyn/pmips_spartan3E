@@ -202,7 +202,7 @@ always @(posedge clock)
 		begin
 			PC <= EXMEMPCPlus2;
 		end
-	else if(imemrdata[15:13] == 7 || imemrdata[15:13] == 8)
+	else if(imemrdata[15:13] == 7 || imemrdata[15:13] == 1)
 		begin
 			PC <= jmp;
 		end

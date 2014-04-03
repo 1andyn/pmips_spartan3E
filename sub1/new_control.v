@@ -112,7 +112,7 @@ always @(OpCode or reset)
 					MemRead = 0; //doesnt matter
 					MemtoReg = 0; // Write reg file from ALU
 					end
-				8: begin //jump and link
+				1: begin //jump and link
 					RegWrite = 1;
 					RegDst = 2;   // 3rd Reg field
 					ALUSrc = 0;   // Use sign extended constant

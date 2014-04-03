@@ -28,8 +28,7 @@ static int ng3[] = {1, 0};
 static int ng4[] = {3, 0};
 static int ng5[] = {0, 0};
 static int ng6[] = {7, 0};
-static int ng7[] = {8, 0};
-static unsigned int ng8[] = {0U, 0U};
+static unsigned int ng7[] = {0U, 0U};
 
 
 
@@ -1271,7 +1270,7 @@ LAB29:    t43 = (t0 + 3128U);
     *((unsigned int *)t42) = (t50 & 7U);
     t51 = *((unsigned int *)t43);
     *((unsigned int *)t43) = (t51 & 7U);
-    t52 = ((char*)((ng7)));
+    t52 = ((char*)((ng3)));
     memset(t53, 0, 8);
     t54 = (t42 + 4);
     t55 = (t52 + 4);
@@ -2489,7 +2488,7 @@ LAB21:    t56 = *((unsigned int *)t44);
 LAB24:    xsi_set_current_line(304, ng0);
 
 LAB27:    xsi_set_current_line(305, ng0);
-    t78 = ((char*)((ng8)));
+    t78 = ((char*)((ng7)));
     t79 = (t0 + 11208);
     xsi_vlogvar_wait_assign_value(t79, t78, 0, 0, 16, 0LL);
     xsi_set_current_line(306, ng0);
@@ -3141,7 +3140,7 @@ LAB27:    xsi_set_current_line(388, ng0);
     t79 = (t0 + 14888);
     xsi_vlogvar_wait_assign_value(t79, t78, 0, 0, 1, 0LL);
     xsi_set_current_line(389, ng0);
-    t2 = ((char*)((ng8)));
+    t2 = ((char*)((ng7)));
     t3 = (t0 + 13768);
     xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 16, 0LL);
     xsi_set_current_line(390, ng0);

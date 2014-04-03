@@ -29,7 +29,6 @@ static int ng4[] = {3, 0};
 static int ng5[] = {5, 0};
 static int ng6[] = {6, 0};
 static int ng7[] = {7, 0};
-static int ng8[] = {8, 0};
 
 
 
@@ -155,7 +154,7 @@ LAB25:    t2 = ((char*)((ng7)));
     if (t30 == 1)
         goto LAB26;
 
-LAB27:    t2 = ((char*)((ng8)));
+LAB27:    t2 = ((char*)((ng2)));
     t30 = xsi_vlog_unsigned_case_compare(t3, 3, t2, 32);
     if (t30 == 1)
         goto LAB28;

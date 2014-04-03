@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, wdata:%d, Predict Stage: %d, WriteData: %d, WriteRegister: %d, Branch:%d";
+static const char *ng0 = "IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b ";
 static const char *ng1 = "D:/Dropbox/Codespace/PMIPS/Temp/testbenchSubproject3.V";
 static int ng2[] = {0, 0};
 static const char *ng3 = "\nIO[display,switch0,switch1]\n";
@@ -57,14 +57,6 @@ static void Monitor_65_4_Func(char *t0)
     char *t18;
     char *t19;
     char *t20;
-    char *t21;
-    char *t22;
-    char *t23;
-    char *t24;
-    char *t25;
-    char *t26;
-    char *t27;
-    char *t28;
 
 LAB0:    t1 = (t0 + 1048U);
     t2 = *((char **)t1);
@@ -85,33 +77,17 @@ LAB0:    t1 = (t0 + 1048U);
     t11 = (t10 + 56U);
     t12 = *((char **)t11);
     t14 = xsi_vlog_time(t13, 1000.0000000000000, 1000.0000000000000);
-    t15 = (t0 + 2488U);
-    t16 = *((char **)t15);
     t15 = (t0 + 3608U);
-    t17 = *((char **)t15);
+    t16 = *((char **)t15);
     t15 = (t0 + 3928U);
-    t18 = *((char **)t15);
+    t17 = *((char **)t15);
     t15 = (t0 + 2648U);
-    t19 = *((char **)t15);
+    t18 = *((char **)t15);
     t15 = (t0 + 2808U);
-    t20 = *((char **)t15);
+    t19 = *((char **)t15);
     t15 = (t0 + 2968U);
-    t21 = *((char **)t15);
-    t15 = (t0 + 3288U);
-    t22 = *((char **)t15);
-    t15 = (t0 + 3448U);
-    t23 = *((char **)t15);
-    t15 = (t0 + 3128U);
-    t24 = *((char **)t15);
-    t15 = (t0 + 3768U);
-    t25 = *((char **)t15);
-    t15 = (t0 + 4408U);
-    t26 = *((char **)t15);
-    t15 = (t0 + 4568U);
-    t27 = *((char **)t15);
-    t15 = (t0 + 4248U);
-    t28 = *((char **)t15);
-    xsi_vlogfile_write(1, 0, 3, ng0, 23, t0, (char)118, t2, 16, (char)118, t3, 16, (char)118, t4, 16, (char)118, t5, 16, (char)118, t6, 16, (char)118, t7, 16, (char)118, t9, 1, (char)118, t12, 1, (char)118, t13, 64, (char)118, t16, 1, (char)118, t17, 1, (char)118, t18, 1, (char)118, t19, 16, (char)118, t20, 16, (char)118, t21, 16, (char)118, t22, 1, (char)118, t23, 16, (char)118, t24, 16, (char)118, t25, 3, (char)118, t26, 16, (char)118, t27, 3, (char)118, t28, 16);
+    t20 = *((char **)t15);
+    xsi_vlogfile_write(1, 0, 3, ng0, 15, t0, (char)118, t2, 16, (char)118, t3, 16, (char)118, t4, 16, (char)118, t5, 16, (char)118, t6, 16, (char)118, t7, 16, (char)118, t9, 1, (char)118, t12, 1, (char)118, t13, 64, (char)118, t16, 1, (char)118, t17, 1, (char)118, t18, 16, (char)118, t19, 16, (char)118, t20, 16);
 
 LAB1:    return;
 }
@@ -262,7 +238,7 @@ LAB5:    xsi_set_current_line(58, ng1);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 1);
     xsi_set_current_line(59, ng1);
     t2 = (t0 + 6672);
-    xsi_process_wait(t2, 70000LL);
+    xsi_process_wait(t2, 22000LL);
     *((char **)t1) = &&LAB6;
     goto LAB1;
 

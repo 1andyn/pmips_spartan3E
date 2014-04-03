@@ -56,13 +56,13 @@ initial
 	reset=1;
 	#2
 	reset=0;
-	#70
+	#22
 	$finish;
 	end
 
 
 initial
-	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCSrc:[%b], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b, Write:%b, DATA:%b, wdata:%d, Predict Stage: %d, WriteData: %d, WriteRegister: %d, Branch:%d",
+	$monitor("IMEM[%d,%b] DMEM[%d,%d,%d] ALU[%d] Signals[%b,%b,%0d], PCStall:[%b], Flush: %b, IFID:%b, IDEX: %b, EXMEM:%b ", //Write:%b, DATA:%b, wdata:%d, Predict Stage: %d, WriteData: %d, WriteRegister: %d, Branch:%d",
 
 		imemaddr,
 		imemrdata,
@@ -76,19 +76,19 @@ initial
 		clock,
 		reset,
 		$time,
-		debug,
+		//debug,
 		debug8,
 		stall,
 		debug2,
 		debug3,
-		debug4,
-		debug5,
+		debug4
+		/*debug5,
 		debug6,
 		debug7,
 		Predict,
 		RegDst,
 		regg,
-		branch
+		branch*/
 		);
 
 
@@ -123,7 +123,7 @@ PMIPSL1 comp(
 
 // Instantiation of Instruction Memory (program)
 
-IM2  instrmem(imemrdata,imemaddr);
+IM5  instrmem(imemrdata,imemaddr);
 
 
 // Instantiation of Data Memory

@@ -28,15 +28,12 @@
 <arg fmt="%s" index="3">&lt;regcell&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="905" delta="new" >&quot;<arg fmt="%s" index="1">hazard_ctrl.v</arg>&quot; line <arg fmt="%d" index="2">91</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="905" delta="new" >&quot;<arg fmt="%s" index="1">hazard_ctrl.v</arg>&quot; line <arg fmt="%d" index="2">95</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;PCSrc&gt;</arg>
 </msg>
 
 <msg type="warning" file="Xst" num="905" delta="old" >&quot;<arg fmt="%s" index="1">new_control.v</arg>&quot; line <arg fmt="%d" index="2">40</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;Instr&gt;</arg>
-</msg>
-
-<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">Predict</arg>&gt; in unit &lt;<arg fmt="%s" index="2">hazard_ctrl</arg>&gt; has a constant value of <arg fmt="%s" index="3">000</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">iaddr&lt;15:6&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -312,13 +309,382 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBRegDst_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
 </msg>
 
-<msg type="error" file="Xst" num="528" delta="old" >Multi-source in Unit &lt;<arg fmt="%s" index="1">hazard_ctrl</arg>&gt; on signal &lt;<arg fmt="%s" index="2">Predict&lt;2&gt;</arg>&gt;; this signal is connected to multiple drivers.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXRegfield2_0&gt; </arg>
 </msg>
 
-<msg type="error" file="Xst" num="528" delta="old" >Multi-source in Unit &lt;<arg fmt="%s" index="1">hazard_ctrl</arg>&gt; on signal &lt;<arg fmt="%s" index="2">Predict&lt;1&gt;</arg>&gt;; this signal is connected to multiple drivers.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXSignExtend_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">9 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXSignExtend_7&gt; &lt;comp/IDEXSignExtend_8&gt; &lt;comp/IDEXSignExtend_9&gt; &lt;comp/IDEXSignExtend_10&gt; &lt;comp/IDEXSignExtend_11&gt; &lt;comp/IDEXSignExtend_12&gt; &lt;comp/IDEXSignExtend_13&gt; &lt;comp/IDEXSignExtend_14&gt; &lt;comp/IDEXSignExtend_15&gt; </arg>
 </msg>
 
-<msg type="error" file="Xst" num="528" delta="new" >Multi-source in Unit &lt;<arg fmt="%s" index="1">hazard_ctrl</arg>&gt; on signal &lt;<arg fmt="%s" index="2">Predict&lt;0&gt;</arg>&gt;; this signal is connected to multiple drivers.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXRegfield2_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXRegfield3_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXRegfield3_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXRegfield3_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXRegfield2_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMRegfield2_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMRegfield3_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMRegfield2_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMRegfield3_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMRegfield2_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMRegfield3_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IFIDInstr_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IFIDInstr_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXRegDst_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXALUOp_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IFIDInstr_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IFIDInstr_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IFIDInstr_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IFIDInstr_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXBranch</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXALUOp_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXMemtoReg_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXMemRead&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IFIDInstr_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IFIDInstr_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXSignExtend_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXSignExtend_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXInstr_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXSignExtend_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXSignExtend_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXInstr_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMMemtoReg_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMMemRead&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXInstr_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMInstr_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMInstr_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXInstr_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/IDEXInstr_15&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">Predict_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">hazard_ctrl</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">comp/IDEXMemtoReg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FPGADevice</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMMemtoReg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FPGADevice</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">comp/MEMWBMemtoReg_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">FPGADevice</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/RegDstMux/result_2</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/RegDstMux/result_1</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/RegDstMux/result_0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/MEMWBRegfield3_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/MEMWBRegfield3_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMInstr_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;comp/EXMEMInstr_12&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/PC_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IFIDPCPlus2_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXPCPlus2_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMPCPlus2_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/MEMWBPCPlus2_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_1</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_2</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_3</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_4</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_5</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_6</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_7</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_8</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_9</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_10</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_11</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_12</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_13</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_14</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="new" >Latch &lt;<arg fmt="%s" index="1">comp/WriteBackMux/result_15</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXInstr_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXInstr_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXInstr_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/IDEXInstr_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">comp/EXMEMInstr_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FPGADevice</arg>&gt;.
 </msg>
 
 </messages>

@@ -25,10 +25,7 @@ output [2:0]debug1;
 output [2:0]debug2;
 output [2:0]debug3;
 output [2:0]debug4;
-//assign debug1 = EXMEMWriteReg;
-//assign debug2 = IDEXWriteReg;
-//assign debug3 = IFID[12:10];
-//assign debug4 = IFID[9:7];
+
 output MP;
 output PCStall;	
 
@@ -36,10 +33,8 @@ input negclock;
 input PCSrc;
 input  clock;
 input  reset;
-//output [3:0]code;
 output [2:0] Predict;
 
-//reg [3:0] //code;
 reg [2:0]Predict;
 
 //Instruction Registers
@@ -47,9 +42,9 @@ input [15:0] IFID;
 input [15:0] IDEX;
 input [15:0] EXMEM;	
 input EXMEMWrite;
-input EXMEMRegDst; //Selects Register Written to
+input [1:0]EXMEMRegDst; //Selects Register Written to
 input IDEXWrite;
-input IDEXRegDst; //Selects Register Written to
+input [1:0]IDEXRegDst; //Selects Register Written to
 
 reg PCStall;
 reg StallCode;
@@ -59,16 +54,6 @@ reg [2:0]EXMEMWriteReg;
 reg [2:0]IDEXWriteReg;
 
 assign IFIDOP = IFID[15:13];
-
-/*
-always @ (posedge clock)
-begin
-	if(IFIDOP == 2) //If IFID is BEQ
-		begin
-			Predict <= 1;
-		end
-end
-*/
 
 always @ (posedge clock)
 begin
@@ -130,28 +115,23 @@ always @*
 		default: IDEXWriteReg <= IDEX[9:7];
 		endcase
 	
-		//code = 9;
 		//IFID is R Type 
 		if(IDEXWrite == 0 && EXMEMWrite == 0)
 			begin
-				//code = 3;
 				StallCode = 0;
 			end
 		else
 		begin
 			if(IFIDOP == 0 || IFIDOP == 2 || IFIDOP == 6)
 				begin
-					//code = 1;
 					if(IDEXWrite == 1 )
 						begin
-							//code = 13;
 							if(IFID[12:10] == IDEXWriteReg && IFID[12:10] != 0 || IFID[9:7] == IDEXWriteReg && IFID[12:10] != 0)
 								begin
 									StallCode = 1; //Stall
 								end
 							else if(EXMEMWrite == 1)
 								begin
-									//code = 10;
 									if(IFID[12:10] == EXMEMWriteReg  && IFID[12:10] != 0 || IFID[9:7] == EXMEMWriteReg && IFID[12:10] != 0)
 										begin
 											StallCode = 1; //Stall
@@ -163,20 +143,17 @@ always @*
 								end	
 							else
 								begin
-									//code = 12;
 									StallCode = 0;
 								end
 						end
 					else if(EXMEMWrite == 1)
 						begin
-							//code = 11;
 							if(IFID[12:10] == EXMEMWriteReg && IFID[12:10] != 0 || IFID[9:7] == EXMEMWriteReg  && IFID[12:10] != 0)
 								begin			
 									StallCode = 1; //Stall
 								end
 							else
 								begin
-									//code = 9;
 									StallCode = 0;
 								end
 						end
@@ -189,24 +166,20 @@ always @*
 			//IFID is I Type
 			else
 				begin
-					//code = 2;
 					if(IDEXWrite == 1)
 						begin
 							if(IFID[12:10] == IDEXWriteReg && IFID[12:10] != 0)
 								begin
-									//code = 5;
 									StallCode = 1; //Stall
 								end
 							else if(EXMEMWrite == 1)
 								begin
-									//code = 6;
 									if(IFID[12:10] == EXMEMWriteReg && IFID[12:10] != 0)
 										begin
 											StallCode = 1; //Stall
 										end
 									else
 										begin
-											//code = 15;
 											StallCode = 0;
 										end
 								end	
@@ -217,14 +190,12 @@ always @*
 						end
 					else if(EXMEMWrite == 1)
 						begin
-							//code = 4;
 							if(IFID[12:10] == EXMEMWriteReg && IFID[12:10] != 0)
 								begin
 									StallCode = 1; //Stall
 								end
 							else
 								begin
-									//code = 7;
 									StallCode = 0;
 								end
 						end
@@ -252,6 +223,5 @@ always @ (StallCode or reset)
 			endcase
 		end
 	end
-
 endmodule
 

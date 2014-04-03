@@ -251,7 +251,7 @@ module MUX3_3bit(
 
 output [2:0] result;
 input [2:0] indata0, indata1, indata2;
-input select;
+input [1:0] select;
 
 reg [2:0] result;
 

@@ -56,7 +56,7 @@ initial
 	reset=1;
 	#2
 	reset=0;
-	#22
+	#75
 	$finish;
 	end
 
@@ -123,7 +123,7 @@ PMIPSL1 comp(
 
 // Instantiation of Instruction Memory (program)
 
-IM5  instrmem(imemrdata,imemaddr);
+IM  instrmem(imemrdata,imemaddr);
 
 
 // Instantiation of Data Memory

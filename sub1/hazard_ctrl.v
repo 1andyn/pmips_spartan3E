@@ -62,7 +62,7 @@ begin
 end
 
 
-/* Brand Predictor*/
+/* Branch Predictor*/
 always @(Predict)
 begin
 	case(Predict)

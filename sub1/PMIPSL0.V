@@ -221,6 +221,11 @@ always @(posedge clock)
 				IFIDInstr <= IFIDInstr;
 				IFIDPCPlus2 <= IFIDPCPlus2;
 			end
+		else if(Flush == 1)
+			begin
+				IFIDInstr <= 0;
+				IFIDPCPlus2 <= PCPlus2;
+			end
 		else
 			begin
 				IFIDPCPlus2 <= PCPlus2;

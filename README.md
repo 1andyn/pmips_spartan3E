@@ -1,7 +1,7 @@
 ## PMIPS implementation 
-- Supports basic arithmetic instructions, jump, branch on equal, store, load
+- Supports basic arithmetic instructions, branch on equal, store, load
 - Utilizes basic branch prediction (assume branch untaken)
 - Detects hazards (read after write)
 
 ## Datapath
-!(datapath.png)
+![](http://i.imgur.com/Ql4E1qS.png)
